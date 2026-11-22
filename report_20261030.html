@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日热门股日报 · 2026-10-30（星期五）周末盘前版</title>
+<style>
+:root{--ink:#171b22;--ink2:#4b5563;--ink3:#8a94a3;--line:#e4e8ee;--bg:#f4f6f9;--navy:#0f1a2b;--gold:#c9a227;--up:#c62828;--dn:#1b7a3e;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.78;font-size:15px;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+header{background:linear-gradient(135deg,#0f1a2b 0%,#1b2b45 55%,#25354f 100%);color:#fff;padding:52px 0 46px;position:relative;overflow:hidden;}
+header::after{content:"";position:absolute;right:-90px;top:-90px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,39,.2),transparent 68%);}
+.hd,.wrap{max-width:1000px;margin:0 auto;padding:0 20px;position:relative;z-index:2;}
+.kicker{font-size:11px;letter-spacing:3px;color:var(--gold);font-weight:600;margin-bottom:12px;}
+h1{font-size:30px;font-weight:700;letter-spacing:.4px;line-height:1.35;}
+.sub{margin-top:14px;font-size:13.5px;color:#b6c1d1;}
+.sub b{color:#fff;font-weight:600;}
+.meta{margin-top:18px;display:flex;gap:9px;flex-wrap:wrap;}
+.meta span{font-size:11.5px;padding:4px 11px;border-radius:20px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);color:#cfd8e5;}
+.wrap{padding:30px 20px 90px;}
+h2{font-size:19px;font-weight:700;margin:40px 0 16px;padding-left:12px;border-left:4px solid var(--gold);line-height:1.3;}
+h2 .en{font-size:11px;color:var(--ink3);font-weight:500;letter-spacing:1.5px;margin-left:9px;}
+h3{font-size:15.5px;font-weight:700;margin:24px 0 11px;color:var(--navy);}
+p{margin-bottom:13px;color:var(--ink2);}
+.lead-p{font-size:14.5px;color:var(--ink2);margin-bottom:18px;}
+.card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:20px 22px;margin-bottom:16px;}
+table{width:100%;border-collapse:collapse;font-size:13.5px;}
+th{text-align:left;font-size:11.5px;color:var(--ink3);font-weight:600;padding:9px 10px;border-bottom:1.5px solid var(--line);letter-spacing:.5px;}
+td{padding:10px;border-bottom:1px solid #f0f2f6;}
+tr:last-child td{border-bottom:none;}
+.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600;}
+.nm{font-weight:600;color:var(--ink);}
+.cd{color:var(--ink3);font-family:ui-monospace,Menlo,monospace;font-size:12.5px;}
+.rng{color:var(--ink3);font-size:12.5px;text-align:right;}
+.lead{color:var(--ink2);font-size:12.5px;}
+.up{color:var(--up);} .dn{color:var(--dn);} .flat{color:var(--ink2);}
+.brgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:4px;}
+.brc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:13px 15px;}
+.bl{font-size:11.5px;color:var(--ink3);margin-bottom:3px;}
+.bv{font-size:19px;font-weight:700;letter-spacing:-.3px;}
+.bv em{font-style:normal;font-size:11px;color:var(--ink3);font-weight:500;margin-left:2px;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.note{background:#fffbf0;border:1px solid #f0e2b8;border-radius:10px;padding:14px 17px;font-size:13.5px;color:#6b5714;margin:16px 0;}
+.note b{color:#4a3c07;}
+.stock{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 0 18px;margin-bottom:20px;overflow:hidden;}
+.shd{display:flex;align-items:flex-start;gap:14px;padding:20px 22px 15px;border-bottom:1px solid #f0f2f6;background:linear-gradient(180deg,#fafbfd,#fff);}
+.sno{font-size:12px;font-weight:700;color:#fff;background:var(--navy);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:0 0 30px;margin-top:2px;}
+.sname{flex:1;min-width:0;}
+.sn1{font-size:18px;font-weight:700;display:flex;align-items:center;gap:9px;flex-wrap:wrap;}
+.scode{font-size:12px;color:var(--ink3);font-family:ui-monospace,Menlo,monospace;font-weight:500;}
+.bd{font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:4px;letter-spacing:.3px;}
+.b3{color:#fff;background:var(--gold);}
+.b2{color:#3d4a5c;background:#e8edf4;}
+.stags{margin-top:7px;display:flex;gap:6px;flex-wrap:wrap;}
+.tg{font-size:11px;color:#4a5568;background:#f1f4f9;border:1px solid #e6ebf2;padding:1px 8px;border-radius:11px;}
+.sprice{text-align:right;flex:0 0 auto;}
+.sp1{font-size:22px;font-weight:700;letter-spacing:-.5px;}
+.sp2{font-size:11.5px;color:var(--ink3);margin-top:1px;}
+.hot{color:var(--up);font-weight:700;} .cool{color:var(--dn);font-weight:700;}
+.ranks{display:flex;gap:22px;padding:13px 22px;background:#fbfcfe;border-bottom:1px solid #f0f2f6;}
+.rkit{display:flex;align-items:center;gap:7px;font-size:12.5px;}
+.rl{color:var(--ink3);font-size:11.5px;}
+.rk{background:var(--navy);color:#fff;font-size:11px;font-weight:700;width:20px;height:20px;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;}
+.nr{color:#c3cad6;font-size:12px;}
+.dim{padding:15px 22px 0;}
+.dimh{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:8px;display:flex;align-items:center;gap:7px;}
+.di{color:var(--gold);font-size:13px;}
+.dl{list-style:none;padding-left:0;}
+.dl li{position:relative;padding-left:15px;margin-bottom:7px;font-size:13.5px;color:var(--ink2);line-height:1.75;}
+.dl li::before{content:"";position:absolute;left:2px;top:9px;width:5px;height:5px;border-radius:50%;background:#cfd6e0;}
+.judge li{font-size:14px;margin-bottom:12px;color:var(--ink2);}
+.judge{list-style:none;padding-left:0;}
+.judge li{position:relative;padding-left:18px;}
+.judge li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:1px;background:var(--gold);}
+.warn{background:#fff;border:1px solid #f2d6d6;border-radius:12px;padding:18px 22px;}
+.warn ol{padding-left:19px;}
+.warn li{margin-bottom:9px;font-size:13.5px;color:var(--ink2);}
+.disc{background:#f7f8fa;border:1px solid var(--line);border-radius:11px;padding:16px 20px;font-size:12.5px;color:var(--ink3);line-height:1.85;margin-top:26px;}
+.float{position:fixed;left:20px;bottom:22px;z-index:99;background:var(--navy);color:#fff;font-size:12.5px;font-weight:600;padding:10px 17px;border-radius:24px;box-shadow:0 8px 24px rgba(15,26,43,.28);transition:.18s;}
+.float:hover{transform:translateY(-2px);background:#1b2b45;}
+.topnav{position:absolute;right:20px;top:20px;z-index:5;font-size:12px;color:#cfd8e5;border:1px solid rgba(255,255,255,.25);padding:6px 14px;border-radius:20px;}
+.topnav:hover{background:rgba(255,255,255,.12);}
+.foot{text-align:center;font-size:12px;color:var(--ink3);margin-top:30px;padding-top:18px;border-top:1px solid var(--line);}
+@media(max-width:720px){
+ h1{font-size:22px;} .brgrid{grid-template-columns:repeat(2,1fr);} .two-col{grid-template-columns:1fr;}
+ .shd{flex-wrap:wrap;} .sprice{text-align:left;} .ranks{gap:12px;flex-wrap:wrap;}
+ table{font-size:12px;} td,th{padding:7px 5px;} .float{left:12px;bottom:14px;}
+}
+</style>
+</head>
+<body>
+<a class="float" href="./index.html">← 历史归档</a>
+
+<header>
+  <a class="topnav" href="./index.html">← 历史归档</a>
+  <div class="hd">
+    <div class="kicker">DAILY HOT STOCK REPORT · 三榜交集</div>
+    <h1>每日热门股日报 · 2026-10-30（星期五）</h1>
+    <div class="sub">数据基准交易日 <b>2026-10-30</b>（周五收盘）　|　版本：<b>周末盘前版</b>　|　服务交易日 <b>2026-11-02（星期一）</b></div>
+    <div class="meta">
+      <span>同花顺热榜 × 东方财富热度榜 × 淘股吧热股榜</span>
+      <span>交集股 8 只</span>
+      <span>生成时间 2026-11-01 20:30</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<div class="note">
+<b>阅读说明：</b>本报告抓取时点为 2026-11-01 20:30（周日，休市）。三大榜单展示的是最近一个交易日 <b>2026-10-30</b> 收盘后的热度状态，文中所有涨跌幅、价格、成交与资金数据均为 <b>2026-10-30</b> 收盘口径；榜单排名为抓取时点的实时排名，与盘中排名可能存在差异。
+</div>
+
+<h2>一、大盘背景<span class="en">MARKET CONTEXT</span></h2>
+<p class="lead-p">10月30日是A股十月的收官日，也是本轮调整中杀伤力最强的一天：三大指数低开高走后再度回落，几乎以全天最低点收盘，超4600只个股下跌、逾80股跌停。全月维度，上证指数跌6.33%、深证成指跌15.94%、创业板指跌23.02%，创业板指较今年6月历史高点回撤已超44%，超4500只个股月线收阴，个股涨跌幅中位数约-12%。</p>
+
+<div class="card">
+<table>
+<tr><th>指数</th><th style="text-align:right">收盘</th><th style="text-align:right">涨跌幅</th><th style="text-align:right">成交额</th><th style="text-align:right">当日区间</th></tr>
+<tr><td class="nm">上证指数</td><td class="num">3599.02</td><td class="num dn">-1.44%</td><td class="num">7642 亿</td><td class="rng">3660.21 / 3595.26</td></tr><tr><td class="nm">深证成指</td><td class="num">10833.78</td><td class="num dn">-2.73%</td><td class="num">9102 亿</td><td class="rng">11171.58 / 10833.78</td></tr><tr><td class="nm">创业板指</td><td class="num">2413.63</td><td class="num dn">-4.13%</td><td class="num">4522 亿</td><td class="rng">2518.24 / 2413.63</td></tr>
+</table>
+<div style="margin-top:12px;font-size:12.5px;color:var(--ink3)">两市合计成交 <b style="color:var(--ink)">16745 亿元</b>，属放量下跌——量能放大而指数破位，说明是分歧性抛压而非缩量阴跌。</div>
+</div>
+
+<h3>市场宽度与情绪</h3>
+<div class="brgrid"><div class="brc"><div class="bl">涨停家数</div><div class="bv">47<em>家</em></div></div><div class="brc"><div class="bl">跌停家数</div><div class="bv">82<em>家</em></div></div><div class="brc"><div class="bl">首板 / 连板</div><div class="bv">38 / 9<em>只</em></div></div><div class="brc"><div class="bl">炸板率</div><div class="bv">39.7<em>%</em></div></div><div class="brc"><div class="bl">封板率</div><div class="bv">60<em>%（31股封板未遂）</em></div></div><div class="brc"><div class="bl">下跌家数</div><div class="bv">超4600<em>只</em></div></div><div class="brc"><div class="bl">主力净流出</div><div class="bv">约400<em>亿元</em></div></div><div class="brc"><div class="bl">两市成交额</div><div class="bv">16745<em>亿元</em></div></div></div>
+<div style="margin-top:12px;font-size:13px;color:var(--ink2)">
+连板梯队：<b>5板 1只</b>（青岛食品）→ <b>4板 0只</b>（断层）→ <b>3板 2只</b>（上海沪工、澳洋健康）→ <b>2板 6只</b>。连板股总数9只，较前一交易日减少1只，晋级率30%，处于“生死线”边缘；炸板率39.7%，处于退潮预警区间（40%）附近。
+</div>
+
+<h3>行业板块：49个行业仅4个上涨</h3>
+<div class="two-col">
+<div class="card" style="margin-bottom:0">
+<div style="font-size:12px;color:var(--ink3);font-weight:600;margin-bottom:6px">涨幅居前</div>
+<table>
+<tr><th>行业</th><th style="text-align:right">涨跌幅</th><th style="text-align:right">成交额</th><th>领涨</th></tr>
+<tr><td class="nm">酿酒行业</td><td class="num up">+3.60%</td><td class="num">258.3 亿</td><td class="lead">皇台酒业 +10.01%</td></tr><tr><td class="nm">医疗器械</td><td class="num up">+1.81%</td><td class="num">86.4 亿</td><td class="lead">阳普医疗 +20.03%</td></tr><tr><td class="nm">食品行业</td><td class="num up">+0.01%</td><td class="num">132.6 亿</td><td class="lead">睿智医药 +11.26%</td></tr><tr><td class="nm">生物制药</td><td class="num up">+0.01%</td><td class="num">369.2 亿</td><td class="lead">羚锐制药 +10.00%</td></tr>
+</table>
+</div>
+<div class="card" style="margin-bottom:0">
+<div style="font-size:12px;color:var(--ink3);font-weight:600;margin-bottom:6px">跌幅居前</div>
+<table>
+<tr><th>行业</th><th style="text-align:right">涨跌幅</th><th style="text-align:right">成交额</th><th>领涨</th></tr>
+<tr><td class="nm">传媒娱乐</td><td class="num dn">-5.91%</td><td class="num">125.6 亿</td><td class="lead">中原传媒 +2.33%</td></tr><tr><td class="nm">电子信息</td><td class="num dn">-5.55%</td><td class="num">1182.5 亿</td><td class="lead">ST信通 +7.99%</td></tr><tr><td class="nm">纺织机械</td><td class="num dn">-4.50%</td><td class="num">10.2 亿</td><td class="lead">物产金轮 -2.32%</td></tr><tr><td class="nm">玻璃行业</td><td class="num dn">-4.48%</td><td class="num">88.8 亿</td><td class="lead">山东药玻 +0.67%</td></tr><tr><td class="nm">次新股</td><td class="num dn">-3.90%</td><td class="num">480.9 亿</td><td class="lead">百瑞吉 +15.44%</td></tr>
+</table>
+</div>
+</div>
+
+<h3>资金流向与当日主线</h3>
+<p>主力资金全天净流出约400亿元。结构上的调仓方向极其清晰：<b>食品饮料净流入约30亿元、白酒净流入约25亿元、医药生物净流入约26.5亿元</b>；而<b>电子净流出112.4亿元、通信净流出58.8亿元、半导体净流出56.1亿元</b>，算力硬件是失血主战场（新易盛单日-14.19%、胜宏科技跌超10%、联特科技本周跌43.67%）。北向资金成交2484.50亿元、占两市总成交额15.96%，最近一周估算净流出约100亿元。此前多次奏效的“尾盘宽基ETF放量托底”在当日失效。</p>
+<p>当日呈现<b>三条并行主线</b>：<br>
+① <b>大消费防御抱团</b>——白酒四家涨停（泸州老窖、古井贡酒、迎驾贡酒、皇台酒业），青岛食品5连板打开板块空间，逻辑是“从科技向消费搬家”的配置级切换，泸州老窖获龙虎榜净买入4.61亿元、北向净买入2.81亿元；<br>
+② <b>“羊”字辈生肖玄学炒作</b>——围绕2027丁未羊年，名称含“羊/洋/阳”的个股批量异动，当日47只涨停中约10席属该阵营，是科技主线真空期游资的抱团方向；<br>
+③ <b>局部科技反攻</b>——PCB/元件方向金安国纪、满坤科技、澳弘电子涨停，但机构与北向均在净卖出，属超跌自救性抽动而非趋势回补。</p>
+
+<h2>二、三榜交集总览<span class="en">CROSS-LIST OVERVIEW</span></h2>
+<p class="lead-p">对同花顺热榜、东方财富热度榜、淘股吧热股榜各自前10名取交集：出现3次（三榜全上榜）2只，出现2次（双榜交叉）6只，合计 <b>8只</b>。下表按“上榜次数 → 当日涨幅”排序。</p>
+
+<div class="card" style="padding:8px 14px 6px">
+<table>
+<tr><th>股票</th><th>代码</th><th style="text-align:right">10-30涨幅</th><th style="text-align:right">收盘价</th><th style="text-align:right">同花顺</th><th style="text-align:right">东财</th><th style="text-align:right">淘股吧</th><th>涨停状态</th></tr>
+<tr><td class="nm"><a href="#002086">东方海洋</a></td><td class="cd">002086</td>
+    <td class="num up">+10.12%</td><td class="num">2.83</td>
+    <td class="num">1</td><td class="num">1</td><td class="num">4</td>
+    <td class="bdg">8天4板</td></tr><tr><td class="nm"><a href="#600261">阳光照明</a></td><td class="cd">600261</td>
+    <td class="num up">+9.95%</td><td class="num">4.09</td>
+    <td class="num">3</td><td class="num">2</td><td class="num">10</td>
+    <td class="bdg">2天2板</td></tr><tr><td class="nm"><a href="#002172">澳洋健康</a></td><td class="cd">002172</td>
+    <td class="num up">+10.06%</td><td class="num">5.91</td>
+    <td class="num">4</td><td class="num">4</td><td class="num">—</td>
+    <td class="bdg">3天3板</td></tr><tr><td class="nm"><a href="#001219">青岛食品</a></td><td class="cd">001219</td>
+    <td class="num up">+9.98%</td><td class="num">19.94</td>
+    <td class="num">6</td><td class="num">—</td><td class="num">2</td>
+    <td class="bdg">5天5板</td></tr><tr><td class="nm"><a href="#603278">大业股份</a></td><td class="cd">603278</td>
+    <td class="num up">+9.17%</td><td class="num">19.52</td>
+    <td class="num">5</td><td class="num">—</td><td class="num">8</td>
+    <td class="bdg">炸板未封</td></tr><tr><td class="nm"><a href="#002724">海洋王</a></td><td class="cd">002724</td>
+    <td class="num up">+8.71%</td><td class="num">14.72</td>
+    <td class="num">2</td><td class="num">5</td><td class="num">—</td>
+    <td class="bdg">8天7板</td></tr><tr><td class="nm"><a href="#000678">襄阳轴承</a></td><td class="cd">000678</td>
+    <td class="num dn">-3.57%</td><td class="num">18.08</td>
+    <td class="num">9</td><td class="num">—</td><td class="num">3</td>
+    <td class="bdg">6板后回调</td></tr><tr><td class="nm"><a href="#002242">九阳股份</a></td><td class="cd">002242</td>
+    <td class="num dn">-3.74%</td><td class="num">22.14</td>
+    <td class="num">7</td><td class="num">—</td><td class="num">1</td>
+    <td class="bdg">13天8板</td></tr>
+</table>
+</div>
+<div style="font-size:12.5px;color:var(--ink3);margin-top:-4px">“—”表示该股未进入对应榜单前10。8只交集股中，6只当日上涨（4只涨停）、2只下跌；<b>7只名称含“羊/洋/阳”</b>，生肖谐音是本轮热度最集中的共同标签。</div>
+
+<h2>三、三榜全上榜逐股拆解<span class="en">ALL-THREE LISTS</span></h2>
+<article class="stock" id="002086">
+  <div class="shd">
+    <div class="sno">01</div>
+    <div class="sname">
+      <div class="sn1">东方海洋<span class="scode">002086</span><span class="bd b3">三榜全上榜</span></div>
+      <div class="stags"><span class="tg">“羊”字辈</span><span class="tg">体外诊断</span><span class="tg">海参养殖</span><span class="tg">预制菜</span></div>
+    </div>
+    <div class="sprice">
+      <div class="sp1 up">+10.12%</div>
+      <div class="sp2">2.83 元 · <span class="hot">8天4板</span></div>
+    </div>
+  </div>
+  <div class="ranks">
+    <div class="rkit"><span class="rl">同花顺</span><span class="rk">1</span></div>
+    <div class="rkit"><span class="rl">东方财富</span><span class="rk">1</span></div>
+    <div class="rkit"><span class="rl">淘股吧</span><span class="rk">4</span></div>
+  </div>
+  <div class="dim"><div class="dimh"><span class="di">①</span>为何被关注</div><ul class="dl"><li>“羊”字辈（“洋”）总龙头，8个交易日4次涨停，同时叠加体外诊断与海参养殖两条独立叙事，是生肖炒作里唯一具备“双主线”属性的趋势抱团标的，10月30日以27.18%的换手再度封板。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">②</span>基本面原因</div><ul class="dl"><li>前三季度营业收入2.47亿元，同比+0.37%；归母净利润亏损6793.11万元，同比增亏35.55%；其中Q3单季营收8947.53万元（-0.5%），归母亏损1967.95万元。</li><li>公司自述海洋、大健康两大主营板块均处于亏损状态，整体经营承压。</li><li>资源端：拥有适合海参养殖的一类水质标准海域4.85万亩；2025年海水养殖收入5015万元，折算单亩创收约1034元（同期好当家约4573元/亩），亩产效率仅为同业四分之一。</li><li>产品端：子公司水溶性维生素测定试剂盒于2026年10月9日取得医疗器械注册证，但公司明确“产品尚未投入生产”。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">③</span>消息面原因</div><ul class="dl"><li>10月29日晚公告：持股18.26%的股东五矿金通（金通东洋私募股权基金）发函要求董事会召集临时股东会，审议第九届董事会换届选举；公司第八届董事会任期已于2026年8月18日届满，换届至今未启动。</li><li>10月30日晚异动公告：10月29日、30日连续两个交易日收盘涨幅偏离值累计超20%；自10月21日起累计上涨30.41%；公司无控股股东、无实际控制人，异常波动期间第一大股东未买卖股票。</li><li>行业侧：秋捕于11月中旬开季，产区活参行情同比走高，连续几年亏损后的投苗缩减与夏季高温减产指向供给偏紧（中证报10月27日报道）。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">④</span>风险提示</div><ul class="dl"><li>公司已在异动公告中明确提示“存在市场情绪过热及股价偏离基本面风险”。</li><li>连续亏损且同比增亏35.55%，市净率4.53倍、每股净资产0.624元，亏损状态下无市盈率可参照。</li><li>董事会换届存在人事与战略变数；2026年12月29日存在解禁窗口。</li><li>换手率27.18%、封单仅8155万元，筹码换手极快，封板质量偏弱。</li></ul></div>
+</article><article class="stock" id="600261">
+  <div class="shd">
+    <div class="sno">02</div>
+    <div class="sname">
+      <div class="sn1">阳光照明<span class="scode">600261</span><span class="bd b3">三榜全上榜</span></div>
+      <div class="stags"><span class="tg">“羊”字辈</span><span class="tg">商业航天</span><span class="tg">激光通信</span><span class="tg">LED照明</span></div>
+    </div>
+    <div class="sprice">
+      <div class="sp1 up">+9.95%</div>
+      <div class="sp2">4.09 元 · <span class="hot">2天2板</span></div>
+    </div>
+  </div>
+  <div class="ranks">
+    <div class="rkit"><span class="rl">同花顺</span><span class="rk">3</span></div>
+    <div class="rkit"><span class="rl">东方财富</span><span class="rk">2</span></div>
+    <div class="rkit"><span class="rl">淘股吧</span><span class="rk">10</span></div>
+  </div>
+  <div class="dim"><div class="dimh"><span class="di">①</span>为何被关注</div><ul class="dl"><li>“羊”字辈（“阳”）+商业航天双标签，10月30日以一字板封死全天（开高低收均为4.09元，振幅0.00%），封单6.10亿元而换手仅2.51%，是当日封板结构最“硬”的标的。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">②</span>基本面原因</div><ul class="dl"><li>前三季度营收19.65亿元（-1.05%），归母净利润2952.24万元（-77.07%），扣非净利润3350.43万元（-29.49%）。</li><li>Q3单季营收6.61亿元（+0.20%），归母净利润亏损1987.21万元（由盈转亏，同比-161.71%）；但单季扣非为+415.96万元（同比+161.83%），亏损主要来自非经常性损益（公允价值变动收益-1547.45万元，上年同期为+3061.17万元）。</li><li>Q3单季毛利率31.71%，同比下降3.12个百分点；前三季经营现金流1412.76万元，同比-85.98%。</li><li>海外收入占比超82%，其中北美占32.06%，对关税与汇率高度敏感；泰国基地拟增资3.24亿元。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">③</span>消息面原因</div><ul class="dl"><li>涨停直接由头：出资3000万元参与蓝星光域融资，取得1.0989%股权，标的主营星载及机载激光通信终端。</li><li>10月31日晚异动公告：10月28日至30日三个交易日收盘涨幅偏离值累计超20%，经自查并向控股股东函证，不存在应披露而未披露的重大事项（含重组、收购、股份发行、引入战投等）。</li><li>行业侧：10月29日商业航天概念集体涨停（航天晨光、盛洋科技、上海沪工、中国卫星等11股），催化为上海发布卫星互联网产业创新发展行动方案（2027-2030年）、目标2030年核心产业规模破800亿元，以及FCC批准SpaceX部署1.5万颗非地球同步轨道卫星。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">④</span>风险提示</div><ul class="dl"><li>3000万元换1.0989%股权，即便标的估值翻十倍，落到报表上的投资收益也仅数千万元级别，与两个涨停带来的市值增量不匹配。</li><li>公司自查结论为“不存在应披露而未披露的重大事项”，即题材缺乏公司层面实质支撑。</li><li>Q3主业已由盈转亏，前三季加权ROE仅0.85%；照明设备行业2026三季报ROE均值为-0.26%，处于存量出清阶段。</li><li>封单6.10亿元但换手仅2.51%，属“小成交量、大封单”结构，封单一旦撤离承接薄弱。</li></ul></div>
+</article>
+
+<h2>四、双榜交叉逐股拆解<span class="en">TWO-LIST CROSSOVER</span></h2>
+<article class="stock" id="002172">
+  <div class="shd">
+    <div class="sno">03</div>
+    <div class="sname">
+      <div class="sn1">澳洋健康<span class="scode">002172</span><span class="bd b2">双榜交叉</span></div>
+      <div class="stags"><span class="tg">“羊”字辈</span><span class="tg">脑机接口</span><span class="tg">医疗服务</span></div>
+    </div>
+    <div class="sprice">
+      <div class="sp1 up">+10.06%</div>
+      <div class="sp2">5.91 元 · <span class="hot">3天3板</span></div>
+    </div>
+  </div>
+  <div class="ranks">
+    <div class="rkit"><span class="rl">同花顺</span><span class="rk">4</span></div>
+    <div class="rkit"><span class="rl">东方财富</span><span class="rk">4</span></div>
+    <div class="rkit"><span class="rl">淘股吧</span><span class="nr">—</span></div>
+  </div>
+  <div class="dim"><div class="dimh"><span class="di">①</span>为何被关注</div><ul class="dl"><li>“羊”字辈（“洋”）梯队第二高度，3连板，叠加脑机接口这一独立新题材，10月30日医疗服务板块获资金净流入16.4亿元，是羊字辈中唯一有“新故事”的中位标的。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">②</span>基本面原因</div><ul class="dl"><li>Q3单季营业收入4.26亿元，归母净利润1332.26万元（同比+55.68%），扣非净利润837.85万元，销售毛利率12.41%。</li><li>Q3单季净利润现金含量-240.56%，每股经营性现金流-0.04元，盈利的现金转化偏弱。</li><li>业务结构以医疗服务、医药流通与化纤为主，毛利率处于10%~13%的低位区间，属薄利经营。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">③</span>消息面原因</div><ul class="dl"><li>10月23日披露2026年三季报，Q3单季归母净利润同比增长55.68%。</li><li>同花顺涨停原因归因为“脑机接口+医疗服务+国资控股+‘羊’字辈”；10月30日医疗服务板块资金净流入16.4亿元，医药生物整体净流入26.5亿元。</li><li>市场侧：财联社10月30日盘后将其列为“医疗板块3连板”焦点股。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">④</span>风险提示</div><ul class="dl"><li>换手率29.99%，为当日连板股中最高之一，首封时间偏晚，分歧极大。</li><li>龙虎榜显示营业部席位净卖出，游资主导特征明显。</li><li>净利润现金含量为-240.56%，账面盈利与现金流背离。</li><li>脑机接口目前仅为市场标签，公司未披露相关业务收入或订单落地情况。</li></ul></div>
+</article><article class="stock" id="001219">
+  <div class="shd">
+    <div class="sno">04</div>
+    <div class="sname">
+      <div class="sn1">青岛食品<span class="scode">001219</span><span class="bd b2">双榜交叉</span></div>
+      <div class="stags"><span class="tg">青啤入主</span><span class="tg">大消费</span><span class="tg">休闲食品</span></div>
+    </div>
+    <div class="sprice">
+      <div class="sp1 up">+9.98%</div>
+      <div class="sp2">19.94 元 · <span class="hot">5天5板</span></div>
+    </div>
+  </div>
+  <div class="ranks">
+    <div class="rkit"><span class="rl">同花顺</span><span class="rk">6</span></div>
+    <div class="rkit"><span class="rl">东方财富</span><span class="nr">—</span></div>
+    <div class="rkit"><span class="rl">淘股吧</span><span class="rk">2</span></div>
+  </div>
+  <div class="dim"><div class="dimh"><span class="di">①</span>为何被关注</div><ul class="dl"><li>全市场唯一5连板高标，青啤集团拟入主带来的控制权变更预期叠加三季报增长，是大消费方向打开板块空间的“情绪总闸”，10月30日盘中炸板后回封，开板3次。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">②</span>基本面原因</div><ul class="dl"><li>前三季度营业收入4.49亿元（+6.00%），归母净利润1.02亿元（+10.38%），扣非净利润9762.26万元（+11.44%）。</li><li>Q3单季营收1.57亿元（+7.15%），归母净利润3678.47万元（+31.17%），单季利润增速明显提速。</li><li>主业为“青食”牌钙奶饼干、休闲饼干与“海友”牌花生酱，2021年10月上市，最新总市值38.88亿元。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">③</span>消息面原因</div><ul class="dl"><li>10月27日晚异动公告：控股股东青岛华通国有资本投资运营集团拟将所持5701.76万股（占总股本29.24%）以非公开协议方式转让至青岛啤酒集团；交易完成后控股股东变更为青啤集团，实际控制人变更为青岛市国资委。</li><li>10月29日再发异动暨风险提示公告：股份转让价格等核心条款仍在协商，尚未签署正式协议，尚需青岛市国资委报批、深交所合规性审核及过户登记，能否实施存在不确定性。</li><li>本周（10月26日至30日）5个交易日连续涨停，周累计涨幅61.07%。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">④</span>风险提示</div><ul class="dl"><li>交易双方（华通集团、青啤集团）均由青岛市国资委100%持股，本质是同一实控人体系内的股权划转，产业整合的实质增量需时间验证。</li><li>已两度发布异动/风险提示公告，明确“存在较大不确定性”。</li><li>5板、换手24.90%、开板3次、封单仅5707.5万元，高位分歧显著；4板梯队空缺，5进6缺乏中位接力支撑。</li><li>38.88亿元市值对应1.02亿元前三季利润，估值已计入较多重组预期。</li></ul></div>
+</article><article class="stock" id="603278">
+  <div class="shd">
+    <div class="sno">05</div>
+    <div class="sname">
+      <div class="sn1">大业股份<span class="scode">603278</span><span class="bd b2">双榜交叉</span></div>
+      <div class="stags"><span class="tg">人形机器人腱绳</span><span class="tg">胎圈钢丝</span><span class="tg">物理AI</span></div>
+    </div>
+    <div class="sprice">
+      <div class="sp1 up">+9.17%</div>
+      <div class="sp2">19.52 元 · <span class="cool">炸板未封</span></div>
+    </div>
+  </div>
+  <div class="ranks">
+    <div class="rkit"><span class="rl">同花顺</span><span class="rk">5</span></div>
+    <div class="rkit"><span class="rl">东方财富</span><span class="nr">—</span></div>
+    <div class="rkit"><span class="rl">淘股吧</span><span class="rk">8</span></div>
+  </div>
+  <div class="dim"><div class="dimh"><span class="di">①</span>为何被关注</div><ul class="dl"><li>10月最“疯”的股票之一：10月16日至30日11个交易日从9.01元涨至19.52元，累计+116.65%，市值翻倍至66.71亿元。驱动来自“人形机器人腱绳”传闻，10月30日盘中冲高后炸板，收涨9.17%。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">②</span>基本面原因</div><ul class="dl"><li>前三季度营业收入37.53亿元（-0.66%），归母净利润亏损1.16亿元（上年同期盈利2000余万元）；Q3单季营收12.9亿元（+2.65%），归母亏损5220万元，扣非亏损5966万元。</li><li>上半年归母净利润-6399.14万元，同比-250.93%。</li><li>前三季度财务费用1.48亿元，同比+86.58%；经营现金流约1亿元，同比降六成以上。</li><li>主业为胎圈钢丝、钢帘线、胶管钢丝，2025年胎圈钢丝国内市占率36.23%，客户覆盖米其林、普利司通、固特异、中策、玲珑等；三项主业合计占营收97.56%。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">③</span>消息面原因</div><ul class="dl"><li>2024年11月出资300万元设立全资子公司山东大业机器人科技；2025年4月与北京邮电大学签署“人形机器人腱绳材料与感知功能”开发服务协议。</li><li>10月22日上交所下发监管工作函；公司于10月22日、23日、24日连发三封股票交易异常波动公告与风险提示，措辞逐次加重（“存在短期大幅回调风险”“市场情绪可能过热，存在非理性炒作”）。</li><li>10月30日下午披露三季报，亏损扩大，与股价形成鲜明反差。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">④</span>风险提示</div><ul class="dl"><li>公司在公告中明确：腱绳产品“尚处于研发送样验证阶段，尚未实现量产，未产生实质性收益”，客户验证周期长，存在验证失败或终止测试风险。</li><li>滚动市盈率为负，无法与通用设备行业均值比较；公司自身提示二级市场交易风险。</li><li>10月30日炸板未封，换手率放大至30%以上，游资特征浓。</li><li>摩洛哥基地（约2亿美元、目标年产10万吨钢帘线）一期年底才完成建设送样，2027年中期批量供货，短期不贡献利润。</li></ul></div>
+</article><article class="stock" id="002724">
+  <div class="shd">
+    <div class="sno">06</div>
+    <div class="sname">
+      <div class="sn1">海洋王<span class="scode">002724</span><span class="bd b2">双榜交叉</span></div>
+      <div class="stags"><span class="tg">“羊”字辈</span><span class="tg">智慧灯杆</span><span class="tg">军工照明</span></div>
+    </div>
+    <div class="sprice">
+      <div class="sp1 up">+8.71%</div>
+      <div class="sp2">14.72 元 · <span class="hot">8天7板</span></div>
+    </div>
+  </div>
+  <div class="ranks">
+    <div class="rkit"><span class="rl">同花顺</span><span class="rk">2</span></div>
+    <div class="rkit"><span class="rl">东方财富</span><span class="rk">5</span></div>
+    <div class="rkit"><span class="rl">淘股吧</span><span class="nr">—</span></div>
+  </div>
+  <div class="dim"><div class="dimh"><span class="di">①</span>为何被关注</div><ul class="dl"><li>“羊”字辈（“洋”）前期龙头，一度走出8天7板，10月单月涨幅93.98%；10月30日在超4600股下跌的市况下逆市大涨8.71%并创历史新高，是羊字辈中唯一“越涨越强”的标的。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">②</span>基本面原因</div><ul class="dl"><li>前三季度营业收入10.77亿元（-3.93%），归母净利润6263.81万元（+14.32%），但扣非净利润为-1630.31万元（同比-189.97%）——账面盈利完全依赖非经常性损益。</li><li>10月15日收盘不足7元，至10月30日收盘14.72元，10个交易日股价翻倍。</li><li>主业为专业工作照明（特殊环境照明、应急救援照明、智能照明EPC），公司自述“AI+智慧照明相关业务收入规模有限，对整体业绩尚不构成重大影响”。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">③</span>消息面原因</div><ul class="dl"><li>11月1日公告：10月19日至10月30日连续10个交易日收盘涨幅偏离值累计达100.02%，构成“股票交易严重异常波动”；近期已3次触发异常波动情形。</li><li>同一公告澄清：公司不属于“核电”概念（耐辐照灯具用于核岛但非主生产设备），也与“深海科技”概念无关，目前无具备万米深海作业的应用产品。</li><li>近5个交易日换手率分别为25.66%、28.85%、24.15%、20.99%、22.85%，较过往明显放大。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">④</span>风险提示</div><ul class="dl"><li>公司明确提示“股价已严重偏离基本面，存在市场情绪过热、非理性炒作风险，后续存在大幅波动可能”。</li><li>扣非净利润为负（-1630.31万元），归母盈利靠非经常性损益支撑，业绩与股价严重背离。</li><li>10月30日未能封板（+8.71%），说明8天7板后的接力动能已衰减。</li><li>照明设备板块当日整体走弱（欧普照明-0.68%、佛山照明-0.21%、立达信-4.00%、得邦照明-9.61%），缺乏同向资金验证。</li></ul></div>
+</article><article class="stock" id="000678">
+  <div class="shd">
+    <div class="sno">07</div>
+    <div class="sname">
+      <div class="sn1">襄阳轴承<span class="scode">000678</span><span class="bd b2">双榜交叉</span></div>
+      <div class="stags"><span class="tg">“羊”字辈</span><span class="tg">减速器</span><span class="tg">机器人零部件</span></div>
+    </div>
+    <div class="sprice">
+      <div class="sp1 dn">-3.57%</div>
+      <div class="sp2">18.08 元 · <span class="cool">6板后回调</span></div>
+    </div>
+  </div>
+  <div class="ranks">
+    <div class="rkit"><span class="rl">同花顺</span><span class="rk">9</span></div>
+    <div class="rkit"><span class="rl">东方财富</span><span class="nr">—</span></div>
+    <div class="rkit"><span class="rl">淘股吧</span><span class="rk">3</span></div>
+  </div>
+  <div class="dim"><div class="dimh"><span class="di">①</span>为何被关注</div><ul class="dl"><li>“羊”字辈（“阳”）+减速器/机器人零部件双标签，10月内最高晋级6连板、月涨幅超45%；10月30日盘中最高触及19.86元（较10月15日收盘9.94元接近翻倍）后回落，收跌3.57%，属高位断板后的第一次负反馈。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">②</span>基本面原因</div><ul class="dl"><li>2026年三季报归母净利润-2617万元（同比减亏约2%），仍处亏损状态。</li><li>Q3单季营业收入4.26亿元，归母净利润-556.17万元；Q2单季营收3.80亿元，归母净利润-161.41万元，单季亏损环比扩大。</li><li>Q3单季毛利率11.29%（毛利4807万元/营收4.26亿元），研发费用2428万元，管理费用2238万元，费用刚性明显。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">③</span>消息面原因</div><ul class="dl"><li>10月29日披露三季报，同时公布截至9月30日股东户数75597户，较上期增加7657户（+11.27%），筹码分散化。</li><li>10月30日因“日换手率达到20%的前5只证券”登上龙虎榜。</li><li>10月31日发布《长江证券承销保荐有限公司关于襄阳汽车轴承股份有限公司收购报告书之2026年第三季度持续督导意见》，收购事项仍在督导期；公司将于11月9日召开2026年第四次临时股东大会。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">④</span>风险提示</div><ul class="dl"><li>公司层面未检索到业绩预增、重大订单或涨价类公告，本轮上涨主要由“羊”字辈与机器人零部件题材驱动，基本面缺乏支撑。</li><li>连续亏损，Q3单季亏损环比扩大，无市盈率可参照。</li><li>6连板后首次收阴，换手率超20%触发龙虎榜，高位筹码松动。</li><li>股东户数一个月增加11.27%，散户化明显，通常是行情后段的特征。</li></ul></div>
+</article><article class="stock" id="002242">
+  <div class="shd">
+    <div class="sno">08</div>
+    <div class="sname">
+      <div class="sn1">九阳股份<span class="scode">002242</span><span class="bd b2">双榜交叉</span></div>
+      <div class="stags"><span class="tg">“羊”字辈</span><span class="tg">小家电</span><span class="tg">类脑AI</span></div>
+    </div>
+    <div class="sprice">
+      <div class="sp1 dn">-3.74%</div>
+      <div class="sp2">22.14 元 · <span class="hot">13天8板</span></div>
+    </div>
+  </div>
+  <div class="ranks">
+    <div class="rkit"><span class="rl">同花顺</span><span class="rk">7</span></div>
+    <div class="rkit"><span class="rl">东方财富</span><span class="nr">—</span></div>
+    <div class="rkit"><span class="rl">淘股吧</span><span class="rk">1</span></div>
+  </div>
+  <div class="dim"><div class="dimh"><span class="di">①</span>为何被关注</div><ul class="dl"><li>“羊”字辈（“阳”）中市值最大、涨幅最猛的一员：9月11日至10月30日大涨160%，9月28日至10月12日连续6个涨停，10月单月涨84%。10月30日盘中最高23.47元创52周新高后回落，收跌3.74%，成交23.29亿元、换手13.65%。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">②</span>基本面原因</div><ul class="dl"><li>总市值168.93亿元，PE（TTM）约221倍，每股收益（TTM）0.10元，估值已完全脱离小家电主业。</li><li>8月18日以来累计上涨138.32%，年初至今上涨112.07%。</li><li>主业为豆浆机、电饭煲、空气炸锅等小家电与厨房器具，属耐用消费品，行业增速平稳。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">③</span>消息面原因</div><ul class="dl"><li>10月26日控股股东上海力鸿减持1447万股，占公司总股本1.90%，按当日成交价测算套现约3亿元。</li><li>市场将其热炒与人形机器人、类脑AI概念相关，但公司层面未见对应的订单或收入披露。</li><li>10月30日盘中最高23.47元创52周新高，随后回落收跌3.74%，为10月内少见的放量长上影。</li></ul></div>
+  <div class="dim"><div class="dimh"><span class="di">④</span>风险提示</div><ul class="dl"><li>控股股东在股价高位减持1.90%、套现约3亿元，是最直接的利益信号。</li><li>PE（TTM）221倍，与个位数增长的厨房小电主业严重不匹配。</li><li>高位放量收阴（成交23.29亿元、换手13.65%），上影线明显，属典型的高位派发形态。</li><li>题材（机器人/类脑AI）与主业无关，缺乏业绩兑现路径。</li></ul></div>
+</article>
+
+<h2>五、综合判断<span class="en">SYNTHESIS</span></h2>
+<div class="card">
+<ul class="judge">
+<li><b>主线持续性：大消费有底、羊字辈无底。</b>白酒与食品的上涨有真实资金承接（白酒净流入25亿元、泸州老窖获机构与北向合力买入），属于配置级切换，持续性取决于三季报后的估值修复能否延续；而“羊”字辈完全是叙事驱动——被爆炒标的中多数主营与生肖毫无关联，东方海洋前三季亏6793万元、大业股份亏1.16亿元、海洋王扣非为负、襄阳轴承亏2617万元，股价与基本面已彻底脱钩。</li>
+<li><b>情绪周期：修复期转弱、风险扩散，但不是冰点。</b>涨停47家、跌停82家，跌停数接近涨停数的1.7倍；连板仅9只、晋级率30%、炸板率39.7%；5板孤标与4板断层并存。这一结构说明资金只敢抱团极少数高辨识度标的，中位接力几乎真空——是典型的“退潮初期”，而非“冰点反转”。</li>
+<li><b>“羊”字辈已进入高低切换阶段。</b>当日高位股开始负反馈：百洋股份、大洋电机跌停，光洋股份跌逾8%，九阳股份-3.74%、襄阳轴承-3.57%；与此同时低位标的密集补涨（沈阳机床、泉阳泉、阳普医疗、鲁阳节能、扬子新材、红太阳首板）。高标断板、低位扩散，历来是题材行情后半段的标配特征。</li>
+<li><b>追高风险处于本轮最高位。</b>8只交集股中6只10月涨幅超40%（大业股份+116.65%、海洋王+93.98%、九阳股份+84%、青岛食品+61.07%、襄阳轴承超45%），且普遍伴随20%~30%的日换手。参考历年生肖炒作（兔宝宝、圣龙股份、川发龙蟒），退潮后平均最大回撤超60%，连板高度越高、踩踏越剧烈。</li>
+<li><b>下一交易日（11月2日 周一）的三个观察点：</b>① 跌停家数能否从82家显著收敛——这是风险是否继续扩散的第一指标；② 5板青岛食品能否承接、3板能否向4板延伸——决定连板空间是否重新打开；③ 电子/PCB能否出现全天连续的资金回流——决定科技主线是否具备修复基础。三者若同时恶化，则需按“退潮扩散”情景应对。</li>
+</ul>
+</div>
+
+<h2>六、风险提示<span class="en">RISK DISCLOSURE</span></h2>
+<div class="warn">
+<ol>
+<li><b>生肖炒作退潮风险（最高优先级）。</b>“羊”字辈行情的本质是弱市中的筹码博弈，叙事门槛极低、无业绩支撑。历史经验显示此类行情退潮后平均最大回撤超60%，且往往在“龙头断板”后1~2个交易日内集体熄火。当前已出现高位股跌停、低位股补涨的分化信号。</li>
+<li><b>业绩与股价严重背离。</b>东方海洋前三季亏损6793.11万元（增亏35.55%）、大业股份亏损1.16亿元、阳光照明Q3单季亏损1987.21万元、海洋王扣非净利润-1630.31万元、襄阳轴承亏损2617万元。多只标的已无市盈率可参照（滚动PE为负），估值锚只剩市净率与情绪。</li>
+<li><b>监管与信息披露风险。</b>大业股份10月22日收到上交所监管工作函，22日至24日连发三封异动公告；东方海洋、青岛食品、阳光照明、海洋王均已在近一周内发布异动或风险提示公告，明确提示“市场情绪过热”“股价偏离基本面”。后续不排除进一步的重点监控与问询。</li>
+<li><b>高换手筹码风险。</b>东方海洋换手27.18%、澳洋健康29.99%、大业股份超30%、青岛食品24.90%、海洋王近5日22%~29%。如此高的日换手意味着持仓结构以短线资金为主，任何风吹草动都会引发集中抛售，封单（东方海洋仅8155万元、青岛食品5707.5万元）不足以提供有效支撑。</li>
+<li><b>大股东减持与解禁风险。</b>九阳股份控股股东上海力鸿于10月26日减持1447万股（占总股本1.90%），按当日成交价测算套现约3亿元；东方海洋2026年12月29日存在解禁窗口。</li>
+<li><b>公司治理与事件不确定性。</b>东方海洋第八届董事会任期已于2026年8月18日届满、换届尚未启动，持股18.26%的股东已发函要求召开临时股东会；青岛食品控制权转让尚需国资委报批、深交所合规审核与过户登记，能否落地存在不确定性；襄阳轴承收购事项仍处持续督导期。</li>
+<li><b>大盘系统性风险。</b>创业板指10月跌23.02%、较6月高点回撤超44%，上证指数已跌破3600点。若指数继续破位，题材股的估值与情绪将同步坍塌，个股逻辑无法对抗系统性下跌。</li>
+<li><b>数据口径提示。</b>本报告榜单为2026-11-01（周日）抓取，反映的是2026-10-30收盘后的静态热度，不含周一开盘后的资金变化；热度排名高不等于次日上涨，历史热度与次日收益的相关性并不稳定。</li>
+</ol>
+</div>
+
+<div class="disc">
+<b>免责声明：</b>本报告数据来源于同花顺、东方财富、淘股吧、腾讯财经、新浪财经等公开渠道，经程序化抓取与人工整理，可能存在延迟、缺失或口径差异。文中涉及的公司公告、财务数据均引自公开披露信息，新闻事件已尽力核实来源与时间点，但不保证绝对完整与准确。本报告仅为市场现象的客观记录与研究分析，<b>不构成任何投资建议、不构成对任何证券的推荐或评级</b>。股市有风险，投资需谨慎，据此操作风险自担。
+<div style="margin-top:10px;color:#a6aeba">报告生成：2026-11-01　|　数据基准日：2026-10-30（星期五）　|　版本：周末盘前版</div>
+</div>
+
+<div class="foot">每日热门股日报 · 三榜交集 · <a href="./index.html" style="color:var(--navy);font-weight:600">返回历史归档 →</a></div>
+
+</div>
+</body>
+</html>
