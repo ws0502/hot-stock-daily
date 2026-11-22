@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="baseline-date" content="2026-11-04">
+<meta name="intersection" content="8">
+<title>每日热门股日报 · 2026-11-04｜三榜交集 8 只</title>
+<style>
+:root{--ink:#171b22;--ink2:#4b5563;--ink3:#8a94a3;--line:#e4e8ee;--bg:#f4f6f9;--navy:#0f1a2b;--gold:#c9a227;--up:#c62828;--dn:#1b7f3b;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.78;font-size:15px;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px;}
+header{background:linear-gradient(135deg,#0f1a2b 0%,#1b2b45 55%,#25354f 100%);color:#fff;padding:44px 0 38px;position:relative;overflow:hidden;}
+header::after{content:"";position:absolute;right:-80px;top:-100px;width:330px;height:330px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,39,.2),transparent 68%);}
+.kicker{font-size:11px;letter-spacing:3px;color:var(--gold);font-weight:600;margin-bottom:10px;}
+h1{font-size:27px;font-weight:700;letter-spacing:.4px;line-height:1.35;}
+.hmeta{margin-top:13px;font-size:13.5px;color:#b6c1d1;}
+.hmeta b{color:#fff;}
+.hmeta span{margin-right:16px;}
+.hlinks{margin-top:18px;display:flex;gap:9px;flex-wrap:wrap;}
+.hbtn{font-size:12.5px;font-weight:600;padding:6px 14px;border-radius:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff;}
+.hbtn:hover{background:rgba(255,255,255,.18);}
+main{padding:28px 0 90px;}
+section{margin-bottom:34px;}
+h2{font-size:18px;font-weight:700;letter-spacing:.2px;margin-bottom:6px;display:flex;align-items:center;gap:9px;}
+h2::before{content:"";width:4px;height:17px;background:var(--gold);border-radius:2px;}
+.lead{font-size:13px;color:var(--ink3);margin-bottom:15px;}
+.grid4{display:grid;grid-template-columns:repeat(5,1fr);gap:11px;}
+.ix{background:#fff;border:1px solid var(--line);border-radius:11px;padding:15px 17px;}
+.ix .n{font-size:12px;color:var(--ink3);}
+.ix .v{font-size:22px;font-weight:700;letter-spacing:-.3px;margin-top:2px;}
+.ix .c{font-size:13px;font-weight:600;margin-top:1px;}
+.up{color:var(--up);} .dn{color:var(--dn);} .flat{color:var(--ink3);}
+.panel{background:#fff;border:1px solid var(--line);border-radius:13px;padding:20px 22px;}
+.panel p{font-size:14.5px;color:#2c3440;margin-bottom:10px;}
+.panel p:last-child{margin-bottom:0;}
+.panel b{color:var(--ink);}
+.flow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;}
+.fbox{border:1px solid var(--line);border-radius:10px;padding:13px 15px;background:#fafbfd;}
+.fbox .ft{font-size:12px;font-weight:700;letter-spacing:.5px;margin-bottom:6px;}
+.fbox.wk .ft{color:var(--dn);} .fbox.st .ft{color:var(--up);}
+.fbox .fl{font-size:13.5px;color:#39424f;line-height:1.9;}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:13.5px;}
+th{background:#f7f9fc;color:var(--ink2);font-weight:600;font-size:12px;letter-spacing:.4px;padding:11px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap;}
+td{padding:11px 8px;border-bottom:1px solid #eef1f6;}
+tr:last-child td{border-bottom:none;}
+tbody tr:hover{background:#fbfcfe;}
+td.c,th.c{text-align:center;}
+.cd2{display:block;font-size:11px;color:#b3bcc9;font-family:ui-monospace,Menlo,monospace;}
+.sc{background:#fff;border:1px solid var(--line);border-radius:13px;padding:19px 21px;margin-bottom:13px;}
+.sch{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;}
+.scl{display:flex;gap:13px;align-items:flex-start;}
+.num{font-size:12px;font-weight:700;color:var(--gold);background:#fdf8e6;border:1px solid #f2e6bf;border-radius:6px;padding:2px 7px;margin-top:3px;}
+.nm{font-size:17.5px;font-weight:700;letter-spacing:.2px;}
+.cd{font-size:12px;color:#b3bcc9;font-weight:400;font-family:ui-monospace,Menlo,monospace;margin-left:4px;}
+.cc{font-size:12.5px;color:var(--ink3);margin-top:2px;}
+.scr{text-align:right;}
+.px{font-size:19px;font-weight:700;letter-spacing:-.2px;}
+.bd{font-size:11.5px;color:var(--ink3);margin-top:2px;}
+.rks{display:flex;gap:7px;flex-wrap:wrap;margin:13px 0 15px;padding-bottom:13px;border-bottom:1px dashed var(--line);}
+.rk{font-size:11.5px;color:var(--ink2);background:#f2f5fa;border:1px solid #e5ebf3;border-radius:5px;padding:3px 8px;}
+.rk b{color:var(--navy);}
+.rk.off{color:#c2c9d3;}
+.rk.meta{background:#fafbfd;color:#7d8797;}
+.dims{display:grid;grid-template-columns:1fr 1fr;gap:13px 20px;}
+.dim .dl{font-size:11.5px;font-weight:700;color:var(--navy);letter-spacing:.4px;margin-bottom:4px;}
+.dim p{font-size:13.5px;color:#39424f;line-height:1.85;}
+.dim.risk .dl{color:var(--up);}
+.dim.risk p{color:#4a3a3a;}
+.verdict{background:linear-gradient(135deg,#0f1a2b,#22354f);color:#e8edf4;border-radius:13px;padding:22px 24px;}
+.verdict h3{font-size:15px;color:var(--gold);letter-spacing:1px;margin-bottom:10px;font-weight:700;}
+.verdict p{font-size:14px;line-height:1.95;margin-bottom:9px;}
+.verdict p:last-child{margin-bottom:0;}
+.verdict b{color:#fff;}
+.risk-list{background:#fff;border:1px solid #f0dcdc;border-left:3px solid var(--up);border-radius:10px;padding:18px 22px;}
+.risk-list li{font-size:13.5px;color:#4a3a3a;margin-left:18px;margin-bottom:7px;}
+.risk-list li:last-child{margin-bottom:0;}
+.disc{font-size:12px;color:var(--ink3);line-height:1.9;border-top:1px solid var(--line);padding-top:16px;}
+.floatbar{position:fixed;left:18px;bottom:18px;z-index:99;}
+.floatbar a{display:inline-block;background:var(--navy);color:#fff;font-size:12.5px;font-weight:600;padding:9px 16px;border-radius:8px;box-shadow:0 6px 20px rgba(15,26,43,.28);}
+.floatbar a:hover{background:#1b2b45;}
+footer{text-align:center;font-size:11.5px;color:#a8b1be;padding:0 20px 40px;}
+@media(max-width:760px){.grid4{grid-template-columns:repeat(2,1fr);}.dims{grid-template-columns:1fr;}.flow{grid-template-columns:1fr;}h1{font-size:21px;}.px{font-size:16px;}table{font-size:12px;}th,td{padding:9px 5px;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="kicker">DAILY HOT STOCK · 三榜交集</div>
+    <h1>每日热门股日报 · 2026-11-04</h1>
+    <div class="hmeta"><span>星期三</span><span>数据基准日 <b>2026-11-04（收盘）</b></span><span>三榜交集 <b>8 只</b></span></div>
+    <div class="hlinks"><a class="hbtn" href="./index.html">← 历史归档</a><a class="hbtn" href="./latest.html">最新一期</a></div>
+  </div>
+</header>
+<main class="wrap">
+
+  <section>
+    <h2>大盘背景</h2>
+    <div class="lead">三大指数全线大涨，创业板单日涨超 6%、科创50 近 10%，半导体链与 AI 算力硬件集体爆发，属于典型的「科技成长强反弹」格局。</div>
+    <div class="grid4">
+      <div class="ix"><div class="n">上证指数</div><div class="v up">3686.17</div><div class="c up">+2.16%</div></div>
+      <div class="ix"><div class="n">深证成指</div><div class="v up">11335.69</div><div class="c up">+4.22%</div></div>
+      <div class="ix"><div class="n">创业板指</div><div class="v up">2544.73</div><div class="c up">+6.40%</div></div>
+      <div class="ix"><div class="n">科创50</div><div class="v up">1265.47</div><div class="c up">+9.92%</div></div>
+      <div class="ix"><div class="n">沪深300</div><div class="v up">4101.34</div><div class="c up">+2.31%</div></div>
+    </div>
+    <div class="panel" style="margin-top:12px">
+      <p><b>成交与情绪：</b>沪市成交 <b>9532.65 亿元</b>、深市成交 <b>10844.29 亿元</b>，两市合计约 <b>2.04 万亿元</b>，量能较上日明显放大。全市场 <b>4667 只上涨 / 779 只下跌</b>，涨停 <b>118 只</b>、跌停 <b>10 只</b>，<b>炸板率 21.85%</b>，但「昨日涨停表现」仅 <b>-0.14%</b> —— 说明指数级别普涨的钱主要流向了新方向，而非接力老题材。</p>
+      <p><b>当日主线：</b>申万口径看，<b>次新股（+6.03%）、陶瓷（+2.57%）、电子器件（+1.51%）、飞机制造（+0.91%）、有色（+0.87%）</b>领涨，仅酿酒（-1.51%）和金融（-0.04%）小幅走弱。涨停结构上，<b>芯片/半导体设备（约 20+ 只）为绝对主线</b>，黄金贵金属（约 13 只）、PCB/覆铜板/光模块（约 12 只）构成第二、第三梯队。核心催化是 AI 算力带动的上游材料涨价（磷化铟、覆铜板）与三季报业绩兑现。</p>
+      <div class="flow">
+        <div class="fbox st"><div class="ft">资金流入方向</div><div class="fl">半导体设备与材料（新洁能、拓荆科技、中科飞测、高凯技术）<br>贵金属（盛达资源、赤峰黄金、兴业银锡）<br>PCB / 覆铜板 / 光模块（大族激光、金安国纪）</div></div>
+        <div class="fbox wk"><div class="ft">资金流出方向</div><div class="fl">高位连板股集体崩塌（七匹狼天地板、东方海洋断板）<br>注册制次新首日暴涨股（C皇冠新材 -20.86%）<br>酿酒、金融等低弹性防御品种</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>交集股总览</h2>
+    <div class="lead">同花顺热榜、东方财富热度榜、淘股吧热股榜各取前 10（并集 19 只），出现 ≥2 次的个股共 <b>8</b> 只，其中 <b>3</b> 只三榜全上榜。</div>
+    <table>
+      <thead><tr><th class="c">#</th><th>股票</th><th class="c">上榜</th><th class="c">同花顺</th><th class="c">东财</th><th class="c">淘股吧</th><th class="c">收盘价</th><th class="c">涨跌幅</th><th class="c">形态</th></tr></thead>
+      <tbody><tr>
+      <td class="c">1</td>
+      <td><b>东方海洋</b><span class="cd2">002086</span></td>
+      <td class="c">3 榜</td>
+      <td class="c">#1</td><td class="c">#8</td><td class="c">#5</td>
+      <td class="c">3.28</td>
+      <td class="c dn"><b>-4.09%</b></td>
+      <td class="c">深海养殖 / 预制菜 · 情绪高标断板</td></tr><tr>
+      <td class="c">2</td>
+      <td><b>七匹狼</b><span class="cd2">002029</span></td>
+      <td class="c">3 榜</td>
+      <td class="c">#3</td><td class="c">#6</td><td class="c">#4</td>
+      <td class="c">9.30</td>
+      <td class="c dn"><b>-9.97%</b></td>
+      <td class="c">男装 / 跨境电商 · 天地板</td></tr><tr>
+      <td class="c">3</td>
+      <td><b>C皇冠新材</b><span class="cd2">001381</span></td>
+      <td class="c">3 榜</td>
+      <td class="c">#2</td><td class="c">#4</td><td class="c">#1</td>
+      <td class="c">66.91</td>
+      <td class="c dn"><b>-20.86%</b></td>
+      <td class="c">新股次日 · 注册制无涨跌幅</td></tr><tr>
+      <td class="c">4</td>
+      <td><b>冰山冷热</b><span class="cd2">000530</span></td>
+      <td class="c">2 榜</td>
+      <td class="c">#7</td><td class="c">#5</td><td class="c">—</td>
+      <td class="c">9.46</td>
+      <td class="c up"><b>+10.00%</b></td>
+      <td class="c">冰雪产业 · 5天3板</td></tr><tr>
+      <td class="c">5</td>
+      <td><b>云南锗业</b><span class="cd2">002428</span></td>
+      <td class="c">2 榜</td>
+      <td class="c">#5</td><td class="c">#3</td><td class="c">—</td>
+      <td class="c">75.38</td>
+      <td class="c up"><b>+10.00%</b></td>
+      <td class="c">磷化铟 / 化合物半导体 · 首板</td></tr><tr>
+      <td class="c">6</td>
+      <td><b>圣阳股份</b><span class="cd2">002580</span></td>
+      <td class="c">2 榜</td>
+      <td class="c">#4</td><td class="c">#9</td><td class="c">—</td>
+      <td class="c">19.05</td>
+      <td class="c up"><b>+2.04%</b></td>
+      <td class="c">钠电池 / 算力储能 · 首板后回落</td></tr><tr>
+      <td class="c">7</td>
+      <td><b>文投控股</b><span class="cd2">600715</span></td>
+      <td class="c">2 榜</td>
+      <td class="c">#8</td><td class="c">—</td><td class="c">#9</td>
+      <td class="c">2.47</td>
+      <td class="c flat"><b>+0.41%</b></td>
+      <td class="c">AI 漫剧 / 短剧游戏 · 9天5板后震荡</td></tr><tr>
+      <td class="c">8</td>
+      <td><b>襄阳轴承</b><span class="cd2">000678</span></td>
+      <td class="c">2 榜</td>
+      <td class="c">#6</td><td class="c">—</td><td class="c">#2</td>
+      <td class="c">19.48</td>
+      <td class="c dn"><b>-3.85%</b></td>
+      <td class="c">机器人轴承 / 减速器 · 9天6板后调整</td></tr></tbody>
+    </table>
+    <div class="panel" style="margin-top:12px">
+      <p><b>一句话读表：</b>8 只交集股中 <b>3 只上涨、5 只下跌</b>，跌幅最大的是刚上市的 C皇冠新材（-20.86%）和天地板的七匹狼（-9.97%）。<b>热度榜的「上榜」并不等于「赚钱」</b>——今天恰好是指数大涨、高位人气股却集体退潮的一天，是典型的高低切换信号。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>三榜全上榜 · 逐股拆解</h2>
+    <div class="lead">同时进入同花顺、东财、淘股吧三大榜单前 10，代表最强的一致性关注度。</div>
+    
+    <div class="sc">
+      <div class="sch">
+        <div class="scl">
+          <div class="num">01</div>
+          <div>
+            <div class="nm">东方海洋<span class="cd">002086</span></div>
+            <div class="cc">深海养殖 / 预制菜 · 情绪高标断板</div>
+          </div>
+        </div>
+        <div class="scr">
+          <div class="px dn">3.28</div>
+          <div class="bd dn"><b>-4.09%</b></div>
+          <div class="bd">收盘价</div>
+        </div>
+      </div>
+      <div class="rks"><span class="rk">同花顺 <b>#1</b></span><span class="rk">东财 <b>#8</b></span><span class="rk">淘股吧 <b>#5</b></span></div>
+      <div class="dims">
+        <div class="dim"><div class="dl">① 为何被关注</div><p>今日热度榜首但股价跳水，核心是「10 天 6 板后的分歧博弈」——两只风险提示公告叠加，热度不降反升。</p></div>
+        <div class="dim"><div class="dl">② 基本面</div><p>10 月 29 日三季报：前三季度营收 2.47 亿元（+0.37%），归母净利 <b>-6793.11 万元</b>（同比减亏 35.55%）。公司明确两大主业海洋板块与大健康板块<b>均处亏损</b>，仅加工业务盈利，不足以覆盖整体亏损。</p></div>
+        <div class="dim"><div class="dl">③ 消息面</div><p>10 月 31 日盘后披露《股票交易异常波动公告》提示情绪过热；11 月 3 日晚再度披露《异常波动暨风险提示公告》（编号 2026-038，上海证券报 11-04 刊载），指出 11 月 2 日、3 日两日涨幅偏离值累计超 20%，10 月 21 日以来累计上涨 <b>57.60%</b>。11 月 4 日早盘高开后快速跳水，盘中一度跌超 5%，收盘 -4.09%（证券时报 11-04）。叠加 10 月 30 日「股东要求召开临时股东会审议董事会换届」函件。</p></div>
+        <div class="dim risk"><div class="dl">④ 风险</div><p>连续两次风险提示 + 高位首根大阴线，<b>断板风险已兑现</b>；无控股股东、无实控人，年内多次被列为被执行人（7 月 1 次、8 月 4 次，标的 5.12 万—7.95 万元）；业绩与股价严重背离（净利仍亏 6793 万，股价 10 日涨 57.6%），追高即接最后一棒。</p></div>
+      </div>
+    </div>
+    <div class="sc">
+      <div class="sch">
+        <div class="scl">
+          <div class="num">02</div>
+          <div>
+            <div class="nm">七匹狼<span class="cd">002029</span></div>
+            <div class="cc">男装 / 跨境电商 · 天地板</div>
+          </div>
+        </div>
+        <div class="scr">
+          <div class="px dn">9.30</div>
+          <div class="bd dn"><b>-9.97%</b></div>
+          <div class="bd">收盘价</div>
+        </div>
+      </div>
+      <div class="rks"><span class="rk">同花顺 <b>#3</b></span><span class="rk">东财 <b>#6</b></span><span class="rk">淘股吧 <b>#4</b></span></div>
+      <div class="dims">
+        <div class="dim"><div class="dl">① 为何被关注</div><p>二连板后高开涨停价开盘、全天单边下杀，走出标准「天地板」，是三榜中最典型的<b>高位崩塌样本</b>。</p></div>
+        <div class="dim"><div class="dl">② 基本面</div><p>三季报（10 月披露）：前三季度营收 20.26 亿元（+0.05%），归母净利 <b>-5055.33 万元</b>（同比 -112.55%）；单三季度营收 6.11 亿元（-6.01%），净亏 2325.13 万元。业绩下滑主因证券投资的公允价值变动收益及处置收益同比减少。</p></div>
+        <div class="dim"><div class="dl">③ 消息面</div><p>11 月 2 日已发布股票交易异常波动公告（10/29、10/30、11/2 三日涨幅偏离值累计 21.06%）。11 月 4 日以涨停价 11.36 元高开，随后跳水，收盘 9.30 元跌停，振幅近 20%，换手率 <b>23.86%</b>（腾讯新闻/证券时报 11-04）。</p></div>
+        <div class="dim risk"><div class="dl">④ 风险</div><p>一日内从涨停到跌停，<b>打板资金全线套牢</b>；扣非后主业亏损叠加投资收益落空，属于「概念（跨境电商/参股保险）涨、业绩跌」的典型；次日低开甚至连续跌停概率不低。</p></div>
+      </div>
+    </div>
+    <div class="sc">
+      <div class="sch">
+        <div class="scl">
+          <div class="num">03</div>
+          <div>
+            <div class="nm">C皇冠新材<span class="cd">001381</span></div>
+            <div class="cc">新股次日 · 注册制无涨跌幅</div>
+          </div>
+        </div>
+        <div class="scr">
+          <div class="px dn">66.91</div>
+          <div class="bd dn"><b>-20.86%</b></div>
+          <div class="bd">收盘价</div>
+        </div>
+      </div>
+      <div class="rks"><span class="rk">同花顺 <b>#2</b></span><span class="rk">东财 <b>#4</b></span><span class="rk">淘股吧 <b>#1</b></span></div>
+      <div class="dims">
+        <div class="dim"><div class="dl">① 为何被关注</div><p>上市次日，注册制新股无涨跌幅限制，首日 3.98 倍涨幅后的获利盘集中了结，热度仍居淘股吧第一。</p></div>
+        <div class="dim"><div class="dl">② 基本面</div><p>2023—2025 年营收 28.95 / 31.59 / 34.08 亿元，归母净利 2.78 / 3.02 / 3.09 亿元；2026 年 1—9 月营收 27.79 亿元（+11.75%），归母净利 <b>2.25 亿元（-7.89%）</b>，主因原材料采购成本上升、售价传导滞后及浙江皇冠产能爬坡。直接材料占主营成本 <b>80% 以上</b>。</p></div>
+        <div class="dim"><div class="dl">③ 消息面</div><p>11 月 3 日登陆深交所主板，发行价 16.98 元，首日最高涨超 787%，两次临停，收盘 84.55 元（<b>+397.94%</b>），换手 87.33%，市值约 397 亿元（央广网/证券时报 11-03）。11 月 4 日高开 71.99 元后一路下行，收 66.91 元（-20.86%），换手率 74.61%，成交 23.8 亿元。</p></div>
+        <div class="dim risk"><div class="dl">④ 风险</div><p>上市两日累计涨幅仍达 <b>294%</b>（相对发行价）；换手率连续两日在 74%—87% 的超高水平，筹码高度松动；发行市盈率 25.87 倍已高于行业均值 27.65 倍附近的合理区间，而净利同比转负，<b>估值与业绩反向</b>。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>双榜交叉 · 逐股拆解</h2>
+    <div class="lead">在两个榜单中进入前 10，关注度略逊但仍属当日焦点。</div>
+    
+    <div class="sc">
+      <div class="sch">
+        <div class="scl">
+          <div class="num">04</div>
+          <div>
+            <div class="nm">冰山冷热<span class="cd">000530</span></div>
+            <div class="cc">冰雪产业 · 5天3板</div>
+          </div>
+        </div>
+        <div class="scr">
+          <div class="px up">9.46</div>
+          <div class="bd up"><b>+10.00%</b></div>
+          <div class="bd">收盘价</div>
+        </div>
+      </div>
+      <div class="rks"><span class="rk">同花顺 <b>#7</b></span><span class="rk">东财 <b>#5</b></span><span class="rk off">淘股吧 <b>—</b></span></div>
+      <div class="dims">
+        <div class="dim"><div class="dl">① 为何被关注</div><p>冰雪经济概念龙头，5 个交易日 3 板，午后炸板尾盘回封，成交额创上市以来新高，情绪最热的「题材+冷门小盘」组合。</p></div>
+        <div class="dim"><div class="dl">② 基本面</div><p>主营制冷设备与热泵系统。近期披露多项热泵专利（无泵循环蒸汽热水联供热泵、复叠式热泵系统、磁悬浮离心热泵压缩机变负荷控制）。但公司<b>主动澄清</b>：冰雪场馆业务截至目前<b>尚未确认收入</b>，对 2026 年营收、利润影响较小；液冷业务处于研发试制、初步推广阶段，2026 年仅有零星收入。</p></div>
+        <div class="dim"><div class="dl">③ 消息面</div><p>吉林省印发《吉林省入境旅游扩能提质三年行动方案（2026—2028 年）》，提出每年新开发入境主题线路 15 条以上；并设 12 月 1—20 日义务教育阶段「雪假」3 天、联动周末形成 5 天小长假（财联社/新浪财经 11-04）。中国旅游研究院预计 2025—2026 冰雪季休闲人数 3.6 亿人次、收入 4500 亿元。</p></div>
+        <div class="dim risk"><div class="dl">④ 风险</div><p>5 天 3 板、5 日累计涨超 20%，<b>公司已公告澄清题材未产生收入</b>，属纯预期炒作；当日振幅巨大（盘中炸板再回封），封单 4.63 亿元但换手率达 <b>30.28%</b>，是典型的游资高位接力，次日承接不足即跳水。</p></div>
+      </div>
+    </div>
+    <div class="sc">
+      <div class="sch">
+        <div class="scl">
+          <div class="num">05</div>
+          <div>
+            <div class="nm">云南锗业<span class="cd">002428</span></div>
+            <div class="cc">磷化铟 / 化合物半导体 · 首板</div>
+          </div>
+        </div>
+        <div class="scr">
+          <div class="px up">75.38</div>
+          <div class="bd up"><b>+10.00%</b></div>
+          <div class="bd">收盘价</div>
+        </div>
+      </div>
+      <div class="rks"><span class="rk">同花顺 <b>#5</b></span><span class="rk">东财 <b>#3</b></span><span class="rk off">淘股吧 <b>—</b></span></div>
+      <div class="dims">
+        <div class="dim"><div class="dl">① 为何被关注</div><p>当日唯一「硬逻辑」涨停：13.05 亿元海外长单落地，叠加 AI 光模块上游材料紧缺，被资金从概念炒作切向业绩兑现。</p></div>
+        <div class="dim"><div class="dl">② 基本面</div><p>11 月 3 日晚公告：控股子公司云南鑫耀与美股光通信公司 AOI（AAOI）签订《长期供货协议》及《年度合同》，2027—2031 年每年采购 <b>18 万片</b> 4 英寸 N 型磷化铟衬底（合计 90 万片）；2027 年金额 <b>1.94 亿美元（约 13.05 亿元）</b>，占 2025 年经审计营收的 <b>122.46%</b>。叠加 7 月 5.70—8.55 亿元长单，半年内签单超 18 亿元。前三季度营收 13.64 亿元（+70.71%），归母净利 1.76 亿元（<b>+869.79%</b>），Q3 单季净利 1.02 亿元（+2642.24%）。</p></div>
+        <div class="dim"><div class="dl">③ 消息面</div><p>Yole 数据：2026 年全球磷化铟衬底需求折合 2 英寸 260—300 万片，有效产能仅约 75 万片，缺口超七成；4 英寸衬底均价年初至今涨 <b>64.9%</b>（华福证券引 SMM，10 月 23 日报 7100 元/片）。11 月 4 日开盘 2 分钟涨停，封单一度 31.7 万手，收盘 75.38 元（时代周报/中证网 11-04）。</p></div>
+        <div class="dim risk"><div class="dl">④ 风险</div><p>涨停开板多次，换手率 <b>13.15%</b>，高位博弈加剧；<b>合同履行以取得两用物项出口许可为前提</b>，存在审批不通过、需求变化风险；现有磷化铟产能 15 万片/年不足以覆盖 18 万片年度订单，扩产项目建设期 18 个月；Q3 起股价曾一度回撤 37.27%，波动极大。</p></div>
+      </div>
+    </div>
+    <div class="sc">
+      <div class="sch">
+        <div class="scl">
+          <div class="num">06</div>
+          <div>
+            <div class="nm">圣阳股份<span class="cd">002580</span></div>
+            <div class="cc">钠电池 / 算力储能 · 首板后回落</div>
+          </div>
+        </div>
+        <div class="scr">
+          <div class="px up">19.05</div>
+          <div class="bd up"><b>+2.04%</b></div>
+          <div class="bd">收盘价</div>
+        </div>
+      </div>
+      <div class="rks"><span class="rk">同花顺 <b>#4</b></span><span class="rk">东财 <b>#9</b></span><span class="rk off">淘股吧 <b>—</b></span></div>
+      <div class="dims">
+        <div class="dim"><div class="dl">① 为何被关注</div><p>「固态电池+算力储能+羊年谐音」三重标签叠加，11 月 3 日首板，11 月 4 日冲高回落，热度仍在但已显分歧。</p></div>
+        <div class="dim"><div class="dl">② 基本面</div><p>山东国资控股，覆盖锂电、铅酸、钠离子及固态电池全品类储能。11 月 2 日公众号消息：公司作为主要起草单位之一参与编制国家标准指导性技术文件《算力中心储能系统 第 1 部分：选型指南》并正式发布。10 月底连续公布多项钠电正极材料专利（聚阴离子型正极材料及制备方法等）。<b>公司已澄清</b>钠离子电池、固态电池业务仅处于中标、试点测试阶段，暂未形成实际营收。</p></div>
+        <div class="dim"><div class="dl">③ 消息面</div><p>11 月 3 日以 <b>+10.02%</b> 封首板（9:35:45 涨停，封单 2.57 亿元，实际换手 11.42%）；11 月 4 日高开 20.54 元后回落，收 19.05 元（<b>+2.04%</b>），冲高回落明显。同期龙蟠科技、丰元股份等固态电池概念同步活跃。</p></div>
+        <div class="dim risk"><div class="dl">④ 风险</div><p>昨日涨停表现 <b>-0.14%</b>、炸板率 21.85%，说明首板接力收益为负；公司自认前沿电池「暂未形成营收」，题材兑现度低；今日上影线较长，次日若无量能补充易补跌。</p></div>
+      </div>
+    </div>
+    <div class="sc">
+      <div class="sch">
+        <div class="scl">
+          <div class="num">07</div>
+          <div>
+            <div class="nm">文投控股<span class="cd">600715</span></div>
+            <div class="cc">AI 漫剧 / 短剧游戏 · 9天5板后震荡</div>
+          </div>
+        </div>
+        <div class="scr">
+          <div class="px flat">2.47</div>
+          <div class="bd flat"><b>+0.41%</b></div>
+          <div class="bd">收盘价</div>
+        </div>
+      </div>
+      <div class="rks"><span class="rk">同花顺 <b>#8</b></span><span class="rk off">东财 <b>—</b></span><span class="rk">淘股吧 <b>#9</b></span></div>
+      <div class="dims">
+        <div class="dim"><div class="dl">① 为何被关注</div><p>AI 漫剧出海主线的情绪龙头，9 天 5 板后进入高位震荡，当日仅微涨，热度靠「老龙头」身份维持。</p></div>
+        <div class="dim"><div class="dl">② 基本面</div><p>前三季度营收 <b>1.80 亿元（-29.51%）</b>，归母净利 <b>-3754.58 万元</b>（同比 -1120.90%，由盈转亏）；单三季度营收 6989.19 万元（-8.83%），净亏 1770.59 万元。2020 年以来已连续 6 年亏损，累计亏损超 80 亿元。</p></div>
+        <div class="dim"><div class="dl">③ 消息面</div><p>10 月 27 日至 11 月 3 日期间多日涨停，累计涨幅 <b>44.71%</b>，同期东财传媒行业指数下跌 0.35%，偏离度极大；11 月 2 日曾上演「地天板」。11 月 4 日披露《股票交易异常波动公告》（编号 2026-047），提示股价大幅上涨后快速回落的风险。行业面：央视财经称海外 AI 漫剧活跃用户超 1.5 亿，机构预测 2026 年海外微短剧市场 60 亿美元、AI 漫剧突破 40 亿美元（+390%）。</p></div>
+        <div class="dim risk"><div class="dl">④ 风险</div><p><b>6 年连亏、营收下滑 29.51%、净利由盈转亏</b>，基本面完全不支撑 44.71% 的涨幅；公司已明确提示「快速回落风险」；今日仅 +0.41%，量能萎缩，龙头地位被高位股崩塌拖累，谨防补跌。</p></div>
+      </div>
+    </div>
+    <div class="sc">
+      <div class="sch">
+        <div class="scl">
+          <div class="num">08</div>
+          <div>
+            <div class="nm">襄阳轴承<span class="cd">000678</span></div>
+            <div class="cc">机器人轴承 / 减速器 · 9天6板后调整</div>
+          </div>
+        </div>
+        <div class="scr">
+          <div class="px dn">19.48</div>
+          <div class="bd dn"><b>-3.85%</b></div>
+          <div class="bd">收盘价</div>
+        </div>
+      </div>
+      <div class="rks"><span class="rk">同花顺 <b>#6</b></span><span class="rk off">东财 <b>—</b></span><span class="rk">淘股吧 <b>#2</b></span></div>
+      <div class="dims">
+        <div class="dim"><div class="dl">① 为何被关注</div><p>9 个交易日涨约 85%、6 个涨停的「妖股」，今日高位调整，淘股吧热度仍居第 2，散户关注度极高。</p></div>
+        <div class="dim"><div class="dl">② 基本面</div><p>前三季度营收 11.29 亿元（-4.22%），归母净利 <b>-2617.40 万元</b>（减亏 2.55%）；Q3 单季营收 4.26 亿元（+11.27%），净亏 556 万元（减亏 50.90%）。机器人业务：可用于谐波减速器、RV 减速器的精密轴承，<b>累计营收仅 16.11 万元</b>，约占上半年营收 0.023%，尚未盈利，仅完成试制送样。</p></div>
+        <div class="dim"><div class="dl">③ 消息面</div><p>10 月 22 日至 11 月 3 日 9 个交易日累计涨约 <b>85%</b>（6 个涨停），同期机器人龙头宇树科技约 +21%。11 月 4 日开 19.60 元、最高 19.70 元、最低 18.23 元，收 <b>19.48 元（-3.85%）</b>，换手率 <b>34.13%</b>，成交 29.35 亿元，主力净流出 2.08 亿元（金角财经/新浪财经 11-04）。</p></div>
+        <div class="dim risk"><div class="dl">④ 风险</div><p><b>股价涨幅 85% vs 机器人业务收入 16.11 万元</b>，背离极端；已连续 6 年亏损；主力资金连续 2 日净流出；换手 34% 意味着筹码极度分散，属纯情绪+生肖谐音（「阳」谐「羊」）炒作，一旦资金退潮回撤空间巨大。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>综合判断</h2>
+    <div class="verdict">
+      <h3>OVERVIEW</h3>
+      <p><b>① 主线持续性：</b>今日的主线是「半导体 + AI 算力上游材料 + 贵金属」，与热搜榜上的人气股几乎<b>完全不重叠</b>。热搜榜的 8 只交集股里，只有云南锗业（磷化铟长单）真正站在主线一侧，其余均属旧题材（水产、男装、冰雪、漫剧、机器人轴承）。这说明<b>本轮反弹是新资金进场买业绩、买确定性，而非旧热度股的二波</b>。云南锗业这类「合同金额超全年营收」的硬催化，持续性明显强于纯情绪股。</p>
+      <p><b>② 情绪周期：</b>指数普涨（4667 涨 / 779 跌、118 家涨停）但「昨日涨停表现 -0.14%」、炸板率 21.85%，是<b>「指数强、接力弱」的分歧阶段</b>。最高连板高度即将被压缩——东方海洋断板、七匹狼天地板、襄阳轴承高位调整，都是高位股集体退潮的确认信号。按情绪周期划分，此处更像<b>退潮初期而非主升段</b>，赚钱效应集中在首板与低位补涨，而非接力高位板。</p>
+      <p><b>③ 追高风险：</b>三个最明显的风险点——(a) <b>天地板/断板</b>（七匹狼 -9.97%、东方海洋 -4.09%）；(b) <b>新股次日崩塌</b>（C皇冠新材 -20.86%，换手 74.61%）；(c) <b>题材与业绩彻底脱钩</b>（襄阳轴承机器人收入 16.11 万元对应 85% 涨幅、冰山冷热冰雪业务「尚未确认收入」）。对普通投资者，本日热搜榜的正确读法是「<b>谁在退潮</b>」而非「谁在起涨」。若要参与，只应考虑有真实订单/业绩支撑的品种，并对高位股保持距离。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>风险提示</h2>
+    <ul class="risk-list">
+      <li><b>高位连板股风险提示公告密集：</b>东方海洋 11-03 第二次披露异动暨风险提示（累计涨 57.60%）；文投控股 11-04 披露异动公告（累计涨 44.71%）；七匹狼 11-02 已披露异动公告。监管关注度已明显提升。</li>
+      <li><b>「天地板」与断板集中出现：</b>七匹狼（涨停开盘→跌停收盘，换手 23.86%）、东方海洋（高开→-4.09%）、襄阳轴承（-3.85%，换手 34.13%），高位资金正在快速撤离。</li>
+      <li><b>估值与业绩严重背离：</b>襄阳轴承机器人业务收入 16.11 万元却累计涨 85%；冰山冷热冰雪业务尚未确认收入；文投控股 6 年连亏、前三季净亏 3754.58 万元；C皇冠新材净利同比 -7.89% 而股价较发行价仍高 294%。</li>
+      <li><b>题材澄清类公告：</b>圣阳股份明确钠电/固态电池「仅处于中标、试点测试阶段，暂未形成实际营收」；冰山冷热明确冰雪场馆「尚未确认收入」，两者均在涨停后被公司主动降温。</li>
+      <li><b>事件性风险：</b>云南锗业 13.05 亿元长单以取得<b>两用物项出口许可</b>为前提，存在审批不确定性；现有 15 万片/年产能不足以覆盖 18 万片年度订单。</li>
+      <li><b>交易层面：</b>C皇冠新材作为注册制新股仍无涨跌幅限制，单日波动可达 20% 以上，不适合追涨；次新股板块整体 +6.03% 已积累较大涨幅。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>免责声明</h2>
+    <div class="disc">本报告数据来自同花顺热榜、东方财富热度榜、淘股吧热股榜、腾讯行情、新浪财经及公开新闻报道，均属公开渠道信息，可能存在延迟、缺失或口径差异，仅供参考。报告中的个股分析仅为对公开信息的客观梳理，不构成任何投资建议或买卖要约。股市有风险，投资需谨慎，据此操作风险自担。</div>
+  </section>
+
+</main>
+<div class="floatbar"><a href="./index.html">← 历史归档</a></div>
+<footer>每日热门股日报 · 数据基准日 2026-11-04 · 三榜交集 8 只</footer>
+</body>
+</html>
