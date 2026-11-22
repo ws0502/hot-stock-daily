@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日热门股日报 · 2026年10月29日（周四）</title>
+<style>
+:root{--ink:#171b22;--ink2:#4b5563;--ink3:#8a94a3;--line:#e4e8ee;--bg:#f4f6f9;--navy:#0f1a2b;--gold:#c9a227;--up:#c62828;--down:#1b7a3d;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.78;font-size:15px;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+header{background:linear-gradient(135deg,#0f1a2b 0%,#1b2b45 55%,#25354f 100%);color:#fff;padding:44px 0 38px;position:relative;overflow:hidden;}
+header::after{content:"";position:absolute;right:-90px;top:-90px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,39,.2),transparent 68%);}
+.hd,.wrap{max-width:1000px;margin:0 auto;padding:0 20px;position:relative;z-index:2;}
+.kicker{font-size:11px;letter-spacing:3px;color:var(--gold);font-weight:600;margin-bottom:11px;}
+h1{font-size:27px;font-weight:700;letter-spacing:.3px;}
+.sub{margin-top:12px;font-size:13.5px;color:#b6c1d1;}
+.sub b{color:#fff;}
+.topnav{margin-top:16px;}
+.topnav a{display:inline-block;font-size:12.5px;color:#cfd8e4;border:1px solid rgba(255,255,255,.22);padding:6px 14px;border-radius:6px;transition:.16s;}
+.topnav a:hover{background:rgba(255,255,255,.1);color:#fff;}
+.wrap{padding:26px 20px 90px;}
+h2{font-size:18px;font-weight:700;margin:34px 0 14px;padding-left:11px;border-left:4px solid var(--navy);line-height:1.35;}
+h2 span{font-size:11.5px;color:var(--ink3);font-weight:500;margin-left:8px;letter-spacing:1px;}
+h3{font-size:15.5px;font-weight:700;margin:0 0 10px;}
+p{margin-bottom:10px;}
+.idx{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:16px;}
+.ix{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 15px;}
+.ix .n{font-size:11.5px;color:var(--ink3);margin-bottom:3px;}
+.ix .v{font-size:19px;font-weight:700;letter-spacing:-.3px;}
+.ix .c{font-size:13px;font-weight:700;margin-top:1px;}
+.up{color:var(--up);}
+.down{color:var(--down);}
+.flat{color:var(--ink2);}
+.panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:17px 20px;margin-bottom:14px;}
+.panel .row{display:flex;gap:10px;font-size:13.6px;color:var(--ink2);padding:5px 0;border-bottom:1px dashed #f0f2f6;}
+.panel .row:last-child{border-bottom:none;}
+.panel .row b{flex:0 0 88px;color:var(--ink);font-weight:600;font-size:13px;}
+.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:4px;margin:2px 4px 2px 0;font-weight:600;}
+.tag.r{color:#8a2b2b;background:#fdecec;border:1px solid #f5c9c9;}
+.tag.g{color:#1b5e33;background:#e9f6ec;border:1px solid #c6e5ce;}
+.tag.b{color:#3d5a80;background:#eaf0f8;border:1px solid #d3e0f0;}
+.tag.y{color:#8a6d00;background:#fdf3d0;border:1px solid #f0dfa0;}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:13.2px;}
+th{background:#f7f9fc;color:var(--ink2);font-weight:600;font-size:12px;text-align:left;padding:10px 11px;border-bottom:1px solid var(--line);white-space:nowrap;}
+td{padding:10px 11px;border-bottom:1px solid #f0f2f6;vertical-align:top;}
+tr:last-child td{border-bottom:none;}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600;}
+td.nm{font-weight:600;white-space:nowrap;}
+td.nm small{display:block;font-weight:400;color:var(--ink3);font-size:11px;letter-spacing:.4px;}
+.rank{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--navy);padding:1px 6px;border-radius:3px;margin-right:4px;}
+.rank.s{background:#5b6b82;}
+.stk{background:#fff;border:1px solid var(--line);border-radius:13px;margin-bottom:16px;overflow:hidden;}
+.stk .sh{padding:15px 20px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,#fbfcfe,#fff);display:flex;align-items:center;gap:11px;flex-wrap:wrap;}
+.stk .sh .nmx{font-size:17px;font-weight:700;}
+.stk .sh .cd{font-size:12px;color:var(--ink3);letter-spacing:.5px;}
+.stk .sh .px{margin-left:auto;font-size:15px;font-weight:700;}
+.stk .sh .px small{font-size:12px;color:var(--ink3);font-weight:500;margin-left:4px;}
+.stk .sb{padding:6px 20px 16px;}
+.dim{padding:12px 0;border-bottom:1px dashed #eef1f5;}
+.dim:last-child{border-bottom:none;}
+.dim .dt{font-size:12px;font-weight:700;color:var(--navy);letter-spacing:.5px;margin-bottom:5px;}
+.dim .dt i{font-style:normal;color:var(--gold);margin-right:6px;}
+.dim .dc{font-size:13.6px;color:#2b313b;line-height:1.85;}
+.dim .dc b{color:#000;font-weight:600;}
+.warn{background:#fffaf0;border:1px solid #f2e0b8;border-radius:10px;padding:14px 18px;font-size:13.4px;color:#5c4a1c;}
+.warn ul{margin:6px 0 0 18px;}
+.warn li{margin-bottom:6px;}
+.note{font-size:12.2px;color:var(--ink3);margin-top:8px;line-height:1.7;}
+.disc{margin-top:38px;padding:18px 20px;background:#f0f3f7;border-radius:11px;font-size:12.2px;color:#5a6472;line-height:1.85;}
+.float{position:fixed;left:18px;bottom:18px;z-index:99;background:var(--navy);color:#fff;font-size:12.5px;font-weight:600;padding:9px 15px;border-radius:8px;box-shadow:0 6px 22px rgba(15,26,43,.3);}
+.float:hover{background:#22354f;}
+footer{margin-top:26px;padding-top:20px;border-top:1px solid var(--line);font-size:11.5px;color:var(--ink3);line-height:1.9;}
+@media(max-width:760px){
+ h1{font-size:21px;}
+ .idx{grid-template-columns:repeat(2,1fr);}
+ table{font-size:12px;}
+ th,td{padding:8px 7px;}
+ .stk .sb{padding:4px 15px 14px;}
+ .stk .sh{padding:13px 15px;}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd">
+    <div class="kicker">DAILY HOT STOCK REPORT · 2026-10-29</div>
+    <h1>每日热门股日报 · 10月29日（周四）</h1>
+    <div class="sub">同花顺热榜 × 东方财富热度榜 × 淘股吧热股榜　三榜交集 <b>9</b> 只　|　三榜全上榜 <b>2</b> 只　|　双榜交叉 <b>7</b> 只</div>
+    <div class="sub">数据基准交易日：<b>2026年10月29日</b>（收盘）　|　报告版本：<b>收盘版</b></div>
+    <div class="topnav"><a href="./index.html">← 历史归档</a></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<h2>一、大盘背景<span>MARKET CONTEXT</span></h2>
+<div class="idx"><div class="ix"><div class="n">上证指数</div><div class="v">3651.43</div><div class="c down">-0.82%</div></div><div class="ix"><div class="n">深证成指</div><div class="v">11138.20</div><div class="c down">-2.92%</div></div><div class="ix"><div class="n">创业板指</div><div class="v">2517.59</div><div class="c down">-4.45%</div></div><div class="ix"><div class="n">科创50</div><div class="v">1228.09</div><div class="c down">-4.27%</div></div><div class="ix"><div class="n">北证50</div><div class="v">910.08</div><div class="c down">-3.88%</div></div></div>
+
+<div class="panel">
+  <div class="row"><b>两市成交额</b><span>约 <b>15565.24 亿元</b>（沪市 7156.21 亿 + 深市 8409.03 亿），较前一交易日 1.63 万亿缩量约 <b>719.63 亿元（-4.4%）</b>。放量反弹一天、缩量杀跌一天，说明昨日放量并非增量资金入场。</span></div>
+  <div class="row"><b>涨跌家数</b><span>上涨 <b>781</b> 家 / 下跌 <b>4728</b> 家 / 平盘 68 家，上涨占比仅约 14%，中位数跌约 2.5%，典型普跌格局。</span></div>
+  <div class="row"><b>涨停/跌停</b><span>涨停 <b>39</b> 家、跌停 <b>42</b> 家、炸板 <b>27</b> 家，封板率约 <b>59.1%</b>；<b>年内首次出现跌停家数反超涨停</b>。连板股仅 10 只，最高高度压缩至 4 板。</span></div>
+  <div class="row"><b>走势特征</b><span>三大指数低开低走，深成指、创业板指开盘即全天最高、收在最低附近（光脚阴线），上证全天未翻红。跌停峰值出现在 14:42、指数低点出现在 14:58——尾盘最后 20 分钟集中夺路，全天不是阴跌而是尾盘踩踏。</span></div>
+  <div class="row"><b>当日主线</b><span>
+    <span class="tag r">商业航天/卫星互联网 +6.84%</span><span class="tag r">银行 +1.97%</span><span class="tag r">保险 +1.76%</span><span class="tag r">风电设备 +1.64%</span><span class="tag r">煤炭 +2.21%</span><span class="tag r">冰雪经济</span><span class="tag r">影视院线</span>
+    <br>2026卫星互联网产业生态大会（10/27—29，上海）发布《上海市卫星互联网产业创新发展行动方案（2027—2030年）》，叠加 SpaceX 三季度营收同比+161%，航天装备成为普跌日唯一有板块效应的进攻方向（约9家涨停，但最高仅2板）。银行端“工农中建”四大行 A+H 总市值历史首破 10 万亿元，21家银行中期分红拟派息超2600亿元，避险资金持续回流。</span></div>
+  <div class="row"><b>杀跌方向</b><span>
+    <span class="tag g">CPO -6.16%</span><span class="tag g">元件 -7.08%</span><span class="tag g">通信设备 -5.63%</span><span class="tag g">半导体 -5.54%</span><span class="tag g">PCB -5.36%</span><span class="tag g">存储芯片 -5.28%</span><span class="tag g">人形机器人 -4.09%</span><span class="tag g">减速器 -3.65%</span>
+    <br>算力硬件与机器人链各贡献约 11 家跌停，昨日两条主线同日“断头”。触发因素：隔夜谷歌三季报不及预期 + 天孚通信三季报预期差 + 美联储声明偏鹰（10年期美债升至5%上方、12月加息预期升温）+ 两融去杠杆。</span></div>
+</div>
+
+<h2>二、三榜交集总览<span>9 STOCKS IN COMMON</span></h2>
+<p style="font-size:13.4px;color:#4b5563;">统计口径：三个榜单各自前 10 名，出现次数 ≥2 即为交集股。今日共 <b>9 只</b>，其中三榜全部上榜 <b>2 只</b>（襄阳轴承、天孚通信），双榜交叉 <b>7 只</b>。值得注意的是，9 只交集股中 <b>4 只上涨、5 只下跌</b>，且涨幅最大的三只（冰山冷热 +10.03%、文投控股 +10.19%、光洋股份 +9.98%）全部是低位补涨或连板小票，说明人气已从“高位龙头”向“低位补涨”迁移。</p>
+<table>
+<thead><tr><th>#</th><th>股票</th><th>今日涨幅</th><th>收盘价</th><th>上榜类型</th><th>各榜位次</th><th>概念标签</th></tr></thead>
+<tbody><tr>
+<td class="num">1</td>
+<td class="nm">襄阳轴承<small>000678</small></td>
+<td class="num up">+6.47%</td>
+<td class="num">18.75</td>
+<td><span class="tag r">三榜</span></td>
+<td>同花顺 #1 · 东财 #1 · 淘股吧 #1</td>
+<td>减速器 · 农机 · 汽车轴承</td>
+</tr><tr>
+<td class="num">2</td>
+<td class="nm">天孚通信<small>300394</small></td>
+<td class="num down">-19.77%</td>
+<td class="num">161.60</td>
+<td><span class="tag r">三榜</span></td>
+<td>同花顺 #3 · 东财 #2 · 淘股吧 #9</td>
+<td>共封装光学(CPO) · 光纤概念 · 光模块</td>
+</tr><tr>
+<td class="num">3</td>
+<td class="nm">宇树科技<small>688836</small></td>
+<td class="num down">-4.82%</td>
+<td class="num">662.39</td>
+<td><span class="tag b">双榜</span></td>
+<td>同花顺 #2 · 东财 #7</td>
+<td>人形机器人 · 科创次新股 · 具身智能</td>
+</tr><tr>
+<td class="num">4</td>
+<td class="nm">上海九百<small>600838</small></td>
+<td class="num down">-2.57%</td>
+<td class="num">13.63</td>
+<td><span class="tag b">双榜</span></td>
+<td>同花顺 #4 · 淘股吧 #4</td>
+<td>物业管理 · 参股券商 · 上海本地零售</td>
+</tr><tr>
+<td class="num">5</td>
+<td class="nm">新华传媒<small>600825</small></td>
+<td class="num up">+0.20%</td>
+<td class="num">14.84</td>
+<td><span class="tag b">双榜</span></td>
+<td>同花顺 #5 · 淘股吧 #2</td>
+<td>AI语料 · 文化传媒 · 并购重组</td>
+</tr><tr>
+<td class="num">6</td>
+<td class="nm">九阳股份<small>002242</small></td>
+<td class="num up">+2.77%</td>
+<td class="num">23.00</td>
+<td><span class="tag b">双榜</span></td>
+<td>同花顺 #7 · 淘股吧 #5</td>
+<td>小家电 · AI/机器人参股 · 高股息预期</td>
+</tr><tr>
+<td class="num">7</td>
+<td class="nm">冰山冷热<small>000530</small></td>
+<td class="num up">+10.03%</td>
+<td class="num">8.23</td>
+<td><span class="tag b">双榜</span></td>
+<td>同花顺 #8 · 东财 #6</td>
+<td>冰雪产业 · 制冷设备 · 无人零售</td>
+</tr><tr>
+<td class="num">8</td>
+<td class="nm">光洋股份<small>002708</small></td>
+<td class="num up">+9.98%</td>
+<td class="num">20.83</td>
+<td><span class="tag b">双榜</span></td>
+<td>东财 #4 · 淘股吧 #6</td>
+<td>人形机器人 · 汽车精密轴承 · 滚珠丝杠</td>
+</tr><tr>
+<td class="num">9</td>
+<td class="nm">文投控股<small>600715</small></td>
+<td class="num up">+10.19%</td>
+<td class="num">2.27</td>
+<td><span class="tag b">双榜</span></td>
+<td>东财 #10 · 淘股吧 #10</td>
+<td>AI短剧/AI漫剧 · 影视院线 · 低价股</td>
+</tr></tbody>
+</table>
+
+<h2>三、三榜全上榜逐股拆解<span>TOP TIER · 2 STOCKS</span></h2>
+<p style="font-size:13.4px;color:#4b5563;">三榜同时进入前 10，意味着“散户人气（同花顺）+ 资金关注（东财）+ 短线客聚集（淘股吧）”三重共振。今日这两只恰好一个在多头顶端、一个在空头震中，构成本轮退潮最典型的一组对照。</p>
+
+<div class="stk">
+  <div class="sh">
+    <span class="rank">01</span>
+    <span class="nmx">襄阳轴承</span>
+    <span class="cd">000678</span>
+    <span class="tag r">三榜全上榜</span>
+    <span class="tag y">6天5板（今日6板失败）</span>
+    <span class="px up">18.75 元<small>+6.47%</small></span>
+  </div>
+  <div class="sb">
+    <div class="dim"><div class="dt"><i>01</i>为何被关注（人气来源）</div><div class="dc">全场人气第一，三榜同时登顶。人形机器人“减速器”链条里流通盘适中、股价绝对值最低的高标，5连板后成为资金默认的情绪标杆。</div></div>
+    <div class="dim"><div class="dt"><i>02</i>基本面原因</div><div class="dc">10月28日三季报：Q3营收4.26亿元（同比+11.27%），归母净利润-556万元、同比减亏50.90%；前三季度营收11.29亿元（-4.22%），归母净利润-2617万元。减速器相关精密轴承累计营业收入仅16.11万元，占2026年上半年营收0.023%，尚未盈利、不涉海外客户。2023—2025年归母净利润连续三年为负（-5372万/-3537万/-4912万），2026H1为-2061万元。</div></div>
+    <div class="dim"><div class="dt"><i>03</i>消息面原因</div><div class="dc">10月29日以涨停价19.37元开盘冲击6板，开盘即最高，全天开板31次，收18.75元、+6.47%，换手率41.93%、成交36.9亿元，6连板失败。10月27日晚公司发布股票交易异常波动公告（两日涨幅偏离累计24.67%），明确提示“市场情绪过热、非理性炒作风险”，并重申减速器业务收入占比极低、股价与经营基本面偏离。（来源：证券时报·数据宝 2026-10-29；中证网 2026-10-28；南方财经 2026-10-29）</div></div>
+    <div class="dim"><div class="dt"><i>04</i>风险提示</div><div class="dc">① 公司自10月23日起已连发多份风险提示公告，属“公司自己否认题材”的典型；② 6板断板+41.93%换手+36.9亿成交，筹码完成一次大规模换手，次日承接力是唯一变量；③ 连亏三年、减速器收入16万元，业绩与股价严重背离；④ 近一个月11次登上龙虎榜，游资主导，一旦断板易形成A字杀。</div></div>
+    <div class="note">榜单位次：同花顺 #1 · 东财 #1 · 淘股吧 #1　|　概念标签：减速器 · 农机 · 汽车轴承</div>
+  </div>
+</div>
+<div class="stk">
+  <div class="sh">
+    <span class="rank">02</span>
+    <span class="nmx">天孚通信</span>
+    <span class="cd">300394</span>
+    <span class="tag r">三榜全上榜</span>
+    <span class="tag y">盘中触及20cm跌停，全市场跌幅第一梯队</span>
+    <span class="px down">161.60 元<small>-19.77%</small></span>
+  </div>
+  <div class="sb">
+    <div class="dim"><div class="dt"><i>01</i>为何被关注（人气来源）</div><div class="dc">光模块三巨头之一，三季报“预期差”引爆算力硬件全链踩踏，同时占据跌幅榜与热榜，是今日关注度最高的空头标的。</div></div>
+    <div class="dim"><div class="dt"><i>02</i>基本面原因</div><div class="dc">10月28日晚三季报：Q3营收19.23亿元（同比+31.50%），归母净利润8.79亿元（+55.30%），略低于市场“9亿元以上”的一致预期；前三季度营收47.51亿元（+21.25%），归母净利润20.83亿元（+42.18%）；前三季度毛利率升至约62.56%（同比+逾10个百分点），研发费用2.96亿元（+47.71%）。股价自6月3日高点373.67元回落至161.60元，累计回撤约57%。</div></div>
+    <div class="dim"><div class="dt"><i>03</i>消息面原因</div><div class="dc">10月29日CPO/光模块板块整体崩塌（同花顺CPO概念-6.16%、通信设备-5.63%、元件-7.08%），天孚通信盘中触及20cm跌停，收-19.77%，单日主力净卖出超19亿元、居全市场首位。直接导火索为隔夜谷歌（Alphabet）三季报营收利润不及预期、自由现金流连续第二季度为负，盘后一度跌超11%，重燃全球“AI资本开支回报”焦虑；叠加自身三季报预期差。（来源：财联社/格隆汇收盘复盘 2026-10-29；华尔街见闻 2026-10-29）</div></div>
+    <div class="dim"><div class="dt"><i>04</i>风险提示</div><div class="dc">① 80倍PE定价的是“CPO未来”，业绩够好但不够惊艳即触发踩踏；② 融资余额近5日减少7.25亿元（-10.96%），杠杆资金持续撤离；③ 存货12.74亿元，若Q4营收不能延续环比加速将转为减值压力；④ 200G EML光芯片供给仍是产业链最大不确定变量；⑤ 作为本轮杀跌“震中”，未缩量止跌前左侧抄底风险极高。</div></div>
+    <div class="note">榜单位次：同花顺 #3 · 东财 #2 · 淘股吧 #9　|　概念标签：共封装光学(CPO) · 光纤概念 · 光模块</div>
+  </div>
+</div>
+
+<h2>四、双榜交叉逐股拆解<span>SECOND TIER · 7 STOCKS</span></h2>
+
+<div class="stk">
+  <div class="sh">
+    <span class="rank">03</span>
+    <span class="nmx">宇树科技</span>
+    <span class="cd">688836</span>
+    <span class="tag b">双榜交叉</span>
+    <span class="tag y">上市后首份季报“增收不增利”</span>
+    <span class="px down">662.39 元<small>-4.82%</small></span>
+  </div>
+  <div class="sb">
+    <div class="dim"><div class="dt"><i>01</i>为何被关注（人气来源）</div><div class="dc">人形机器人整机第一股，科创板稀缺标的，首份季报兑现度不及预期，人气与争议同时拉满。</div></div>
+    <div class="dim"><div class="dt"><i>02</i>基本面原因</div><div class="dc">Q3营收6.65亿元（同比+69.93%，单季增速创年内新高），归母净利润1.13亿元（-17.37%），扣非净利润1.05亿元（-17.42%）；前三季度营收18.17亿元（+55.71%，已超2025年全年16.99亿元），归母净利润3.87亿元（+270.54%，含上年一次性股份支付费用因素），扣非净利润3.49亿元（-18.78%）。研发投入2.63亿元（+191.48%），Q3单季1.27亿元（+249.58%）、占营收19.10%；销售费用由0.76亿元增至2.30亿元。</div></div>
+    <div class="dim"><div class="dt"><i>03</i>消息面原因</div><div class="dc">10月28日盘后披露A股上市后首份三季报；10月29日低开超6%（报653.22元），盘中最高699.99元未能站稳700元整数关，收662.39元、-4.82%，换手率20.01%、成交40.3亿元，总市值2679亿元。（来源：中国商报 2026-10-29；大河财立方 2026-10-29；中新经纬 2026-10-29）</div></div>
+    <div class="dim"><div class="dt"><i>04</i>风险提示</div><div class="dc">① PE(TTM)477.95倍、PB30.07倍，估值对增速极度敏感；② Q3归母净利润1.13亿元较Q2的2.24亿元接近腰斩，环比恶化；③ 扣非连续下滑，研发与销售费用侵蚀利润，主业盈利能力待验证；④ 流通市值仅199亿元（流通股本约3009万股），20%换手放大波动；⑤ 10月30日三季报披露收官，业绩验证期情绪难独立走强。</div></div>
+    <div class="note">榜单位次：同花顺 #2 · 东财 #7　|　概念标签：人形机器人 · 科创次新股 · 具身智能</div>
+  </div>
+</div>
+<div class="stk">
+  <div class="sh">
+    <span class="rank">04</span>
+    <span class="nmx">上海九百</span>
+    <span class="cd">600838</span>
+    <span class="tag b">双榜交叉</span>
+    <span class="tag y">7天5板（昨日6板失败）</span>
+    <span class="px down">13.63 元<small>-2.57%</small></span>
+  </div>
+  <div class="sb">
+    <div class="dim"><div class="dt"><i>01</i>为何被关注（人气来源）</div><div class="dc">本轮“内需消费”连板旗手，上海静安区国资背景的老牌商业股，小市值+政策敏感的组合让它成为零售板块的情绪风向标。</div></div>
+    <div class="dim"><div class="dt"><i>02</i>基本面原因</div><div class="dc">2026年上半年营业收入4322.53万元（同比-4.06%），归母净利润2507.38万元（+5.40%）；收入来自正章洗染洗涤服务、酒类批发与商业物业出租，利润主要靠参股九百城市广场与久光百货的投资收益，实控人为静安区国资委。按10月23日收盘价计算，静态市盈率97.28倍、滚动市盈率87.93倍，而零售业分别为21.22倍与20.48倍。</div></div>
+    <div class="dim"><div class="dt"><i>03</i>消息面原因</div><div class="dc">催化起于政策端：10月21日国家发改委在月度发布会表示扩大内需战略实施方案正在研究制定、将加快印发；10月22日商务部披露前三季度服务零售额同比+5%（高于商品零售4个百分点）、1—9月批发和零售业增加值11.1万亿元（+4.4%，占GDP 10.4%）。上海九百10月27日完成五连板，10月28日冲击6板失败，10月29日再跌2.57%收13.63元。公司已于10月22日、10月23日两次发布股票交易风险提示公告。（来源：金融界 2026-10-27；新浪财经《价值判断》2026-10-29）</div></div>
+    <div class="dim"><div class="dt"><i>04</i>风险提示</div><div class="dc">① 主业收入连续收缩，利润依赖参股企业投资收益，与股价缺乏对应；② 估值高出行业4倍以上（滚动PE 87.93 vs 20.48）；③ 6板失败后接力资金缺失，龙头断板意味着板块进入退潮；④ 公司两次自行风险提示，监管关注度高；⑤ 高位股在跌停反超涨停的环境下补跌概率大。</div></div>
+    <div class="note">榜单位次：同花顺 #4 · 淘股吧 #4　|　概念标签：物业管理 · 参股券商 · 上海本地零售</div>
+  </div>
+</div>
+<div class="stk">
+  <div class="sh">
+    <span class="rank">05</span>
+    <span class="nmx">新华传媒</span>
+    <span class="cd">600825</span>
+    <span class="tag b">双榜交叉</span>
+    <span class="tag y">9月21日起11连板，累计涨幅179.47%</span>
+    <span class="px up">14.84 元<small>+0.20%</small></span>
+  </div>
+  <div class="sb">
+    <div class="dim"><div class="dt"><i>01</i>为何被关注（人气来源）</div><div class="dc">本轮最强“妖股”，核心不是概念而是真实的重大资产重组——发行股份收购上海界面财联社100%股权，把“AI语料/数据资产”落到了资产层面。</div></div>
+    <div class="dim"><div class="dt"><i>02</i>基本面原因</div><div class="dc">2025年扣非净亏损1629.75万元，主营业务毛利率24.76%（同比-0.74个百分点），主业盈利能力薄弱。正在推进发行股份购买上海界面财联社科技股份有限公司100%股权，目前审计、评估工作尚未完成，尚需履行内部决策及监管审批程序，存在不确定性。</div></div>
+    <div class="dim"><div class="dt"><i>03</i>消息面原因</div><div class="dc">9月19日披露《发行股份购买资产暨关联交易预案》；9月21日至10月12日连续10个交易日涨停、累计上涨159.51%，10月8日触及严重异常波动；10月13日起停牌核查，10月19日发布重组进展公告并复牌；至10月29日复牌后累计涨幅达179.47%。公司公告提示：截至10月28日滚动市盈率362.62倍，显著高于新闻和出版业18.62倍，存在市场情绪过热及非理性炒作风险。10月29日仅涨0.20%、收14.84元，高位明显滞涨。（来源：上海证券报 2026-10-12；新浪财经 2026-10-29；财联社投保动态）</div></div>
+    <div class="dim"><div class="dt"><i>04</i>风险提示</div><div class="dc">① 滚动PE 362.62倍 vs 行业18.62倍，估值处于极端位置；② 重组审计评估未完成、审批未落地，存在失败或缩水风险；③ 复牌后累计涨幅179%，获利盘极其厚重；④ 今日仅微涨0.20%，量价背离、上攻乏力，是典型的高位滞涨信号；⑤ 曾因连续涨停被停牌核查，二次异动触发监管的概率高。</div></div>
+    <div class="note">榜单位次：同花顺 #5 · 淘股吧 #2　|　概念标签：AI语料 · 文化传媒 · 并购重组</div>
+  </div>
+</div>
+<div class="stk">
+  <div class="sh">
+    <span class="rank">06</span>
+    <span class="nmx">九阳股份</span>
+    <span class="cd">002242</span>
+    <span class="tag b">双榜交叉</span>
+    <span class="tag y">13个交易日8涨停，累计涨超140%</span>
+    <span class="px up">23.00 元<small>+2.77%</small></span>
+  </div>
+  <div class="sb">
+    <div class="dim"><div class="dt"><i>01</i>为何被关注（人气来源）</div><div class="dc">“概念缝合体”：类脑AI、华为、机器人、太空厨房、哈基米豆浆等传闻轮番附着，叠加小家电低位属性，成为资金反复炒作的载体。</div></div>
+    <div class="dim"><div class="dt"><i>02</i>基本面原因</div><div class="dc">前三季度营业收入50.52亿元（同比-9.55%），归母净利润7198.95万元（-41.75%），扣非净利润7671.37万元（-60.14%）；Q3单季营收15.63亿元（-2.21%），归母净利润仅21.63万元（同比-近75%，环比由Q2亏损约1100万元转为微利）；前三季度经营活动现金流净额-1.48亿元（-142.79%）。按10月20日数据，滚动市盈率235.24倍、静态市盈率133.35倍，行业（电气机械和器材制造业）仅18.99倍/19.92倍。</div></div>
+    <div class="dim"><div class="dt"><i>03</i>消息面原因</div><div class="dc">9月28日起至10月21日，13个交易日录得8个涨停，累计涨幅一度超140%。10月22日晚披露三季报（单季净利21.63万元）。10月27日晚公告：控股股东上海力鸿于10月26日通过集中竞价减持1447.26万股、占总股本1.90%，持股比例由50.40%降至48.50%，按当日均价21.36元测算套现约3.09亿元。公司此前已逐条澄清：持有深思考人工智能7.92%股权但与华为无战略合作；享刻智能属财务性投资；太空厨房未形成独立业务；哈基米豆浆与上市公司无股权关系。10月29日收23.00元、+2.77%，换手15.39%。（来源：山东财经报道/网易 2026-10-28；新浪财经 2026-10-29；搜狐财经 2026-10-29）</div></div>
+    <div class="dim"><div class="dt"><i>04</i>风险提示</div><div class="dc">① 控股股东在股价高位减持3.09亿元，是最直接的负面信号；② Q3单季净利21.63万元，15亿营收几乎不赚钱，业绩与股价彻底背离；③ 所有热门概念均被公司自己澄清，题材缺乏基本面锚；④ 滚动PE 235倍 vs 行业19倍；⑤ 经营现金流转负、研发投入三连降，中长期竞争力存疑。</div></div>
+    <div class="note">榜单位次：同花顺 #7 · 淘股吧 #5　|　概念标签：小家电 · AI/机器人参股 · 高股息预期</div>
+  </div>
+</div>
+<div class="stk">
+  <div class="sh">
+    <span class="rank">07</span>
+    <span class="nmx">冰山冷热</span>
+    <span class="cd">000530</span>
+    <span class="tag b">双榜交叉</span>
+    <span class="tag y">首板涨停</span>
+    <span class="px up">8.23 元<small>+10.03%</small></span>
+  </div>
+  <div class="sb">
+    <div class="dim"><div class="dt"><i>01</i>为何被关注（人气来源）</div><div class="dc">冰雪经济低位补涨龙头。制冷设备是雪场、冰场建设的直接上游，题材纯度高、股价低、市值小，是季节性行情最顺手的载体。</div></div>
+    <div class="dim"><div class="dt"><i>02</i>基本面原因</div><div class="dc">2026年前三季度营业收入32.96亿元（同比-8.78%），归母净利润6131.34万元（-32.10%）；主营构成为工业产品71.73%、安装工程25.91%、其他2.36%；总市值66.70亿元。股东户数5.84万（较上期-5.64%），人均流通股1.16万股（+6.58%）。</div></div>
+    <div class="dim"><div class="dt"><i>03</i>消息面原因</div><div class="dc">10月29日冰雪经济概念异动拉升，冰山冷热直线涨停（+10.03%），龙江交通回封涨停，晶雪节能、雪人集团、长白山、大连圣亚跟涨。催化为美团数据：截至10月28日，10月以来平台“滑雪”搜索量同比增长125%，入住时间在当年11月至次年3月的雪场周边5公里住宿预订量同比增长217%；部分滑雪场已正式开板、多数雪场预计11月开板，多家航司布局冰雪经济。政策端，国务院办公厅《关于以冰雪运动高质量发展激发冰雪经济活力的若干意见》提出2027年冰雪经济总规模1.2万亿元、2030年1.5万亿元。当日主力资金净流入3990.36万元，换手率12.74%。（来源：财联社 2026-10-29；经济观察网 2026-10-29；新浪财经 2026-10-29）</div></div>
+    <div class="dim"><div class="dt"><i>04</i>风险提示</div><div class="dc">① 营收-8.78%、净利-32.10%，业绩下滑与涨停背离；② 近5个交易日曾跌16.65%（近20日仍涨52.70%），波动极大、属高位反复；③ 冰雪属季节性低位题材轮动，缺新增硬催化，多家机构判断“持续性偏弱、宜当短线”；④ 年内11次登上龙虎榜，10月28日龙虎榜净买入3541万元，游资博弈特征明显。</div></div>
+    <div class="note">榜单位次：同花顺 #8 · 东财 #6　|　概念标签：冰雪产业 · 制冷设备 · 无人零售</div>
+  </div>
+</div>
+<div class="stk">
+  <div class="sh">
+    <span class="rank">08</span>
+    <span class="nmx">光洋股份</span>
+    <span class="cd">002708</span>
+    <span class="tag b">双榜交叉</span>
+    <span class="tag y">4连板（T字板，31次开板）</span>
+    <span class="px up">20.83 元<small>+9.98%</small></span>
+  </div>
+  <div class="sb">
+    <div class="dim"><div class="dt"><i>01</i>为何被关注（人气来源）</div><div class="dc">机器人精密零部件方向的连板高标。轴承→丝杠→关节的产业链叙事清晰，且盘子适中，是机器人退潮日里少数还能封住的高位股。</div></div>
+    <div class="dim"><div class="dt"><i>02</i>基本面原因</div><div class="dc">Q3营业收入8.81亿元（同比+39.99%），归母净利润107.70万元（-89.88%）；前三季度营业收入23.61亿元（+24.95%），归母净利润5827.89万元（-8.35%）。2026年上半年机器人相关收入999.41万元、占比较低且未盈利。PE(TTM)122.39倍、PB6.62倍，总市值117.09亿元、流通市值106.16亿元。</div></div>
+    <div class="dim"><div class="dt"><i>03</i>消息面原因</div><div class="dc">10月26日起连续4个涨停，连板期间累计上涨46.38%、5日涨幅51.71%。10月29日以T字板收盘，全天31次开板，换手率27.90%、成交28.87亿元。催化为《上海市加快发展新一代智能制造行动方案》正式发布，提出推动8000台人形机器人进工厂、AI赋能新型智能制造装备产业规模突破2000亿元。龙虎榜显示：机构净卖出5201.02万元、深股通净卖出1213.43万元、营业部席位合计净买入2.31亿元。盘后公司发布股票交易异常波动公告并披露三季报。（来源：证券时报 2026-10-29；21世纪经济报道 2026-10-29；新浪财经 2026-10-29）</div></div>
+    <div class="dim"><div class="dt"><i>04</i>风险提示</div><div class="dc">① 单季净利-89.88%却走出4连板，业绩与股价背离极致；② 31次开板说明封板质量极差，随时可能断板；③ 筹码结构差：机构与深股通净卖出、游资净买入2.31亿，属“接盘式”换手；④ 已发异动公告，PE 122倍；⑤ 机器人板块今日约11家跌停，属性已从扩散转为整体退潮。</div></div>
+    <div class="note">榜单位次：东财 #4 · 淘股吧 #6　|　概念标签：人形机器人 · 汽车精密轴承 · 滚珠丝杠</div>
+  </div>
+</div>
+<div class="stk">
+  <div class="sh">
+    <span class="rank">09</span>
+    <span class="nmx">文投控股</span>
+    <span class="cd">600715</span>
+    <span class="tag b">双榜交叉</span>
+    <span class="tag y">3连板（7天4板）</span>
+    <span class="px up">2.27 元<small>+10.19%</small></span>
+  </div>
+  <div class="sb">
+    <div class="dim"><div class="dt"><i>01</i>为何被关注（人气来源）</div><div class="dc">AI短剧/AI漫剧方向最便宜标的（2.27元），低价+题材双击，在情绪退潮期反而是最容易封板的品种。</div></div>
+    <div class="dim"><div class="dt"><i>02</i>基本面原因</div><div class="dc">2026年上半年营业收入1.10亿元，归母净利润-1983.99万元（亏损），主要受全国电影票房大幅下降影响，同时叠加新游戏研发投入增加。业务包括影院及院线运营、游戏研发运营，并已探索文化演出赛事、产业投资基金、AIGC漫剧等方向；半年报披露红果短剧平台上线作品中热度值破4000万的优质作品共8部。最新市值约92亿元。</div></div>
+    <div class="dim"><div class="dt"><i>03</i>消息面原因</div><div class="dc">10月29日开盘秒板后多次炸板，11:07左右回封并封死，收2.27元、+10.19%，成交额11亿元、换手率17.13%，涨停封单超30万手。消息面：中国网络视听节目服务协会会长聂辰席披露，我国微短剧人均单日使用时长达129分钟，红果短剧DAU达1.68亿（超过4家主要长视频平台移动端日活之和），今年前8个月上线微短剧43万部（为去年全年的13倍），其中AI剧占比超九成，单部AI剧成本可降至3万—8万元。公司已于10月28日晚、10月29日两次发布股票交易异常波动公告，明确“各业务板块经营情况稳定、不存在应披露而未披露的重大事项”。（来源：腾讯新闻/中国财富网 2026-10-29；中国证券报公告 2026-10-29；上海证券报 2026-10-29）</div></div>
+    <div class="dim"><div class="dt"><i>04</i>风险提示</div><div class="dc">① 上半年营收1.10亿元、亏损1983.99万元，对应92亿市值，估值与基本面严重脱节；② 公司已明确“无未披露重大事项”，题材缺乏资产支撑；③ 今日盘中多次炸板，封板质量不稳；④ 低价股+17%换手，情绪退潮时杀跌速度极快；⑤ 影视院线板块受票房下滑压制，行业β为负。</div></div>
+    <div class="note">榜单位次：东财 #10 · 淘股吧 #10　|　概念标签：AI短剧/AI漫剧 · 影视院线 · 低价股</div>
+  </div>
+</div>
+
+<h2>五、综合判断<span>CONCLUSION</span></h2>
+<div class="panel">
+  <div class="row"><b>主线持续性</b><span><b>今日没有真正的主线。</b>商业航天/卫星互联网虽有约9家涨停、是唯一成气候的进攻方向，但最高高度仅2板（上海沪工），不满足“板块连涨≥3日+有高度”的主线条件，只能定义为“当日最强热点”。消费内需（青岛食品4板一字）是发改委扩大内需方案的政策脉冲。银行/煤炭红利是避险落脚点而非进攻主线。真正的主线——机器人、算力硬件——今日双双崩塌，且是跌停的主要来源。</span></div>
+  <div class="row"><b>情绪周期</b><span><b>退潮中后段。</b>四个硬指标同时指向退潮：① 涨停39家 vs 跌停42家，年内首次跌停反超涨停；② 连板高度由5板压缩至4板，连板股仅10只，晋级率降至约27%，二进三基本全部失败；③ 封板率59.1%看似回升，但冲板次数从143次降至66次，“封得住”是因为“冲的少了”；④ 昨日涨停今日获利率仅约33%。结构上是“高度在消费、宽度在航天、两者不重合”，没有能同时提供高度与宽度的引领者，属典型的高低切换型断层。</span></div>
+  <div class="row"><b>追高风险</b><span><b>极高，容错率处于年内低位。</b>具体风险点：① 襄阳轴承6板断板、41.93%换手、36.9亿成交，高位股“断头”后A字杀概率大；② 光洋股份T字板31次开板，是全场封板质量最差的高标，随时断板；③ 九阳股份控股股东已在10/26高位减持3.09亿元，产业资本用脚投票；④ 天孚通信作为杀跌震中尚未缩量止跌，算力链左侧抄底等于接刀；⑤ 10月30日三季报披露收官，“业绩雷”仍在释放窗口，且今晚美国9月PCE数据待公布。</span></div>
+  <div class="row"><b>需要盯的三个信号</b><span>① 天孚通信能否缩量止跌（本轮杀跌震中）；② 跌停家数能否收敛至20家以内、封板率回升至65%以上；③ 成交额能否重回1.6万亿上方。三者未同时改善前，任何反弹都更可能是存量资金的高低切，而非趋势反转。</span></div>
+  <div class="row"><b>结构建议</b><span>哑铃结构仍是当下最优解：一头配银行/煤炭等高股息防御（但四大行已创新高，追高性价比下降，宜回调配置），一头只保留真正有订单、三季报已兑现的科技标的；中间部分——高估值无业绩、靠题材连板的高位股——是这轮退潮的主要杀伤区，应明确回避。</span></div>
+</div>
+
+<h2>六、风险提示<span>RISK DISCLOSURE</span></h2>
+<div class="warn">
+<ul>
+<li><b>连板股风险提示公告密集：</b>襄阳轴承（10/23起多份）、上海九百（10/22、10/23两次）、光洋股份（10/29盘后）、文投控股（10/28晚、10/29两次）、新华传媒（多次严重异常波动）、九阳股份（多次异动）均已自行提示风险，其中襄阳轴承、九阳股份、文投控股明确否认或澄清了市场热炒的概念。</li>
+<li><b>业绩与股价严重背离：</b>襄阳轴承连亏三年、减速器收入16.11万元；光洋股份Q3净利-89.88%；九阳股份Q3净利21.63万元；文投控股上半年亏损1983.99万元；冰山冷热净利-32.10%。5只交集股的股价与当期业绩方向相反。</li>
+<li><b>估值极端化：</b>宇树科技PE(TTM)478倍、新华传媒滚动PE 363倍（行业18.6倍）、九阳股份235倍（行业19倍）、上海九百88倍（行业20倍）、光洋股份122倍。高估值在流动性收缩环境中缺乏缓冲。</li>
+<li><b>产业资本减持：</b>九阳股份控股股东10月26日减持1.90%股份、套现约3.09亿元，是本轮最明确的负面信号之一。</li>
+<li><b>高位股断板效应：</b>今日襄阳轴承（5进6失败）、上海九百（6板失败后续跌）、多伦科技（2连跌）、正裕工业（3连跌）等前期人气股集体走弱，断板股的亏钱效应正在扩散，接力高位股的风险收益比已明显恶化。</li>
+<li><b>外部变量：</b>美联储10月议息维持利率不变但声明偏鹰，10年期美债收益率升至5%上方，12月加息预期升温，对长久期成长股估值形成持续压制；10月30日三季报披露收官，业绩不及预期个股仍可能集中释放。</li>
+</ul>
+</div>
+
+<div class="disc">
+<b>免责声明</b><br>
+本报告数据来源于同花顺、东方财富、淘股吧、腾讯财经、财联社、证券时报、上海证券报、中国证券报等公开渠道，行情数据基准日为 2026 年 10 月 29 日收盘。报告中的榜单位次、涨跌幅、财务数据均按公开信息整理，不保证绝对精确；消息面内容已尽力交叉核实，但可能存在时点偏差。<br>
+本报告仅为公开信息汇总与逻辑梳理，<b>不构成任何投资建议、不构成买卖要约或要约邀请</b>。文中提及的所有个股仅用于说明市场现象，不代表推荐。股市有风险，投资需谨慎，据此操作风险自担。
+</div>
+
+<footer>
+每日热门股日报 · 2026年10月29日（周四）收盘版　|　三榜交集 9 只（三榜全上榜 2 只 / 双榜交叉 7 只）<br>
+数据基准交易日 2026-10-29　|　生成时间 2026-10-29 20:30 (GMT+8)　|　<a href="./index.html" style="color:#4b5563;text-decoration:underline;">← 返回历史归档</a>
+</footer>
+</div>
+
+<a class="float" href="./index.html">← 历史归档</a>
+</body>
+</html>
