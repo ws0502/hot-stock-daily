@@ -1,199 +1,383 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>每日热门股日报 · 2026-11-24</title><style>
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日热门股日报 · 2026-11-25</title>
+<style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
-background:#f4f6fa;color:#1f2937;line-height:1.78;font-size:15px}
-a{color:inherit;text-decoration:none}
-header{background:linear-gradient(135deg,#0f2c5c 0%,#1e4d8f 55%,#2c6cb8 100%);color:#fff;padding:44px 0 38px}
-.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
-.kicker{font-size:11px;letter-spacing:3px;color:#a9c6ea;font-weight:600;margin-bottom:10px}
-h1{font-size:28px;font-weight:700;letter-spacing:.4px}
-.meta{margin-top:12px;font-size:13.5px;opacity:.88;display:flex;gap:16px;flex-wrap:wrap}
-.meta b{color:#fff}
-.body{padding:26px 0 70px}
-.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:24px}
-.stat{background:#fff;border:1px solid #e5eaf2;border-radius:11px;padding:15px 16px}
-.stat .sl{font-size:11.5px;color:#8a94a3;margin-bottom:3px}
-.stat .sv{font-size:22px;font-weight:700;color:#0f2c5c;line-height:1.2}
-.stat .sv em{font-style:normal;font-size:12px;color:#8a94a3;font-weight:500;margin-left:2px}
-.sec{background:#fff;border:1px solid #e5eaf2;border-radius:13px;padding:22px 24px;margin-bottom:20px}
-.sec h2{font-size:18px;color:#0f2c5c;margin-bottom:14px;padding-left:11px;border-left:4px solid #2c6cb8;line-height:1.25}
-.sec h3{font-size:15px;color:#1e4d8f;margin:16px 0 8px}
-table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
-th{background:#f1f5fb;color:#3d5573;font-weight:600;text-align:left;padding:9px 11px;border-bottom:1px solid #e0e6f0;font-size:12.5px}
-td{padding:9px 11px;border-bottom:1px solid #eef2f7}
+:root{--ink:#101828;--sub:#5b6478;--line:#e5e8ef;--bg:#f5f6fa;--accent:#2a5cff;--up:#d92d20;--dn:#079455;--warn:#b54708;--warnbg:#fffaeb}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px 64px}
+.hero{background:linear-gradient(135deg,#101828 0%,#1e3a8a 55%,#2a5cff 100%);color:#fff;padding:44px 20px 36px;margin-bottom:28px}
+.hero-in{max-width:1000px;margin:0 auto}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;opacity:.7}
+h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin:8px 0 6px}
+.sub{font-size:14px;opacity:.82}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:22px}
+.kpi{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:12px 14px;backdrop-filter:blur(6px)}
+.kpi .k{font-size:12px;opacity:.72}
+.kpi .v{font-size:21px;font-weight:700;margin-top:2px}
+.kpi .d{font-size:11px;opacity:.66}
+section{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin-bottom:20px}
+h2{font-size:19px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:9px}
+h2:before{content:"";width:4px;height:19px;background:var(--accent);border-radius:2px}
+.lead{font-size:13px;color:var(--sub);margin-bottom:16px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font-weight:600;font-size:12px;color:var(--sub);padding:9px 10px;border-bottom:1px solid var(--line);background:#fafbfd;white-space:nowrap}
+td{padding:9px 10px;border-bottom:1px solid #f1f3f7}
 tr:last-child td{border-bottom:none}
-.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
-th{white-space:nowrap}
-td:nth-child(2){white-space:nowrap}
-td:nth-child(2) b{white-space:nowrap}
-.na{color:#c3cbd8}
-.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px}
-.idx{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin:4px 0 14px}
-.ib{background:#f8fafd;border:1px solid #e8eef7;border-radius:9px;padding:12px 14px}
-.ib .n{font-size:12px;color:#7b8698}
-.ib .v{font-size:20px;font-weight:700;margin:2px 0;font-variant-numeric:tabular-nums}
-.ib .p{font-size:13px;font-weight:600}
-.stk{border:1px solid #e8eef7;border-radius:11px;padding:16px 18px;margin-bottom:13px;background:#fdfefe}
-.stk .hd{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:9px;padding-bottom:9px;border-bottom:1px dashed #e0e6f0}
-.stk .nm{font-size:16.5px;font-weight:700;color:#0f2c5c}
-.stk .cd{font-size:12px;color:#8a94a3;font-family:ui-monospace,monospace}
-.stk .pc{font-size:16px;font-weight:700;font-variant-numeric:tabular-nums}
-.badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:5px;background:#fdeaea;color:#c0392b;border:1px solid #f7cfcf}
-.badge.b2{background:#eef2fa;color:#4a6285;border-color:#dbe3f1}
-.kv{display:grid;grid-template-columns:74px 1fr;gap:6px 10px;font-size:13.8px;margin-bottom:4px}
-.kv .k{color:#7b8698;font-size:12.5px;padding-top:2px}
-.kv .v{color:#27313f}
-.kv .v b{color:#0f2c5c}
-.kv.rkk .v{font-family:ui-monospace,monospace;font-size:12.8px}
-.warn{background:#fff8f6;border-left:3px solid #e8836a;padding:8px 12px;border-radius:0 7px 7px 0;font-size:13.4px;color:#8a3f2b;margin-top:8px}
-.jd{margin-bottom:15px}
-.jd .t{font-size:14px;font-weight:700;color:#1e4d8f;margin-bottom:4px}
-.jd p{font-size:13.8px;color:#3a4657}
-.rk2{display:flex;gap:11px;padding:11px 0;border-bottom:1px dashed #eef2f7}
-.rk2:last-child{border-bottom:none}
-.rk2 .i{flex:0 0 22px;height:22px;border-radius:50%;background:#1e4d8f;color:#fff;font-size:12px;font-weight:700;
-display:flex;align-items:center;justify-content:center;margin-top:3px}
-.rk2 .c .t{font-size:14px;font-weight:700;color:#0f2c5c;margin-bottom:2px}
-.rk2 .c .d{font-size:13.6px;color:#3a4657}
-.disc{background:#f8fafd;border:1px dashed #cfdae9;border-radius:11px;padding:16px 20px;font-size:12.8px;color:#6b7a90;line-height:1.75}
-.disc b{color:#3d5573}
-footer{text-align:center;color:#94a3b8;font-size:12px;padding:18px 0 30px}
-@media(max-width:720px){
-.stats{grid-template-columns:repeat(2,1fr)}.idx{grid-template-columns:repeat(2,1fr)}
-h1{font-size:21px}.sec{padding:18px 16px}.kv{grid-template-columns:66px 1fr}
-table{font-size:12.4px}th,td{padding:7px 8px}}
+.num{text-align:right;font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+.nm{font-weight:600}
+.code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--sub)}
+.up{color:var(--up);font-weight:600} .dn{color:var(--dn);font-weight:600} .flat{color:var(--sub)}
+.sum td{background:#f8f9fc;font-weight:700;border-top:2px solid var(--line)}
+.rk{display:inline-block;min-width:24px;height:24px;line-height:24px;text-align:center;border-radius:6px;background:#eef1f7;color:var(--sub);font-size:12px;font-weight:700}
+.rk.top{background:var(--accent);color:#fff}
+.nb{color:#c3c9d6}
+.tgcell{font-size:12px;color:var(--sub)}
+.stock{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-bottom:16px}
+.shead{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap}
+.sname{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sname h3{font-size:20px;font-weight:700}
+.sname code{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--sub);background:#f1f3f7;padding:2px 7px;border-radius:5px}
+.star{font-size:11px;font-weight:700;color:#fff;background:var(--accent);padding:2px 8px;border-radius:20px}
+.star.s2{background:#98a2b3}
+.schg{font-size:26px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.2}
+.tags{margin:10px 0 14px;display:flex;gap:6px;flex-wrap:wrap}
+.tg{font-size:11.5px;color:#344054;background:#f2f4f7;border:1px solid #e4e7ec;padding:2px 9px;border-radius:5px}
+.rks{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:8px;margin-bottom:16px}
+.rkbox{border:1px solid var(--line);border-radius:9px;padding:8px 10px;background:#fbfcfe}
+.rkbox span{display:block;font-size:11px;color:var(--sub)}
+.rkbox b{display:block;margin-top:3px;font-size:16px}
+.rkbox b.q{font-size:15px;font-variant-numeric:tabular-nums}
+.dims{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dim{border-left:3px solid var(--accent);background:#fafbfd;border-radius:0 8px 8px 0;padding:10px 14px}
+.dim.risk{border-left-color:var(--warn);background:var(--warnbg)}
+.dl{font-size:11.5px;font-weight:700;color:var(--accent);letter-spacing:.04em;margin-bottom:4px}
+.dim.risk .dl{color:var(--warn)}
+.dim p{font-size:13.5px;line-height:1.8;color:#344054}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+ul.pts{list-style:none;font-size:14px}
+ul.pts li{padding:9px 0 9px 22px;position:relative;border-bottom:1px dashed #eef1f6}
+ul.pts li:last-child{border-bottom:none}
+ul.pts li:before{content:"";position:absolute;left:6px;top:18px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+ul.pts.warn li:before{background:var(--warn)}
+.tagb{font-weight:700}
+.disc{background:#fbfcfe;border:1px dashed #cfd6e4;border-radius:10px;padding:16px 18px;font-size:12.5px;color:var(--sub);line-height:1.85}
+footer{text-align:center;font-size:12px;color:#98a2b3;margin-top:26px}
+@media(max-width:760px){.dims,.grid2{grid-template-columns:1fr}h1{font-size:25px}.schg{font-size:22px}section,.stock{padding:18px 16px}}
 </style></head><body>
-<header><div class="wrap"><div class="kicker">DAILY HOT STOCK REPORT</div>
-<h1>每日热门股日报 · 2026-11-24</h1>
-<div class="meta"><span>星期二</span><span>三榜交集 <b>9 只</b></span><span>三榜全上榜 <b>5 只</b></span><span>数据口径：收盘后</span></div>
-</div></header><div class="wrap body">
-<div class="stats">
-<div class="stat"><div class="sl">上证指数</div><div class="sv">3548.37<em>点</em></div></div>
-<div class="stat"><div class="sl">深证成指</div><div class="sv">10423.60<em>点</em></div></div>
-<div class="stat"><div class="sl">创业板指</div><div class="sv">2278.99<em>点</em></div></div>
-<div class="stat"><div class="sl">两市成交</div><div class="sv">1.66<em>万亿</em></div></div>
-<div class="stat"><div class="sl">涨停家数</div><div class="sv">55<em>家</em></div></div>
-</div>
-<div class="sec"><h2>一、大盘背景：高开低走，创业板从 +4% 收在最低</h2>
-<div class="idx">
-<div class="ib"><div class="n">上证指数</div><div class="v" style="color:#d92b2b">3548.37</div><div class="p" style="color:#d92b2b">+0.27%</div><div class="n" style="margin-top:2px">成交 7719 亿</div></div>
-<div class="ib"><div class="n">深证成指</div><div class="v" style="color:#12864b">10423.60</div><div class="p" style="color:#12864b">-0.29%</div><div class="n" style="margin-top:2px">成交 8832 亿</div></div>
-<div class="ib"><div class="n">创业板指</div><div class="v" style="color:#12864b">2278.99</div><div class="p" style="color:#12864b">-0.05%</div><div class="n" style="margin-top:2px">成交 4489 亿</div></div>
-<div class="ib"><div class="n">科创50</div><div class="v" style="color:#d92b2b">1250.09</div><div class="p" style="color:#d92b2b">+1.81%</div><div class="n" style="margin-top:2px">成交 1001 亿</div></div>
-</div>
-<p>今日三大指数集体高开：沪指开 <b>3567.84</b>、创业板指开 <b>2368.70</b>（+3.9%），盘中最高摸到 <b>2376.34</b>（一度涨超 4%），随后单边回落。最终上证 <b style="color:#d92b2b">+0.27%</b>、深成 <b style="color:#12864b">-0.29%</b>、创业板 <b style="color:#12864b">-0.05%</b>，收在全天最低 2278.99，全天振幅 <b>4.27%</b>；科创50 逆势 <b style="color:#d92b2b">+1.81%</b>。</p>
-<p>两市成交 <b>1.66 万亿（16551 亿，较上日放量 1022 亿）</b>，但赚钱效应明显收缩：涨停仅 <b>55</b> 家（昨日 151 家）、跌停 <b>2</b> 家，全市场 <b>超 3400 只个股下跌</b>、约 1900 只上涨——<b>放量 + 普跌 + 收盘在最低</b>，是指数假强、个股真弱的典型形态。</p>
-<table><thead><tr><th>方向</th><th>表现</th><th>驱动 / 代表个股</th></tr></thead><tbody><tr><td><b style="color:#d92b2b">主线一 · 人形机器人</b></td><td>板块涨 <b>2.56%</b>，19 只概念股涨停，13 只两连板；减速器 +3.39%、丝杠/传感器同步扩散</td><td>中京电子 4 连板；克来机电、长华集团 3 连板；宁波东力、锋龙股份、福莱新材、安培龙、柯力传感 2 连板；同星科技 / 安培龙 / 雷迪克 20CM</td></tr><tr><td><b style="color:#d92b2b">主线二 · 算力硬件（冲高回落）</b></td><td>早盘领涨、尾盘翻绿；工业富联涨停开盘炸板</td><td>工业富联 +6.97%（涨停开 42.12）、东山精密 +1.72%（涨停开 78.62）、胜宏科技 +6.27%、寒武纪 +6.03%、天孚通信 +4.53%；但中际旭创 -0.05%、新易盛 -0.74%，均从 +11% 回落</td></tr><tr><td><b style="color:#d92b2b">主线三 · 消费电子 / 半导体设备</b></td><td>消费电子领涨，半导体设备盘中异动</td><td>奥尼电子 20CM 涨停、联创电子涨停；全筑股份 6 天 4 板、百傲化学涨停、芯源微 +7.33%</td></tr><tr><td><b style="color:#12864b">走弱方向</b></td><td>贵金属、煤炭、燃气、工业金属、券商</td><td>赤峰黄金、西部黄金、紫金矿业集体下挫，鑫铂股份跌停（-10.00%）；PCB 概念高开低走，逸豪新材、澳弘电子、宝鼎科技回落</td></tr></tbody></table>
-<p style="margin-top:12px;font-size:13.6px;color:#4a5a70"><b>风格判断：</b>今日真正有梯队的是<b>人形机器人</b>（按丝杠、减速器、力传感器、结构件分环节炒作），而算力硬件是<b>消息驱动的一日反弹</b>——黄仁勋回归英伟达修复了风险偏好，但工业富联、东山精密涨停开盘全部炸板，中际旭创、新易盛从 +11% 翻绿。指数层面 1.66 万亿的放量并没有换来上涨家数，说明资金在高开位置完成了换手而非加仓。</p>
-</div>
-<div class="sec"><h2>二、三榜交集：9 只（三榜全上榜 5 只）</h2>
-<p style="font-size:13.7px;color:#3a4657">口径：同花顺热榜 × 东方财富热度榜 × 淘股吧实时热搜，各取前 10，出现 ≥2 榜即入交集。<b>三榜全上榜（★）</b>优先列示。今日交集 9 只，上涨 <b style="color:#d92b2b">6</b> 只、下跌 <b style="color:#12864b">3</b> 只，三榜全上榜 <b>5</b> 只、占比 56%——较昨日（6 只 / 10 只）下降，且结构从「纯情绪小票」切换为「情绪票 + 算力权重」混杂，说明资金注意力正在分散。</p>
-<table><thead><tr><th>#</th><th>股票</th><th>代码</th><th class="num">涨跌幅</th><th class="num">同花顺</th><th class="num">东财</th><th class="num">淘股吧</th><th class="num">换手</th><th class="num">成交额</th><th>连板</th></tr></thead><tbody>
-<tr style="background:#fbfcfe"><td>1</td><td><b>★ 九阳股份</b></td><td class="mono">002242</td><td class="num" style="color:#d92b2b;font-weight:700">+10.01%</td><td class="num"><b>1</b></td><td class="num"><b>1</b></td><td class="num"><b>6</b></td><td class="num">4.32%</td><td class="num">11.43 亿</td><td style="font-size:12.5px;color:#5a6b82">2 连板（近 6 个交易日 4 板；两月累计 +270%，60 日 +326%）</td></tr>
-<tr style="background:#fbfcfe"><td>2</td><td><b>★ 华胜天成</b></td><td class="mono">600410</td><td class="num" style="color:#d92b2b;font-weight:700">+3.12%</td><td class="num"><b>3</b></td><td class="num"><b>2</b></td><td class="num"><b>2</b></td><td class="num">35.22%</td><td class="num">67.48 亿</td><td style="font-size:12.5px;color:#5a6b82">8 个交易日 4 板（今日早盘封板 18.32 后炸板）</td></tr>
-<tr style="background:#fbfcfe"><td>3</td><td><b>★ 中京电子</b></td><td class="mono">002579</td><td class="num" style="color:#d92b2b;font-weight:700">+9.98%</td><td class="num"><b>9</b></td><td class="num"><b>4</b></td><td class="num"><b>5</b></td><td class="num">8.81%</td><td class="num">8.33 亿</td><td style="font-size:12.5px;color:#5a6b82">4 连板（全市场最高标，今日一字板 09:25 封死，未开板）</td></tr>
-<tr style="background:#fbfcfe"><td>4</td><td><b>★ 冰山冷热</b></td><td class="mono">000530</td><td class="num" style="color:#12864b;font-weight:700">-0.74%</td><td class="num"><b>4</b></td><td class="num"><b>6</b></td><td class="num"><b>8</b></td><td class="num">41.13%</td><td class="num">34.45 亿</td><td style="font-size:12.5px;color:#5a6b82">今日冲高 14.61（+8.1%）后跳水收绿；10-13 以来六次触发异常波动</td></tr>
-<tr style="background:#fbfcfe"><td>5</td><td><b>★ 华东重机</b></td><td class="mono">002685</td><td class="num" style="color:#d92b2b;font-weight:700">+9.95%</td><td class="num"><b>7</b></td><td class="num"><b>10</b></td><td class="num"><b>4</b></td><td class="num">49.15%</td><td class="num">42.92 亿</td><td style="font-size:12.5px;color:#5a6b82">2 连板（今日 7 次开板后回封，封单 8315 万元）</td></tr>
-<tr><td>6</td><td><b>东山精密</b></td><td class="mono">002384</td><td class="num" style="color:#d92b2b;font-weight:700">+1.72%</td><td class="num"><b>2</b></td><td class="num"><b>7</b></td><td class="num"><span class='na'>—</span></td><td class="num">13.92%</td><td class="num">146.58 亿</td><td style="font-size:12.5px;color:#5a6b82">今日以涨停价 78.62 开盘，盘初炸板，收 72.70（日内回落 7.5%）</td></tr>
-<tr><td>7</td><td><b>中际旭创</b></td><td class="mono">300308</td><td class="num" style="color:#12864b;font-weight:700">-0.05%</td><td class="num"><b>6</b></td><td class="num"><b>5</b></td><td class="num"><span class='na'>—</span></td><td class="num">5.80%</td><td class="num">285.83 亿</td><td style="font-size:12.5px;color:#5a6b82">高开 463.20（+11.0%）、最高 469.00 后单边回落，收 417.00，全天振幅 12.9%</td></tr>
-<tr><td>8</td><td><b>工业富联</b></td><td class="mono">601138</td><td class="num" style="color:#d92b2b;font-weight:700">+6.97%</td><td class="num"><b>8</b></td><td class="num"><b>3</b></td><td class="num"><span class='na'>—</span></td><td class="num">1.41%</td><td class="num">117.08 亿</td><td style="font-size:12.5px;color:#5a6b82">以涨停价 42.12 开盘，全天围绕涨停价震荡后炸板，收 40.96</td></tr>
-<tr><td>9</td><td><b>新易盛</b></td><td class="mono">300502</td><td class="num" style="color:#12864b;font-weight:700">-0.74%</td><td class="num"><b>10</b></td><td class="num"><b>8</b></td><td class="num"><span class='na'>—</span></td><td class="num">10.38%</td><td class="num">249.75 亿</td><td style="font-size:12.5px;color:#5a6b82">高开 197.00、最高 201.99（+11.4%）后一路走低，收在全天最低 180.01</td></tr>
-</tbody></table>
-<p style="margin-top:11px;font-size:12.8px;color:#7b8698">★ = 三榜全上榜（同花顺 + 东方财富 + 淘股吧均在前 10）；— = 未进入该榜前 10。涨跌幅按 A 股口径：<b style="color:#d92b2b">红涨</b> / <b style="color:#12864b">绿跌</b>。</p>
-</div>
-<div class="sec"><h2>三、逐股拆解（四维度：人气 · 基本面 · 消息面 · 风险）</h2>
-<p style="font-size:13.4px;color:#7b8698;margin-bottom:14px">仅覆盖交集股，每只固定 4 维度；财务数字取 2026 年三季报，消息面以当日/近日公告原文与权威媒体为准，无可靠来源的不写。</p>
-<div class="stk">
-<div class="hd"><span class="nm">1. 九阳股份</span><span class="cd">002242</span><span class="pc" style="color:#d92b2b">+10.01%　35.05 元</span><span class="badge">★ 三榜全上榜</span></div>
-<div class="kv rkk"><div class="k">三榜位次</div><div class="v">同花顺 <b>1</b> · 东方财富 <b>1</b> · 淘股吧 <b>6</b>　｜　换手 <b>4.32%</b>　成交 <b>11.43 亿</b>　估值 <b>404.9 倍(TTM)</b></div></div>
-<div class="kv"><div class="k">为何关注</div><div class="v">三榜同时第一梯队（同花顺 1 / 东财 1 / 淘股吧 6），「羊字辈」玄学 + 深思考机器人 + 小家电超跌三重标签，是当下人气最集中的一只。</div></div>
-<div class="kv"><div class="k">基本面</div><div class="v">2026 前三季营收 50.52 亿元（-9.55%），归母净利 7198.95 万元（-41.75%），扣非 -60.14%；Q3 单季归母仅 21.63 万元（-74.69%）；2021—2025 年营收、净利已连续五年双降。滚动 PE 404.9 倍，行业中值约 56 倍，龙头苏泊尔仅 19 倍。</div></div>
-<div class="kv"><div class="k">消息面</div><div class="v">11-17、11-18 两份异动风险提示逐条否认：与华为不存在战略合作关系；持深思考 7.92% 股权、未并表且尚未盈利；「哈基米」产品属杭州九阳豆业、与上市公司无股权关系；太空厨房技术未形成独立业务收入。10-26 控股股东上海力鸿集中竞价减持 1447.26 万股（占总股本 1.90%），套现约 3.09 亿元，持股由 67.42% 降至 65.53%。龙虎榜上章盟主常用席位买入近亿元，深股通与机构席位亦有进场。</div></div>
-<div class="warn"><b>⚠️ 风险：</b>今日量比仅 0.23、成交 11.43 亿（昨日 25.19 亿），缩量秒板意味着筹码高度锁定，但获利盘同样巨大；Q3 净利 21.63 万元撑起 267 亿市值，控股股东已在 10 月高位兑现，属「基本面与股价完全脱钩」的极端样本。</div>
-</div>
-<div class="stk">
-<div class="hd"><span class="nm">2. 华胜天成</span><span class="cd">600410</span><span class="pc" style="color:#d92b2b">+3.12%　17.17 元</span><span class="badge">★ 三榜全上榜</span></div>
-<div class="kv rkk"><div class="k">三榜位次</div><div class="v">同花顺 <b>3</b> · 东方财富 <b>2</b> · 淘股吧 <b>2</b>　｜　换手 <b>35.22%</b>　成交 <b>67.48 亿</b>　估值 <b>亏损(TTM)</b></div></div>
-<div class="kv"><div class="k">为何关注</div><div class="v">淘股吧第 2、东财第 2、同花顺第 3，是今日唯一「炸板仍稳居三榜前列」的标的，华为算力链人气担当。</div></div>
-<div class="kv"><div class="k">基本面</div><div class="v">2026 前三季营收 38.33 亿元（+20.83%），归母净利 -2.59 亿元（-172.32%），EPS -0.24 元，加权 ROE -6.12%；收入端在放量，利润端被减值与费用吞噬，10-30 同时披露《关于 2026 年第三季度计提及冲回资产减值准备的公告》。</div></div>
-<div class="kv"><div class="k">消息面</div><div class="v">11-24 Bernstein Research 预测：2026 年以华为昇腾为首的国产 AI 芯片市占率有望首次超过 50%，2028 年中国本土 AI 芯片产量可覆盖内需（供需比约 104%）；行业测算 2026 年华为昇腾 AI 处理器收入将突破 120 亿美元（来源：华夏时报 / 财联社 11-24）。11-19 公司发布股票交易异常波动公告；11-24 早盘华为算力概念异动，封单一度超 88 万手。</div></div>
-<div class="warn"><b>⚠️ 风险：</b>换手 35.22%、成交 67.48 亿、振幅 12.79%，20 日已涨 47%；主力净流入 2.16 亿元，但大单净流出 2.34 亿元、超大单净流入 4.5 亿元，资金分歧极大；前三季仍亏 2.59 亿元，PE 为负，纯靠题材与情绪定价。</div>
-</div>
-<div class="stk">
-<div class="hd"><span class="nm">3. 中京电子</span><span class="cd">002579</span><span class="pc" style="color:#d92b2b">+9.98%　16.20 元</span><span class="badge">★ 三榜全上榜</span></div>
-<div class="kv rkk"><div class="k">三榜位次</div><div class="v">同花顺 <b>9</b> · 东方财富 <b>4</b> · 淘股吧 <b>5</b>　｜　换手 <b>8.81%</b>　成交 <b>8.33 亿</b>　估值 <b>亏损(TTM)</b></div></div>
-<div class="kv"><div class="k">为何关注</div><div class="v">三榜均在榜（9 / 4 / 5），是今日唯一 4 连板，概念标签「高阶 HDI + 算力 + 光模块 PCB + 人形机器人」四重叠加，PCB 与机器人两条线都认它。</div></div>
-<div class="kv"><div class="k">基本面</div><div class="v">2026 前三季营收 24.45 亿元（+1.83%），归母净利 -1.17 亿元（-558.47%），EPS -0.19 元，加权 ROE -5.03%；是已披露三季报的 33 家 PCB 公司中唯一亏损者。机构一致预测 2026 年营收 44.91 亿元、净利 1.40 亿元（2 家机构）。</div></div>
-<div class="kv"><div class="k">消息面</div><div class="v">11-21 股票交易异常波动公告（11-19、11-20 两日收盘涨幅偏离值累计超 20%），公司称生产经营正常、无未披露重大事项；11-20 全球电子协会发布 PCB 供应链缺货警报，瓶颈或延续至 2027 年上半年；11-12 披露募集资金三方监管协议，7 亿元定增资金落地。</div></div>
-<div class="warn"><b>⚠️ 风险：</b>一字板 + 缩量：换手仅 8.81%、量比 0.64、成交 8.33 亿（昨日 25.87 亿），封单 1.97 亿；封得越死，开板时抛压越集中。业绩亏损、PE 为负，4 连板已是全市场最高标，一旦断板即为情绪风向标转向信号。</div>
-</div>
-<div class="stk">
-<div class="hd"><span class="nm">4. 冰山冷热</span><span class="cd">000530</span><span class="pc" style="color:#12864b">-0.74%　13.42 元</span><span class="badge">★ 三榜全上榜</span></div>
-<div class="kv rkk"><div class="k">三榜位次</div><div class="v">同花顺 <b>4</b> · 东方财富 <b>6</b> · 淘股吧 <b>8</b>　｜　换手 <b>41.13%</b>　成交 <b>34.45 亿</b>　估值 <b>346.3 倍(TTM)</b></div></div>
-<div class="kv"><div class="k">为何关注</div><div class="v">同花顺 4 / 东财 6 / 淘股吧 8，冰雪产业 + 液冷双题材，是今日交集中换手最极端、分歧最大的一只。</div></div>
-<div class="kv"><div class="k">基本面</div><div class="v">2026 前三季营收 32.96 亿元（-8.98%），归母净利 6131.34 万元（-32.38%），扣非 3881 万元（-50.99%）；滚动 PE 346.3 倍，公司自认行业（C34 通用设备）PE 仅 34.09 倍。</div></div>
-<div class="kv"><div class="k">消息面</div><div class="v">11-24（今日）发布《股票交易异常波动暨风险提示公告》（2026-041）：10-13 至 11-23 期间六次触发异常波动；冰雪场馆业务 2026 年至今尚未确认收入；液冷业务处研发试制、初步推广阶段，2026 年仅零星收入，部分产品可商用时间尚不确定。此前 10-23、11-12、11-19 已连续三次发布异动公告。</div></div>
-<div class="warn"><b>⚠️ 风险：</b>今日换手 41.13%、成交 34.45 亿、振幅 9.2%，高位天量却收阴，是典型派发形态；公司公告明示「若涨幅继续扩大可能触发严重异常波动」——即存在停牌核查可能；核心概念几乎零收入，扣非腰斩。</div>
-</div>
-<div class="stk">
-<div class="hd"><span class="nm">5. 华东重机</span><span class="cd">002685</span><span class="pc" style="color:#d92b2b">+9.95%　8.95 元</span><span class="badge">★ 三榜全上榜</span></div>
-<div class="kv rkk"><div class="k">三榜位次</div><div class="v">同花顺 <b>7</b> · 东方财富 <b>10</b> · 淘股吧 <b>4</b>　｜　换手 <b>49.15%</b>　成交 <b>42.92 亿</b>　估值 <b>100.2 倍(TTM)</b></div></div>
-<div class="kv"><div class="k">为何关注</div><div class="v">淘股吧第 4、同花顺第 7、东财第 10，标签为「GPU 芯片 + 港口装卸设备 + 定增注册」，小盘（90 亿市值）+ 高换手，游资主战场。</div></div>
-<div class="kv"><div class="k">基本面</div><div class="v">2026 前三季营收 9.43 亿元（+55.86%），归母净利 6325.79 万元（+58.11%），EPS 0.0628 元，加权 ROE 3.89%；收入与利润同步高增，但绝对利润体量仅 6300 万元级，撑 90 亿市值对应 PE 100 倍。</div></div>
-<div class="kv"><div class="k">消息面</div><div class="v">11-06《关于 2026 年度以简易程序向特定对象发行股票申请获得深圳证券交易所受理的公告》，定增进入注册流程；11-17、11-19 连发两份股票交易异常波动公告；11-24 涨停原因被市场归因为「GPU 芯片 + 港口设备 + 定增注册」。近 10 个交易日已 6 次涨停，窗口累计涨幅 +85.3%。</div></div>
-<div class="warn"><b>⚠️ 风险：</b>换手 49.15%（全市场第 5）、成交 42.92 亿，相当于近半个市值换手一遍；日内 7 次开板说明抛压极重，尾盘才勉强回封；芯片业务收入占比极低（不足 3%），题材与业绩体量不匹配，杠杆资金集中易踩踏。</div>
-</div>
-<div class="stk">
-<div class="hd"><span class="nm">6. 东山精密</span><span class="cd">002384</span><span class="pc" style="color:#d92b2b">+1.72%　72.70 元</span><span class="badge b2">两榜上榜</span></div>
-<div class="kv rkk"><div class="k">三榜位次</div><div class="v">同花顺 <b>2</b> · 东方财富 <b>7</b> · 淘股吧 <b>—</b>　｜　换手 <b>13.92%</b>　成交 <b>146.58 亿</b>　估值 <b>25.9 倍(TTM)</b></div></div>
-<div class="kv"><div class="k">为何关注</div><div class="v">同花顺第 2、东财第 7，PCB 千亿龙头 + 苹果链 + 光模块结构件，是今日「英伟达链情绪修复」的第一梯队标的。</div></div>
-<div class="kv"><div class="k">基本面</div><div class="v">2026 前三季营收 453.79 亿元（+67.63%），归母净利 52.89 亿元（+332.34%），EPS 2.89 元，加权 ROE 22.08%；是交集中业绩弹性最大的一只，PE 仅 25.9 倍，估值与增速的匹配度最好。</div></div>
-<div class="kv"><div class="k">消息面</div><div class="v">11-24 公告：公司 H 股自 2026-11-23 起调入沪港通及深港通标的证券名单（公告 2026-070），内地投资者可直接投资其 H 股；11-23 公告部分行使超额配售权、稳定价格行动结束及稳定价格期届满；11-24 受黄仁勋回归英伟达消息刺激，光模块/PCB 板块早盘集体冲高。</div></div>
-<div class="warn"><b>⚠️ 风险：</b>涨停开盘、收盘仅 +1.72%，日内回落 7.5%，成交 146.58 亿元——利好（港股通）当天即被用来兑现；H 股稳定价格期已结束，护盘资金退出；1414 亿市值、13.92% 换手，筹码松动速度快。</div>
-</div>
-<div class="stk">
-<div class="hd"><span class="nm">7. 中际旭创</span><span class="cd">300308</span><span class="pc" style="color:#12864b">-0.05%　417.00 元</span><span class="badge b2">两榜上榜</span></div>
-<div class="kv rkk"><div class="k">三榜位次</div><div class="v">同花顺 <b>6</b> · 东方财富 <b>5</b> · 淘股吧 <b>—</b>　｜　换手 <b>5.80%</b>　成交 <b>285.83 亿</b>　估值 <b>19.0 倍(TTM)</b></div></div>
-<div class="kv"><div class="k">为何关注</div><div class="v">同花顺第 6、东财第 5，「易中天」三巨头之首，光模块全球龙头；今日 285.83 亿成交为全市场最大单只成交之一。</div></div>
-<div class="kv"><div class="k">基本面</div><div class="v">2026 前三季营收 695.47 亿元（+178.13%），归母净利 222.38 亿元（+211.81%），EPS 19.78 元，加权 ROE 44.26%；PE 19.0 倍，是 4912 亿市值里少见的「高增长 + 低估值」组合。</div></div>
-<div class="kv"><div class="k">消息面</div><div class="v">11-24 披露《关于回购公司股份方案的公告》（2026-111）：拟以自有或自筹资金回购 20 亿—40 亿元，回购价上限 600 元/股，用于员工持股/股权激励及维护公司价值；11-18 曾披露收到董事长提议回购的公告。11-24 黄仁勋回归英伟达，光模块板块早盘集体冲高，公司一度涨 11%。</div></div>
-<div class="warn"><b>⚠️ 风险：</b>20—40 亿元回购是「跌出来的利好」，但当日高开 11% 后收平，从高点回落 11%，说明利好被直接用于出货；股价 417 元、市值 4912 亿元，单日 285.83 亿元成交对应 5.8% 换手，一旦 AI 资本开支预期反复，波动会被放大。</div>
-</div>
-<div class="stk">
-<div class="hd"><span class="nm">8. 工业富联</span><span class="cd">601138</span><span class="pc" style="color:#d92b2b">+6.97%　40.96 元</span><span class="badge b2">两榜上榜</span></div>
-<div class="kv rkk"><div class="k">三榜位次</div><div class="v">同花顺 <b>8</b> · 东方财富 <b>3</b> · 淘股吧 <b>—</b>　｜　换手 <b>1.41%</b>　成交 <b>117.08 亿</b>　估值 <b>15.3 倍(TTM)</b></div></div>
-<div class="kv"><div class="k">为何关注</div><div class="v">东财第 3、同花顺第 8，8128 亿市值巨头以涨停价开盘，是今日算力链情绪修复的最强信号，也是全市场讨论度最高的「大票异动」。</div></div>
-<div class="kv"><div class="k">基本面</div><div class="v">2026 前三季营收 9414.14 亿元（+55.88%），归母净利 403.75 亿元（+79.55%），EPS 2.04 元，加权 ROE 21.77%；Q3 云计算业务营收同比、环比均大幅增长——AI-ASIC 服务器出货量同比 +1.5 倍、环比 +80%，AI-GPU 机柜出货量同比 +70%、环比 +15%，云计算业务营收增幅约 75%。</div></div>
-<div class="kv"><div class="k">消息面</div><div class="v">11-24 黄仁勋回归英伟达，被压制已久的 AI 产业链交易逻辑重新获得支撑，服务器、光模块、高速 PCB 率先修复（同花顺 11-24）；11-20、11-21 连发员工持股计划进展公告：信托账户截至 11-20 已买入 1347.58 万股、成交 4.995 亿元、均价约 37.08 元；该计划覆盖不超过 1.2 万名核心员工、零成本受让，考核 2027—2029 年累计净利不低于 2400 亿元；2026 年现金分红 194.49 亿元、分红率超 55%。</div></div>
-<div class="warn"><b>⚠️ 风险：</b>涨停开盘、收 +6.97%，炸板后未能回封；公司自年内高点已跌约四成，本轮属超跌反弹而非趋势反转；换手仅 1.41% 意味着大资金进出成本极高，一旦情绪退潮，8128 亿市值的回落会非常钝重。</div>
-</div>
-<div class="stk">
-<div class="hd"><span class="nm">9. 新易盛</span><span class="cd">300502</span><span class="pc" style="color:#12864b">-0.74%　180.01 元</span><span class="badge b2">两榜上榜</span></div>
-<div class="kv rkk"><div class="k">三榜位次</div><div class="v">同花顺 <b>10</b> · 东方财富 <b>8</b> · 淘股吧 <b>—</b>　｜　换手 <b>10.38%</b>　成交 <b>249.75 亿</b>　估值 <b>17.2 倍(TTM)</b></div></div>
-<div class="kv"><div class="k">为何关注</div><div class="v">同花顺第 10、东财第 8，「易中天」中的业绩弹性担当，1.6T 光模块主力供应商；今日 249.75 亿成交、收在最低价，是分歧最剧烈的一只。</div></div>
-<div class="kv"><div class="k">基本面</div><div class="v">2026 前三季营收 318.50 亿元（+92.97%），归母净利 113.72 亿元（+79.74%），EPS 8.16 元，加权 ROE 49.22%；PE 17.2 倍、ROE 近 50%，是全交集中盈利质量最高的标的。</div></div>
-<div class="kv"><div class="k">消息面</div><div class="v">11-18 自愿披露《关于公司近期生产经营情况的公告》：客户需求指引明确、在手订单充足，不存在需求预期下修或砍单，对 Q4 及明年订单增长持积极预期；800G/1.6T 为今年主力产品，1.6T 已进入大规模放量，NPO 预计 2027 年批量出货、2028 年大规模交付；成都与泰国基地快速扩产。回购：计划 8—10 亿元，截至 11-18 已回购 421.6 万股、耗资 7.999 亿元（最高 213.27 元 / 最低 172.05 元）；2025 年度分红 10 派 10、合计 9.96 亿元。</div></div>
-<div class="warn"><b>⚠️ 风险：</b>高开 11.4%、收在全天最低，标准的单边出货形态；CPO/NPO 技术路线切换对可插拔光模块的长期估值构成压制；2510 亿市值 + 10.38% 换手，短线筹码已高度换手，回购托底（均价约 190 元）反而成为上方套牢盘参照。</div>
-</div>
-</div>
-<div class="sec"><h2>四、综合判断</h2>
-<div class="jd"><div class="t">主线持续性：机器人是真主线，算力是「消息驱动的一日反弹」</div><p>今日唯一有完整梯队的是人形机器人——同花顺人形机器人概念板块涨 2.56%，19 只概念股涨停，13 只两连板，克来机电、长华集团 3 连板，中京电子 4 连板，减速器、丝杠、六维力传感器、柔性传感等细分同步扩散，说明资金是在「按产业链环节」而不是「按个股」炒作，这种结构通常能延续 3—5 个交易日。反观算力硬件：工业富联涨停开盘炸板收 +6.97%、东山精密涨停开盘收 +1.72%、中际旭创从 +11% 收平、新易盛从 +11.4% 收在最低，四只权重票全部「高开低走」，本质是黄仁勋回归英伟达带来的情绪修复，而非订单或业绩的边际变化。机器人可跟踪晋级，算力需等回踩确认。</p></div>
-<div class="jd"><div class="t">情绪周期：指数假强、个股真弱，处于退潮期而非启动期</div><p>三大指数高开低走，创业板指开盘 2368.70、盘中最高 2376.34（一度涨超 4%），最终收在当日最低 2278.99、跌 0.05%，全天振幅 4.27%，这是最典型的「高开低走、收盘在最低」形态。更关键的是赚钱效应：涨停家数从昨日 151 家骤降至 55 家，跌停 2 家，全市场超 3400 只个股下跌、仅约 1900 只上涨，成交 1.66 万亿还放量 1022 亿——放量下跌意味着有人在借高开出货。连板结构上，最高标仅 4 板 1 只（中京电子）、3 板 4 只、2 板 25 只、首板 25 只，高度被压缩、宽度尚可，属于「低位轮动补涨」，不是主升浪。</p></div>
-<div class="jd"><div class="t">追高风险：两端都不划算，中间才是唯一有性价比的位置</div><p>交集 9 只中三榜全上榜 5 只（昨日 6 只 / 10 只），集中度下降，说明资金注意力开始分散。情绪端：九阳（-41.75%）、中京（-558.47%）、冰山（-32.38%）、华胜（-172.32%）四只连板/高标全部业绩亏损或大幅下滑，追高等于为「辟谣过的题材」付 300—400 倍 PE。业绩端：东山（+332%）、中际（+212%）、工业富联（+80%）、新易盛（+80%）业绩都真实爆发，但今天全部炸板或翻绿，说明再好的业绩也扛不住「高开 10% 的兑现盘」。明日更值得观察的不是涨幅，而是：中京电子 4 连板一字板能否延续（断板即情绪见顶）、机器人 2 板梯队晋级率、以及算力四票能否在今日低点上方止跌——三条同时走坏，则确认退潮。</p></div>
-</div>
-<div class="sec"><h2>五、风险提示</h2>
-<div class="rk2"><div class="i">1</div><div class="c"><div class="t">连板股风险公告已进入密集披露期</div><div class="d">冰山冷热 11-24（今日）、中京电子 11-21、华胜天成 11-19、华东重机 11-17 与 11-19、九阳股份 11-18 均已发布股票交易异常波动公告；其中冰山冷热在公告中明确「若后续涨幅继续扩大，可能触发严重异常波动情形」，即存在被交易所停牌核查的现实可能。</div></div></div>
-<div class="rk2"><div class="i">2</div><div class="c"><div class="t">业绩与股价严重背离，估值缺乏支撑</div><div class="d">九阳股份 Q3 单季归母仅 21.63 万元、市值 267 亿元、PE 404.9 倍（行业约 56 倍）；中京电子前三季亏损 1.17 亿元却 4 连板；冰山冷热扣非 -50.99%、PE 346 倍（行业 34 倍）；华胜天成亏损 2.59 亿元、PE 为负。四只高标全部是「股价跑在业绩前面几个数量级」。</div></div></div>
-<div class="rk2"><div class="i">3</div><div class="c"><div class="t">高位天量滞涨，派发特征明显</div><div class="d">冰山冷热换手 41.13%、成交 34.45 亿元却收跌 0.74%；华东重机换手 49.15%、成交 42.92 亿元、日内 7 次开板；华胜天成换手 35.22%、封板后炸板收 +3.12%。换手率前五名（华晟智能 72.24%、真视通 63.44%、贝特利 52.45%、北纬科技 50.95%、华东重机 49.15%）全部是情绪票，筹码一日换手近半，任何风吹草动都会引发踩踏。</div></div></div>
-<div class="rk2"><div class="i">4</div><div class="c"><div class="t">利好兑现风险：回购、港股通、缺货警报都被用来出货</div><div class="d">中际旭创 20—40 亿元回购公告当日高开 11% 收平；东山精密 H 股调入港股通当日涨停开盘收 +1.72%；工业富联员工持股 + 分红 + AI 服务器高增，涨停开盘仍炸板。利好越集中，兑现盘越坚决，这是当前市场最需警惕的行为模式。</div></div></div>
-<div class="rk2"><div class="i">5</div><div class="c"><div class="t">题材兑现度不足，概念与实际收入存在数量级差距</div><div class="d">九阳持股深思考仅 7.92%、未并表且尚未盈利；冰山冷热冰雪场馆业务 2026 年尚未确认收入、液冷仅零星收入；华东重机芯片业务收入占比不足 3%；中京电子的机器人属性来自 PCB 下游预期而非直接订单。</div></div></div>
-<div class="rk2"><div class="i">6</div><div class="c"><div class="t">杠杆与小盘筹码结构放大波动</div><div class="d">华东重机市值仅 90.19 亿元却成交 42.92 亿元、换手近半；九阳量比 0.23 的缩量板意味着流动性在涨停价上被抽干，一旦开板承接不足，跌幅会被融资盘被动平仓进一步放大。指数层面，贵金属、煤炭、燃气、券商同步走弱，风格切换尚未完成。</div></div></div>
-<div class="rk2"><div class="i">7</div><div class="c"><div class="t">外部变量仍是「叙事」而非订单</div><div class="d">黄仁勋回归英伟达带来的是风险偏好修复，AI 资本开支的隐形杠杆与客户集中度问题并未解决；若海外算力股回吐，A 股光模块/PCB/服务器链条会同步补跌，且这类品种市值大、机构持仓重，回撤速度往往快于上涨速度。</div></div></div>
-</div>
-<div class="sec"><h2>六、数据口径与免责声明</h2>
-<div class="disc"><b>数据来源：</b>同花顺热榜（dq.10jqka.com.cn）、东方财富热度榜（emappdata.eastmoney.com）、淘股吧实时热搜（m.tgb.cn/quotes）、腾讯行情（qt.gtimg.cn）收盘数据、东方财富涨停池与业绩报表（datacenter-web.eastmoney.com）、上市公司公告原文（沪深交易所 / 巨潮资讯）、央广网 / 证券时报 / 财联社 / 中新经纬 / 21 世纪经济报道等媒体。<br><br><b>口径说明：</b>涨跌幅为 2026-11-24 收盘价对前收盘价；换手率、成交额、量比、估值均取当日收盘值；PE 为 TTM 口径，亏损公司标注「亏损」。三榜位次以各榜当日快照为准，榜单在盘后仍会滚动，本报告固定于收盘后 17:00 前后抓取。<br><br><b>下一交易日：</b>2026-11-25 星期三（A股交易日），本报告覆盖下一交易日盘前参考。<br><br><b>免责声明：</b>本报告数据来自公开渠道，仅供参考，<b>不构成任何投资建议</b>。本报告不含任何买卖推荐、目标价或仓位建议。所涉个股多为高波动、高换手品种，连板股存在被交易所实施停牌核查、退市风险警示等风险，投资者应独立判断、自负盈亏。股市有风险，入市需谨慎。</div>
-</div>
-<footer>每日热门股日报 · 2026-11-24 · 生成于收盘后 · 覆盖 9 只交集股</footer>
+<div class="hero"><div class="hero-in">
+  <div class="kicker">DAILY HOT STOCK BRIEF · 三榜交集</div>
+  <h1>每日热门股日报 · 2026-11-25</h1>
+  <div class="sub">星期三 · 收盘后 · 同花顺热榜 × 东方财富热度榜 × 淘股吧热搜</div>
+  <div class="kpis">
+    <div class="kpi"><div class="k">交集股</div><div class="v">10 只</div><div class="d">三榜全上榜 4 只</div></div>
+    <div class="kpi"><div class="k">今日收涨 / 收跌</div><div class="v">8 / 2</div><div class="d">涨停 8 只</div></div>
+    <div class="kpi"><div class="k">两市成交额</div><div class="v">13,831 亿</div><div class="d">较前日缩量约 2720 亿</div></div>
+    <div class="kpi"><div class="k">上证指数</div><div class="v dn">-2.03%</div><div class="d">3,476.47 点</div></div>
+  </div>
+</div></div>
+
+<div class="wrap">
+
+<section>
+  <h2>一、大盘背景</h2>
+  <p class="lead">周四（11-26）为 A 股交易日，本报告供下一交易日盘前参考。今日三大指数集体低开、午后跳水，沪指失守 3500 点，全市场超 4900 只个股下跌。</p>
+  <table><thead><tr><th>指数</th><th class="num">收盘</th><th class="num">涨跌幅</th><th class="num">成交额（亿元）</th></tr></thead>
+  <tbody><tr><td class="nm">上证指数</td><td class="num up">3,476.47</td><td class="num dn">-2.03%</td><td class="num">6,527</td></tr><tr><td class="nm">深证成指</td><td class="num up">10,086.36</td><td class="num dn">-3.24%</td><td class="num">7,304</td></tr><tr><td class="nm">创业板指</td><td class="num up">2,183.58</td><td class="num dn">-4.19%</td><td class="num">3,549</td></tr><tr><td class="nm">科创50</td><td class="num up">1,186.14</td><td class="num dn">-5.12%</td><td class="num">823</td></tr><tr><td class="nm">沪深300</td><td class="num up">3,898.24</td><td class="num dn">-1.65%</td><td class="num">4,110</td></tr><tr class="sum"><td class="nm">沪深两市合计成交额</td><td class="num">—</td><td class="num">—</td><td class="num">13,831</td></tr></tbody></table>
+  <div class="grid2" style="margin-top:18px">
+    <div>
+      <ul class="pts">
+        <li><span class="tagb">主线（逆势）</span>：医药（抗流感方向领涨，康芝药业、拓新药业、亨迪药业、双鹭药业、特一药业涨停）、商业零售（杭州解百 3 连板，中央商场、国芳集团、家家悦涨停）、酒店餐饮与免税旅游早盘走强后回落。</li>
+        <li><span class="tagb">主线（个股）</span>：全市场涨停 51 家、跌停 43 家，涨停结构仍以题材股为主——九阳股份（6 天 4 板）、克来机电（4 板）、金新农（4 板）、汇洲智能 / 宁波东力 / 杭州解百（3 板）。</li>
+      </ul>
+    </div>
+    <div>
+      <ul class="pts warn">
+        <li><span class="tagb">走弱方向</span>：算力产业链集体调整——光刻机、存储芯片、半导体、先进封装、MLCC 跌幅居前；申万电子 -6.71%、电力设备 -5.14%、机械设备 -4.91%、通信 -4.36%、计算机 -3.92%。</li>
+        <li><span class="tagb">外因</span>：11 月 24 日纳指 -1.48%、费城半导体指数 -7.88%、英伟达跌近 6%；11 月 25 日韩国 KOSPI -6.16%（三星、SK 海力士跌近或超 10%）、日经 -2.78%。全球 AI 资本开支回报与高估值担忧共振。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>二、交集股清单（三榜前 10 交叉）</h2>
+  <p class="lead">三榜各自前 10 共 30 个席位、去重后 24 只个股，出现次数 ≥2 的有 10 只；其中三榜全上榜 4 只（九阳股份、中京电子、冰山冷热、华胜天成），优先列出。</p>
+  <table><thead><tr><th>同花顺</th><th>东财</th><th>淘股吧</th><th>名称</th><th>代码</th><th class="num">涨跌幅</th><th class="num">换手率</th><th class="num">在榜数</th></tr></thead>
+  <tbody><tr><td><span class="rk top">1</span></td><td><span class="rk top">1</span></td><td><span class="rk top">3</span></td><td class="nm"><a href="#s002242">九阳股份</a></td><td class="code">002242</td><td class="num up">+10.01%</td><td class="num">14.2%</td><td class="num">3/3</td></tr><tr><td><span class="rk top">3</span></td><td><span class="rk top">2</span></td><td><span class="rk top">2</span></td><td class="nm"><a href="#s002579">中京电子</a></td><td class="code">002579</td><td class="num up">+10.00%</td><td class="num">42.5%</td><td class="num">3/3</td></tr><tr><td><span class="rk top">2</span></td><td><span class="rk">5</span></td><td><span class="rk">8</span></td><td class="nm"><a href="#s000530">冰山冷热</a></td><td class="code">000530</td><td class="num up">+9.54%</td><td class="num">38.7%</td><td class="num">3/3</td></tr><tr><td><span class="rk">4</span></td><td><span class="rk">4</span></td><td><span class="rk">4</span></td><td class="nm"><a href="#s600410">华胜天成</a></td><td class="code">600410</td><td class="num up">+4.37%</td><td class="num">31.3%</td><td class="num">3/3</td></tr><tr><td><span class="rk">7</span></td><td><span class="rk">7</span></td><td><span class="nb">—</span></td><td class="nm"><a href="#s600103">青山纸业</a></td><td class="code">600103</td><td class="num up">+9.88%</td><td class="num">30.6%</td><td class="num">2/3</td></tr><tr><td><span class="rk">5</span></td><td><span class="rk">6</span></td><td><span class="nb">—</span></td><td class="nm"><a href="#s300394">天孚通信</a></td><td class="code">300394</td><td class="num up">+7.65%</td><td class="num">8.2%</td><td class="num">2/3</td></tr><tr><td><span class="nb">—</span></td><td><span class="rk">8</span></td><td><span class="rk">10</span></td><td class="nm"><a href="#s600467">好当家</a></td><td class="code">600467</td><td class="num up">+10.09%</td><td class="num">19.3%</td><td class="num">2/3</td></tr><tr><td><span class="rk">6</span></td><td><span class="rk">9</span></td><td><span class="nb">—</span></td><td class="nm"><a href="#s002086">东方海洋</a></td><td class="code">002086</td><td class="num dn">-4.41%</td><td class="num">45.8%</td><td class="num">2/3</td></tr><tr><td><span class="rk">8</span></td><td><span class="nb">—</span></td><td><span class="rk top">1</span></td><td class="nm"><a href="#s002685">华东重机</a></td><td class="code">002685</td><td class="num up">+0.45%</td><td class="num">39.8%</td><td class="num">2/3</td></tr><tr><td><span class="rk">9</span></td><td><span class="nb">—</span></td><td><span class="rk">5</span></td><td class="nm"><a href="#s002148">北纬科技</a></td><td class="code">002148</td><td class="num dn">-9.99%</td><td class="num">2.2%</td><td class="num">2/3</td></tr></tbody></table>
+  <p class="lead" style="margin:14px 0 0">注：位次为各平台榜单原始排名；“—” 表示该股未进入对应榜单前 10。</p>
+</section>
+
+<section>
+  <h2>三、逐股拆解（10 只交集股 · 四维度）</h2>
+  <p class="lead">每只固定「为何被关注 / 基本面原因 / 消息面原因 / 风险点」四维度，所有数字来自三季报、公司公告或公开报道。</p>
+  
+<article class="stock" id="s002242">
+  <header class="shead">
+    <div class="sname"><h3>九阳股份</h3><code>002242</code><span class="star">三榜全上榜</span></div>
+    <div class="schg up">+10.01%</div>
+  </header>
+  <div class="tags"><span class="tg">机器人投资</span><span class="tg">厨房小家电</span><span class="tg">“羊”字辈</span></div>
+  <div class="rks">
+    <div class="rkbox"><span>同花顺热榜</span><b><span class="rk top">1</span></b></div>
+    <div class="rkbox"><span>东财热度榜</span><b><span class="rk top">1</span></b></div>
+    <div class="rkbox"><span>淘股吧热搜</span><b><span class="rk top">3</span></b></div>
+    <div class="rkbox"><span>换手率</span><b class="q">14.18%</b></div>
+    <div class="rkbox"><span>成交额</span><b class="q">41.1亿</b></div>
+    <div class="rkbox"><span>总市值</span><b class="q">294亿</b></div>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="dl l1">1 · 为何被关注</div><p>连续 6 天 4 板、地天板与天地板交替，三榜第一，同花顺人气榜登顶，是全市场情绪指标股。</p></div>
+    <div class="dim"><div class="dl l2">2 · 基本面原因</div><p>2026 前三季营收 50.52 亿元（-9.55%），归母净利 7198.95 万元（-41.75%），Q3 单季归母仅 21.63 万元；经营性现金流 -1.48 亿元由正转负。</p></div>
+    <div class="dim"><div class="dl l3">3 · 消息面原因</div><p>11 月 17—18 日公告：仅持深思考 7.92% 股权（未并表、标的未盈利）、参股享刻智能属财务性投资，与华为无战略合作；11 月 18 日天地板、19 日地天板，24 日 1 分钟封板。</p></div>
+    <div class="dim risk"><div class="dl l4">4 · 风险点</div><p>PE(TTM) 约 445 倍（行业均值约 53 倍）；控股股东 10 月 26 日已减持 1447.26 万股（1.90%）；土地收储 2.56 亿元收益要 2028 年才确认，属非经常性损益。</p></div>
+  </div>
+</article>
+<article class="stock" id="s002579">
+  <header class="shead">
+    <div class="sname"><h3>中京电子</h3><code>002579</code><span class="star">三榜全上榜</span></div>
+    <div class="schg up">+10.00%</div>
+  </header>
+  <div class="tags"><span class="tg">高阶 HDI</span><span class="tg">算力</span><span class="tg">光模块 PCB</span><span class="tg">人形机器人</span></div>
+  <div class="rks">
+    <div class="rkbox"><span>同花顺热榜</span><b><span class="rk top">3</span></b></div>
+    <div class="rkbox"><span>东财热度榜</span><b><span class="rk top">2</span></b></div>
+    <div class="rkbox"><span>淘股吧热搜</span><b><span class="rk top">2</span></b></div>
+    <div class="rkbox"><span>换手率</span><b class="q">42.49%</b></div>
+    <div class="rkbox"><span>成交额</span><b class="q">41.9亿</b></div>
+    <div class="rkbox"><span>总市值</span><b class="q">118亿</b></div>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="dl l1">1 · 为何被关注</div><p>5 天 5 板，淘股吧与东财双双第 2，今日换手 42.49%、成交 41.87 亿元，为三榜最纯正的“算力硬件”连板标的。</p></div>
+    <div class="dim"><div class="dl l2">2 · 基本面原因</div><p>2026 前三季营收 24.45 亿元（+1.83%），归母净利 -1.17 亿元（-558.47%），扣非 -1.24 亿元；Q3 营收 9.71 亿元（+24.0%）但归母仍亏 2757 万元。</p></div>
+    <div class="dim"><div class="dl l3">3 · 消息面原因</div><p>11 月 6 日互动易：珠海载板专线（MSAP）可做 800G/1.6T 光模块 PCB，正处爬坡；9-11 阶 HDI 主要供算力加速卡、处导入期；11 月 21 日披露股票交易异常波动公告。</p></div>
+    <div class="dim risk"><div class="dl l4">4 · 风险点</div><p>亏损扩大且 PE 为负（-101 倍），估值无盈利支撑；原料涨价、提价滞后，毛利率承压；42% 换手意味筹码高度换手，断板即易踩踏。</p></div>
+  </div>
+</article>
+<article class="stock" id="s000530">
+  <header class="shead">
+    <div class="sname"><h3>冰山冷热</h3><code>000530</code><span class="star">三榜全上榜</span></div>
+    <div class="schg up">+9.54%</div>
+  </header>
+  <div class="tags"><span class="tg">冰雪产业</span><span class="tg">液冷</span><span class="tg">制冷设备</span></div>
+  <div class="rks">
+    <div class="rkbox"><span>同花顺热榜</span><b><span class="rk top">2</span></b></div>
+    <div class="rkbox"><span>东财热度榜</span><b><span class="rk">5</span></b></div>
+    <div class="rkbox"><span>淘股吧热搜</span><b><span class="rk">8</span></b></div>
+    <div class="rkbox"><span>换手率</span><b class="q">38.70%</b></div>
+    <div class="rkbox"><span>成交额</span><b class="q">33.0亿</b></div>
+    <div class="rkbox"><span>总市值</span><b class="q">124亿</b></div>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="dl l1">1 · 为何被关注</div><p>10 月 14 日以来 26 个交易日累计 +117%，8 次涨停，今日再涨 9.54% 收 14.70 元，市值 124 亿元，深交所已窗口指导。</p></div>
+    <div class="dim"><div class="dl l2">2 · 基本面原因</div><p>前三季营收 32.96 亿元（-8.98%），归母 6131.34 万元（-32.38%），扣非 3880.85 万元（-50.99%）；Q3 归母 1417 万元（+16.79%）是唯一改善点。</p></div>
+    <div class="dim"><div class="dl l3">3 · 消息面原因</div><p>11 月 18 日哈尔滨冰雪大世界造雪启动；8 月中标中汽股份呼伦贝尔冰雪试验基地 2.7 亿元订单（工期两年）；但公司多次明确“2026 年冰雪场馆业务尚未确认收入、液冷仅零星收入”。</p></div>
+    <div class="dim risk"><div class="dl l4">4 · 风险点</div><p>PE 约 379 倍 vs 行业 36.62 倍；应收账款 18.26 亿元占总资产 24%、周转近 150 天；57.45% 资产负债率 + 2.86 亿元商誉。</p></div>
+  </div>
+</article>
+<article class="stock" id="s600410">
+  <header class="shead">
+    <div class="sname"><h3>华胜天成</h3><code>600410</code><span class="star">三榜全上榜</span></div>
+    <div class="schg up">+4.37%</div>
+  </header>
+  <div class="tags"><span class="tg">华为昇腾</span><span class="tg">算力总包</span><span class="tg">云计算</span></div>
+  <div class="rks">
+    <div class="rkbox"><span>同花顺热榜</span><b><span class="rk">4</span></b></div>
+    <div class="rkbox"><span>东财热度榜</span><b><span class="rk">4</span></b></div>
+    <div class="rkbox"><span>淘股吧热搜</span><b><span class="rk">4</span></b></div>
+    <div class="rkbox"><span>换手率</span><b class="q">31.33%</b></div>
+    <div class="rkbox"><span>成交额</span><b class="q">60.3亿</b></div>
+    <div class="rkbox"><span>总市值</span><b class="q">196亿</b></div>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="dl l1">1 · 为何被关注</div><p>唯一“三榜同为第 4”的标的，今日 +4.37% 收 17.92 元，换手 31.33%、成交 60.33 亿元，是三榜中成交额最大的算力股。</p></div>
+    <div class="dim"><div class="dl l2">2 · 基本面原因</div><p>前三季营收 38.33 亿元（+20.83%），归母 -2.59 亿元（-172.3%，主因子公司 ASL 持 GDYN 股票计提减值）；Q3 扣非 7837.88 万元（+56.65%），单季主业转正。</p></div>
+    <div class="dim"><div class="dl l3">3 · 消息面原因</div><p>11 月 17 日华为算力行情中涨停（封单 108 万手）；中国电信 174 亿元“Token 工厂”集采中标份额 18%，位列第一序列；8 月发布 400G/800G 光模块产品矩阵；11 月 19 日发布异常波动公告。</p></div>
+    <div class="dim risk"><div class="dl l4">4 · 风险点</div><p>前三季仍亏 2.59 亿元，公司自查直指“业绩亏损及换手率较高风险”；PB 约 4.9 倍、前十大流通股东仅 6.2% 股权高度分散；AI 资本开支预期一旦回落，总包估值首当其冲。</p></div>
+  </div>
+</article>
+<article class="stock" id="s600103">
+  <header class="shead">
+    <div class="sname"><h3>青山纸业</h3><code>600103</code><span class="star s2">2 榜在榜</span></div>
+    <div class="schg up">+9.88%</div>
+  </header>
+  <div class="tags"><span class="tg">光模块（恒宝通）· 竹浆纸</span><span class="tg">福建国资</span></div>
+  <div class="rks">
+    <div class="rkbox"><span>同花顺热榜</span><b><span class="rk">7</span></b></div>
+    <div class="rkbox"><span>东财热度榜</span><b><span class="rk">7</span></b></div>
+    <div class="rkbox"><span>淘股吧热搜</span><b><span class="nb">—</span></b></div>
+    <div class="rkbox"><span>换手率</span><b class="q">30.59%</b></div>
+    <div class="rkbox"><span>成交额</span><b class="q">24.8亿</b></div>
+    <div class="rkbox"><span>总市值</span><b class="q">84亿</b></div>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="dl l1">1 · 为何被关注</div><p>3 天 2 板，同花顺与东财均为第 7，今日 +9.88% 收 3.78 元，换手 30.59%，是典型的“低价 + 光模块期权”炒作壳。</p></div>
+    <div class="dim"><div class="dl l2">2 · 基本面原因</div><p>前三季营收 18.18 亿元（+2.83%），归母 6559.12 万元（+0.93%）；Q3 归母 2536.14 万元（+184.64%），但全年盈利仅 0.66 亿元级别。</p></div>
+    <div class="dim"><div class="dl l3">3 · 消息面原因</div><p>子公司恒宝通（持股 65.15%）800G 光模块处客户送样验证、400G 未大规模量产；10 月 16 日公告已明确该状态；11 月 25 日盘中再触涨停；11 月 26 日为三季度分红（10 派 0.1 元）股权登记日。</p></div>
+    <div class="dim risk"><div class="dl l4">4 · 风险点</div><p>PE 约 151 倍，光模块未量产、未贡献收入；主业造纸“随行就市”，Q3 单季净利仅 2536 万元；4 月高点 5.71 元以来仍有约 34% 空间未收复，套牢盘密集。</p></div>
+  </div>
+</article>
+<article class="stock" id="s300394">
+  <header class="shead">
+    <div class="sname"><h3>天孚通信</h3><code>300394</code><span class="star s2">2 榜在榜</span></div>
+    <div class="schg up">+7.65%</div>
+  </header>
+  <div class="tags"><span class="tg">CPO</span><span class="tg">光器件</span><span class="tg">算力光互连</span></div>
+  <div class="rks">
+    <div class="rkbox"><span>同花顺热榜</span><b><span class="rk">5</span></b></div>
+    <div class="rkbox"><span>东财热度榜</span><b><span class="rk">6</span></b></div>
+    <div class="rkbox"><span>淘股吧热搜</span><b><span class="nb">—</span></b></div>
+    <div class="rkbox"><span>换手率</span><b class="q">8.21%</b></div>
+    <div class="rkbox"><span>成交额</span><b class="q">117.2亿</b></div>
+    <div class="rkbox"><span>总市值</span><b class="q">1428亿</b></div>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="dl l1">1 · 为何被关注</div><p>三榜中唯一“大盘暴跌里逆势大涨”的机构票，今日 +7.65% 收 130.87 元，成交 117.16 亿元居两市前列，是资金从题材切向业绩的落点。</p></div>
+    <div class="dim"><div class="dl l2">2 · 基本面原因</div><p>前三季营收 47.51 亿元（+21.25%），归母 20.83 亿元（+42.18%）；Q3 营收 19.23 亿元（+31.5%，环比 +28.4%），归母 8.79 亿元（+55.3%），毛利率 65.05%（+11.37pct）。</p></div>
+    <div class="dim"><div class="dl l3">3 · 消息面原因</div><p>11 月 18 日披露近期经营情况并回购（累计 88 万股、1.08 亿元）；11 月 22 日公告拟在南昌投建新一代高速光器件项目，并购买泰国罗勇约 16 万平方米土地建厂；CPO 配套产品已批量交付。</p></div>
+    <div class="dim risk"><div class="dl l4">4 · 风险点</div><p>PE 约 54 倍为三榜最低，但已充分反映高增长；CPO 收入占比提升要等 2027 年，NPO 仍在送样；若北美 AI 资本开支预期下修，高估值成长股回撤弹性同样大。</p></div>
+  </div>
+</article>
+<article class="stock" id="s600467">
+  <header class="shead">
+    <div class="sname"><h3>好当家</h3><code>600467</code><span class="star s2">2 榜在榜</span></div>
+    <div class="schg up">+10.09%</div>
+  </header>
+  <div class="tags"><span class="tg">海参</span><span class="tg">水产养殖</span><span class="tg">预制菜</span></div>
+  <div class="rks">
+    <div class="rkbox"><span>同花顺热榜</span><b><span class="nb">—</span></b></div>
+    <div class="rkbox"><span>东财热度榜</span><b><span class="rk">8</span></b></div>
+    <div class="rkbox"><span>淘股吧热搜</span><b><span class="rk">10</span></b></div>
+    <div class="rkbox"><span>换手率</span><b class="q">19.29%</b></div>
+    <div class="rkbox"><span>成交额</span><b class="q">10.0亿</b></div>
+    <div class="rkbox"><span>总市值</span><b class="q">53亿</b></div>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="dl l1">1 · 为何被关注</div><p>10 天 6 板，东财第 8、淘股吧第 10，今日一字涨停 +10.09% 收 3.60 元，但成交仅 9.98 亿元、换手 19.29%，是高位缩量连板。</p></div>
+    <div class="dim"><div class="dl l2">2 · 基本面原因</div><p>公司公告九个交易日累计涨幅 40.63%、期间五个涨停；拥有 5 万亩围堰精养殖海域、130 万平方米海参育苗车间，冷冻预制菜为加工端延伸方向。</p></div>
+    <div class="dim"><div class="dl l3">3 · 消息面原因</div><p>11 月 22 日广发证券研报：进口鱼粉报价涨至 23250 元/吨，秘鲁第二捕捞禁令下四季度至 2027Q1 鱼粉价格维持高位；11 月 23 日公司公告提示“市场情绪过热、非理性炒作及股价快速回落风险”。</p></div>
+    <div class="dim risk"><div class="dl l4">4 · 风险点</div><p>PE 约 149 倍；公司自认生产经营正常、无未披露重大事项，即无新基本面变量；缩量一字板意味着一旦开板承接极薄，连板股风险公告已发出。</p></div>
+  </div>
+</article>
+<article class="stock" id="s002086">
+  <header class="shead">
+    <div class="sname"><h3>东方海洋</h3><code>002086</code><span class="star s2">2 榜在榜</span></div>
+    <div class="schg dn">-4.41%</div>
+  </header>
+  <div class="tags"><span class="tg">预制菜</span><span class="tg">海洋经济</span><span class="tg">大健康</span></div>
+  <div class="rks">
+    <div class="rkbox"><span>同花顺热榜</span><b><span class="rk">6</span></b></div>
+    <div class="rkbox"><span>东财热度榜</span><b><span class="rk">9</span></b></div>
+    <div class="rkbox"><span>淘股吧热搜</span><b><span class="nb">—</span></b></div>
+    <div class="rkbox"><span>换手率</span><b class="q">45.75%</b></div>
+    <div class="rkbox"><span>成交额</span><b class="q">32.4亿</b></div>
+    <div class="rkbox"><span>总市值</span><b class="q">85亿</b></div>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="dl l1">1 · 为何被关注</div><p>22 天 11 板，今日高位回落 -4.41% 收 4.34 元，换手 45.75%，是三榜中换手最高的分歧股。</p></div>
+    <div class="dim"><div class="dl l2">2 · 基本面原因</div><p>前三季营收 2.47 亿元（+0.37%），归母 -6793.11 万元（亏损同比收窄 35.55%）；海洋与大健康两大板块均亏损，仅加工业务盈利。</p></div>
+    <div class="dim"><div class="dl l3">3 · 消息面原因</div><p>11 月 20 日自然资源部等五部门印发《海洋产业投融资指导目录（2026 版）》；11 月 23—24 日连续发布异常波动公告，披露 10 月 21 日以来累计上涨 90.32%、无控股股东及实际控制人、董事会换届推进中。</p></div>
+    <div class="dim risk"><div class="dl l4">4 · 风险点</div><p>持续亏损、PE 为负（-73.8 倍）；公司自述“股价偏离基本面与合理估值区间”；无实控人叠加换届，治理不确定性高；45% 换手＋高位阴线，是情绪退潮的典型形态。</p></div>
+  </div>
+</article>
+<article class="stock" id="s002685">
+  <header class="shead">
+    <div class="sname"><h3>华东重机</h3><code>002685</code><span class="star s2">2 榜在榜</span></div>
+    <div class="schg up">+0.45%</div>
+  </header>
+  <div class="tags"><span class="tg">GPU 芯片（锐信图芯）· 港机</span><span class="tg">信创</span></div>
+  <div class="rks">
+    <div class="rkbox"><span>同花顺热榜</span><b><span class="rk">8</span></b></div>
+    <div class="rkbox"><span>东财热度榜</span><b><span class="nb">—</span></b></div>
+    <div class="rkbox"><span>淘股吧热搜</span><b><span class="rk top">1</span></b></div>
+    <div class="rkbox"><span>换手率</span><b class="q">39.81%</b></div>
+    <div class="rkbox"><span>成交额</span><b class="q">35.6亿</b></div>
+    <div class="rkbox"><span>总市值</span><b class="q">91亿</b></div>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="dl l1">1 · 为何被关注</div><p>9 天 6 板，淘股吧第 1 位，今日仅 +0.45% 收 8.99 元、换手 39.81%，是“榜单第一但股价滞涨”的典型高位派发形态。</p></div>
+    <div class="dim"><div class="dl l2">2 · 基本面原因</div><p>前三季营收 9.43 亿元（+55.86%），归母 6325.79 万元（+58.11%）；但 Q3 单季净利仅 118.81 万元（-91.42%），利润几乎全部由 Q1 的 5413.56 万元贡献。</p></div>
+    <div class="dim"><div class="dl l3">3 · 消息面原因</div><p>11 月 6 日披露简易程序定增（募资 2.92 亿元投智能制造基地，15 名对象已报注册）；锐信图芯 16nm GPU 面向信创，上半年收入 1759.98 万元仅占 2.32%、净利 -203.3 万元；11 月 18 日提示市盈率显著高于行业。</p></div>
+    <div class="dim risk"><div class="dl l4">4 · 风险点</div><p>因锐信图芯业绩未达预期已计提 5000 万元减值，2026 年需约 6157 万元净利才完成三年承诺；PE 约 101 倍 vs 行业 2.3 倍水平；定增能否获批不确定，Q4 交付节奏亦不确定。</p></div>
+  </div>
+</article>
+<article class="stock" id="s002148">
+  <header class="shead">
+    <div class="sname"><h3>北纬科技</h3><code>002148</code><span class="star s2">2 榜在榜</span></div>
+    <div class="schg dn">-9.99%</div>
+  </header>
+  <div class="tags"><span class="tg">四足机器人（天宇经纬）· 物联网</span><span class="tg">低空经济</span></div>
+  <div class="rks">
+    <div class="rkbox"><span>同花顺热榜</span><b><span class="rk">9</span></b></div>
+    <div class="rkbox"><span>东财热度榜</span><b><span class="nb">—</span></b></div>
+    <div class="rkbox"><span>淘股吧热搜</span><b><span class="rk">5</span></b></div>
+    <div class="rkbox"><span>换手率</span><b class="q">2.16%</b></div>
+    <div class="rkbox"><span>成交额</span><b class="q">1.0亿</b></div>
+    <div class="rkbox"><span>总市值</span><b class="q">57亿</b></div>
+  </div>
+  <div class="dims">
+    <div class="dim"><div class="dl l1">1 · 为何被关注</div><p>10 天 6 板后今日一字跌停 -9.99% 收 10.27 元、封单超 82 万手，换手仅 2.16%，是今日最典型的“异动公告—跌停”链条。</p></div>
+    <div class="dim"><div class="dl l2">2 · 基本面原因</div><p>前三季营收 2.91 亿元（+0.72%），归母 591.08 万元（+2246.41%，低基数）；扣非仅 57.21 万元，扭亏主要靠处置参股股权与理财收益。</p></div>
+    <div class="dim"><div class="dl l3">3 · 消息面原因</div><p>11 月 24 日公告 11 月 11—24 日 10 个交易日涨幅偏离累计 100.09%，属严重异常波动，并称滚动 PE 10748 倍 vs 行业 51.73 倍；被纳入异动股票池（11 月 25 日—12 月 8 日，严重异动）。</p></div>
+    <div class="dim risk"><div class="dl l4">4 · 风险点</div><p>仅持天宇经纬 30.33%（联营、不并表），天宇经纬 2025 年营收约 2500 万元、与宇树合作仍在适配试点；无接盘即连续跌停，2.16% 换手说明想卖也卖不掉。</p></div>
+  </div>
+</article>
+</section>
+
+<section>
+  <h2>四、综合判断</h2>
+  <div class="grid2">
+    <div>
+      <ul class="pts">
+        <li><span class="tagb">主线持续性</span>：本轮人气股集中在“算力硬件（PCB / 光模块 / CPO / 昇腾总包）”与“小盘题材（机器人参股、冰雪、海洋经济）”两条线。前者有业绩（天孚通信 Q3 净利 +55.3%、华胜天成 Q3 扣非 +56.65%），在指数暴跌中仍能逆势收红，持续性相对可跟踪；后者靠公告澄清与情绪推动（九阳股份 Q3 净利仅 21.63 万元、北纬科技扣非 57.21 万元），一旦补跌往往直接连续跌停。</li>
+        <li><span class="tagb">情绪周期</span>：今日 51 家涨停 / 43 家跌停，涨停梯队最高仅 4 板（克来机电、金新农），而昨日 6—11 板的九阳股份、北纬科技、东方海洋集体进入分歧或跌停——高标断层、空间压缩，是典型的退潮中段特征。</li>
+      </ul>
+    </div>
+    <div>
+      <ul class="pts warn">
+        <li><span class="tagb">追高风险</span>：交集股中 6 只 PE 超 100 倍或为负（九阳 445 倍、冰山 379 倍、青山 151 倍、好当家 149 倍、华东重机 101 倍、中京电子为负），换手率普遍 30%—46%，筹码一日一换，任何一日开板都缺少承接。</li>
+        <li><span class="tagb">结构判断</span>：若周四（11-26）指数延续调整，资金大概率继续在“低位补涨 + 医药零售防御”内部轮动，高位算力题材股的溢价将进一步收敛；反之若外围企稳，天孚通信、华胜天成这类有业绩支撑的标的修复弹性大于纯题材股。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>五、风险提示</h2>
+  <ul class="pts warn">
+    <li><span class="tagb">连板股风险公告密集</span>：好当家（10 天 6 板）11 月 23 日自认“市场情绪过热、非理性炒作”；东方海洋（22 天 11 板）11 月 23—24 日连发异常波动公告；北纬科技 11 月 24 日认定为“严重异常波动”并被纳入异动股票池（11-25 至 12-08），11 月 25 日一字跌停、封单超 82 万手。</li>
+    <li><span class="tagb">高位回调风险</span>：冰山冷热 26 个交易日 +117% 后已被深交所窗口指导，自述可能触发严重异常波动；青山纸业 4 月高点 5.71 元以来仍有约 34% 空间未收复，上方套牢盘密集。</li>
+    <li><span class="tagb">业绩与股价背离</span>：九阳股份前三季净利 -41.75%、Q3 仅 21.63 万元；中京电子前三季亏 1.17 亿元；东方海洋亏 6793 万元；华胜天成亏 2.59 亿元；北纬科技扣非仅 57.21 万元。股价涨幅与利润表方向完全相反。</li>
+    <li><span class="tagb">题材兑现不确定</span>：恒宝通 800G 光模块仅“客户送样验证”；冰山冷热冰雪场馆业务“2026 年尚未确认收入”、液冷“仅零星收入”；九阳股份澄清与华为“不存在战略合作”；天孚通信 CPO 放量要等 2027 年。</li>
+    <li><span class="tagb">杠杆与筹码风险</span>：中京电子换手 42.49%、东方海洋 45.75%、华东重机 39.81%，均为融资余额敏感品种；控股股东高位减持（九阳股份 10 月 26 日减持 1.90%）与定增未获批（华东重机 2.92 亿元）均构成筹码或预期扰动。</li>
+  </ul>
+</section>
+
+<section>
+  <h2>六、三榜原始数据（前 10）</h2>
+  <div class="grid2" style="grid-template-columns:1.25fr 1fr;gap:24px">
+    <div>
+      <p class="lead"><b>同花顺热榜</b></p>
+      <table><thead><tr><th>#</th><th>名称</th><th>代码</th><th class="num">涨跌幅</th><th>概念</th></tr></thead><tbody><tr><td>1</td><td class="nm">九阳股份</td><td class="code">002242</td><td class="num up">+10.01%</td><td class="tgcell">净水概念、绿色电力</td></tr><tr><td>2</td><td class="nm">冰山冷热</td><td class="code">000530</td><td class="num up">+9.54%</td><td class="tgcell">无人零售、冰雪产业</td></tr><tr><td>3</td><td class="nm">中京电子</td><td class="code">002579</td><td class="num up">+10.00%</td><td class="tgcell">共封装光学(CPO)、PCB概念</td></tr><tr><td>4</td><td class="nm">华胜天成</td><td class="code">600410</td><td class="num up">+4.37%</td><td class="tgcell">云计算、网络安全</td></tr><tr><td>5</td><td class="nm">天孚通信</td><td class="code">300394</td><td class="num up">+7.65%</td><td class="tgcell">共封装光学(CPO)、光纤概念</td></tr><tr><td>6</td><td class="nm">东方海洋</td><td class="code">002086</td><td class="num dn">-4.41%</td><td class="tgcell">预制菜、幽门螺杆菌概念</td></tr><tr><td>7</td><td class="nm">青山纸业</td><td class="code">600103</td><td class="num up">+9.88%</td><td class="tgcell">共封装光学(CPO)、海峡两岸</td></tr><tr><td>8</td><td class="nm">华东重机</td><td class="code">002685</td><td class="num up">+0.45%</td><td class="tgcell">信创、芯片概念</td></tr><tr><td>9</td><td class="nm">北纬科技</td><td class="code">002148</td><td class="num dn">-9.99%</td><td class="tgcell">手机游戏、网络游戏</td></tr><tr><td>10</td><td class="nm">新易盛</td><td class="code">300502</td><td class="num up">+0.72%</td><td class="tgcell">共封装光学(CPO)、5G</td></tr></tbody></table>
+    </div>
+    <div>
+      <p class="lead"><b>东方财富热度榜</b></p>
+      <table><thead><tr><th>#</th><th>名称</th><th>代码</th><th class="num">涨跌幅</th></tr></thead><tbody><tr><td>1</td><td class="nm">九阳股份</td><td class="code">002242</td><td class="num up">+10.01%</td></tr><tr><td>2</td><td class="nm">中京电子</td><td class="code">002579</td><td class="num up">+10.00%</td></tr><tr><td>3</td><td class="nm">金牛化工</td><td class="code">600722</td><td class="num up">+10.04%</td></tr><tr><td>4</td><td class="nm">华胜天成</td><td class="code">600410</td><td class="num up">+4.37%</td></tr><tr><td>5</td><td class="nm">冰山冷热</td><td class="code">000530</td><td class="num up">+9.54%</td></tr><tr><td>6</td><td class="nm">天孚通信</td><td class="code">300394</td><td class="num up">+7.65%</td></tr><tr><td>7</td><td class="nm">青山纸业</td><td class="code">600103</td><td class="num up">+9.88%</td></tr><tr><td>8</td><td class="nm">好当家</td><td class="code">600467</td><td class="num up">+10.09%</td></tr><tr><td>9</td><td class="nm">东方海洋</td><td class="code">002086</td><td class="num dn">-4.41%</td></tr><tr><td>10</td><td class="nm">文投控股</td><td class="code">600715</td><td class="num dn">-9.87%</td></tr></tbody></table>
+      <p class="lead" style="margin-top:18px"><b>淘股吧实时热搜</b></p>
+      <table><thead><tr><th>#</th><th>名称</th><th>代码</th><th class="num">涨跌幅</th></tr></thead><tbody><tr><td>1</td><td class="nm">华东重机</td><td class="code">002685</td><td class="num up">+0.45%</td></tr><tr><td>2</td><td class="nm">中京电子</td><td class="code">002579</td><td class="num up">+10.00%</td></tr><tr><td>3</td><td class="nm">九阳股份</td><td class="code">002242</td><td class="num up">+10.01%</td></tr><tr><td>4</td><td class="nm">华胜天成</td><td class="code">600410</td><td class="num up">+4.37%</td></tr><tr><td>5</td><td class="nm">北纬科技</td><td class="code">002148</td><td class="num dn">-9.99%</td></tr><tr><td>6</td><td class="nm">长华集团</td><td class="code">605018</td><td class="num up">+4.91%</td></tr><tr><td>7</td><td class="nm">真视通</td><td class="code">002771</td><td class="num up">+8.08%</td></tr><tr><td>8</td><td class="nm">冰山冷热</td><td class="code">000530</td><td class="num up">+9.54%</td></tr><tr><td>9</td><td class="nm">汇洲智能</td><td class="code">002122</td><td class="num up">+10.12%</td></tr><tr><td>10</td><td class="nm">好当家</td><td class="code">600467</td><td class="num up">+10.09%</td></tr></tbody></table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>免责声明</h2>
+  <div class="disc">
+    本报告由自动化程序采集同花顺热榜、东方财富热度榜、淘股吧实时热搜及腾讯行情公开数据整理生成，行情数据为 2026-11-25 收盘快照，部分平台榜单为盘中/延时快照，个股涨跌幅、换手率、市值口径可能存在细微差异，以交易所与上市公司正式披露为准。
+    报告中涉及的财务数据取自上市公司 2026 年三季度报告及公开公告，新闻事件取自公开媒体报道，均已标注时间点；对个股“为何被关注”的描述仅还原市场公开讨论的题材逻辑，不代表本报告认可该逻辑，也不构成对任何公司业务前景的判断。
+    本报告仅供学习研究参考，<b>不构成任何投资建议、买卖要约或收益承诺</b>。文中提及个股多处于高换手、高估值或业绩亏损状态，股价波动剧烈，投资者据此操作风险自担。股市有风险，投资需谨慎。
+  </div>
+  <footer>每日热门股日报 · 2026-11-25 · 三榜交集 10 只（三榜全上榜 4 只） · 数据来源：同花顺 / 东方财富 / 淘股吧 / 腾讯行情</footer>
+</section>
+
 </div></body></html>
